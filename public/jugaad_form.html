@@ -1,0 +1,53 @@
+<div class="col-md-8 content">
+  <div class="box right-skew">Ask Jugaad</div>
+    
+<form role="form" class="fm">
+         <div class="form-group">
+          <label>Title your Jugaad</label>
+          <input type="text" placeholder="Title" class="form-control" ng-model="jugaad.title">
+         </div>
+         
+         <div class="form-group">
+         <label>Describe your Jugaad</label>
+          <text-angular ng-model="jugaad.description"></text-angular>
+         </div>
+         
+         <!-- Category -->
+         <div class="form-group">
+           <label>Specify the most suitable category</label>
+            <div class="row">
+             <div class="col-md-6">
+               <select class="form-control" ng-model="jugaad.category" ng-change="changed()">
+               <option value="tec">Technology</option>  
+               <option value="sci">Science</option>
+               <option value="daily">Daily Life</option>
+               <option value="gen">General</option>
+               <option value="oth">Other</option>
+               </select>   
+             </div>
+                
+             <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Category" ng-model="jugaad.cat1" ng-hide="myVar"> 
+             </div>
+            </div>
+         </div>
+        
+        <!-- Author -->
+        <div class="form-group">
+           <div class="checkbox">
+             <label>
+               <input type="checkbox" ng-click="tog2()"> If this idea is not originally your's or is modified, please credit the author.
+             </label>
+           </div>       
+            <input type="text" class="form-control" placeholder="Author name" ng-model="jugaad.auth" ng-disabled="var2">
+        </div>
+    
+         <!-- Buttons -->
+         <div class="text-center">
+         <button class="btn btn-md btn-primary" ng-click="create()">Add</button>
+         <button class="btn btn-md btn-info" ng-click="clear()">Reset</button>     
+        </div>
+    
+    
+</form>    
+</div>

@@ -1,0 +1,62 @@
+.fm{
+  margin: 20px; 
+}
+
+*:focus {outline: none;}
+
+.box{
+ margin-left: -15px;
+ background: #5b56a1;
+ padding: 10px 10px 10px 20px;
+ color: rgba(255, 255, 255, 0.9);
+ width: 450px;
+ max-height: 54px;
+ font-family: 'Quicksand', sans-serif;
+ font-size: 24px;
+ line-height: 34px;
+ font-weight: 700;
+}
+
+@media screen and (max-width:480px){
+    .box{
+      width: 200px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+}
+
+.right-skew {
+  position: relative;
+
+}
+
+.right-skew:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -5px;
+  display: block;
+  width: 10px;
+  max-height: 54px;
+  background: #9ca1d5;
+  -webkit-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  transform: skew(-10deg);
+}
+
+label{
+font-family: 'Quicksand', sans-serif;
+font-size: 16px;
+}
+
+.form-control{
+  border-radius: 0;
+  border: 2px solid #2c3e50;
+  height: 40px;
+}
+
+.form-control:focus{
+  border-radius: 0;
+  border: 2px solid #34495e;
+}
