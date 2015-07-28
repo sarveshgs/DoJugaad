@@ -22,7 +22,114 @@ app.use(express.bodyParser());
 
 
 //----------------------------------------------------
+//********************SOCIAL lOgin start***************
 
+
+var passport = require('passport')
+  , FacebookStrategy = require('passport-facebook').Strategy;
+  var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+
+  //app.use(express.static('public'));
+  //app.use(express.cookieParser());
+  //app.use(express.bodyParser());
+  //app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(passport.initialize());
+  //app.use(passport.session());
+  //app.use(app.router);
+
+//////////GOOGLE******************
+passport.use(new GoogleStrategy({
+    clientID:     '724699266914-vo6f70jquh2kr9eef0eq8hfgithu0r27.apps.googleusercontent.com',
+    clientSecret: 'uvJjU0hVhjNmq4SwOBwZPerb',
+    callbackURL: "http://localhost:8080/auth/google/callback/",
+    passReqToCallback   : true
+  },
+  function(request, accessToken, refreshToken, profile, done) {
+    //console.log(accessToken)
+   //console.log(refreshToken)  
+   console.log(profile.provider);
+   console.log(profile.id)
+//  console.log(profile.displayname.value)
+   console.log(profile.name);
+   console.log(profile.email)
+   console.log(profile.photos[0].value)
+   return done(null,profile)
+
+  }
+));
+app.get('/auth/google',
+  passport.authenticate('google', { scope: 
+    [ 'https://www.googleapis.com/auth/plus.login',
+    , 'https://www.googleapis.com/auth/plus.profile.emails.read' ] }
+));
+
+
+app.get( '/auth/google/callback', 
+    passport.authenticate( 'google', { 
+        successRedirect: '/submit.html',
+        failureRedirect: '/index.html'
+}));
+//app.get('/auth/google', passport.authenticate('google'));
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
+
+
+
+//////////FaceBook*************
+passport.use(new FacebookStrategy({
+    clientID: '1593285864278038',
+    clientSecret: 'a231d50802f4290c76ff4904946aeda5',
+    callbackURL: "http://localhost:8080/auth/facebook/callback/"
+   // profileFields: ['id', 'displayName', 'link', 'about_me', 'photos', 'email']
+  },
+  function(accessToken, refreshToken, profile, done) {
+  //console.log(accessToken)
+   //console.log(refreshToken)  
+   console.log(profile)
+   console.log(profile.provider);
+   console.log(profile.id)
+//  console.log(profile.displayname.value)
+   console.log(profile.name);
+   console.log(profile.emails)
+   console.log(profile.photos)
+    return done(null,profile)
+//User.findOrCreate(function(err, user) {
+//console.log(profile.provider)
+//console.log(err)
+      //if (err) { return done(err); }
+      //done(null, user);
+    //});
+  }
+));
+
+
+//app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get('/auth/facebook',
+  passport.authenticate('facebook', {  scope: ['read_stream', 'publish_actions']  })
+);
+
+app.get('/auth/facebook/callback/',
+  passport.authenticate('facebook', {  
+  		    successRedirect: '/submit.html#/',
+     		 failureRedirect: '/index.html'
+                                  }));
+
+
+
+app.get( '/auth/google/callback', 
+    passport.authenticate( 'google', { 
+        successRedirect: '/submit.html',
+        failureRedirect: '/index.html'
+}));
+
+
+//*********************SOCIAL LOGIN ENDS*************
 
 app.get("/serviceClients", function (req, res) {
 

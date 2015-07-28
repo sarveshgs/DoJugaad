@@ -1,6 +1,7 @@
 // add the module with global defaults for froala
-var myApp = angular.module('myApp', ['textAngular','ui.bootstrap','ngRoute']).
-config(function($provide){
+var myApp = angular.module('myApp', ['ngAnimate','textAngular','ui.bootstrap','ngRoute']);
+
+myApp.config(function($provide){
  		$provide.decorator('taOptions', ['taRegisterTool', '$delegate', function(taRegisterTool, taOptions){
 			  taOptions.toolbar = [
       ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],
@@ -19,6 +20,7 @@ myApp.controller('mainController', function($scope, $http) {
 
     $scope.myVar = true;
     $scope.var2 = true;
+    $scope.btn_disp = true;
     
     /* Toggle for category */
     $scope.changed = function () {
@@ -44,6 +46,10 @@ myApp.controller('mainController', function($scope, $http) {
     };
     
     
+    
+    $scope.test = function () {
+      $scope.btn_disp = !$scope.btn_disp;
+    }
     
     
 	$scope.create = function () {
