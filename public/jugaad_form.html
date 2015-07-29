@@ -44,9 +44,22 @@
     
          <!-- Buttons -->
          <div class="text-center" ng-show="btn_disp">
-         <button class="btn btn-md btn-primary" ng-click="test()">Add</button>
-         <button class="btn btn-md btn-info" ng-click="clear()">Reset</button>     
+         <button class="bb btn btn-3 btn-3e icon-arrow-right" ng-click="test()">Submit</button>
+         <button class="bb btn mybtn" ng-click="clear()">Reset</button>     
         </div>
+    
+        <!-- Login Buttons -->
+        <div class="text-center" ng-show="login_disp">
+           <div class="checkbox">
+             <label>
+               <input type="checkbox" ng-click="tog3()" ng-checked="true"> Share it on social network.
+             </label>
+           </div>    
+           <p>
+            <a href="/auth/facebook" class="cc btn azm-social azm-btn azm-border-bottom azm-facebook"><i class="fa fa-facebook"></i> Log in with Facebook</a>
+            <a href="/auth/google" class="cc btn azm-social azm-btn azm-border-bottom azm-google-plus"><i class="fa fa-google-plus"></i> Sign in with Google+</a>
+           </p>
+        </div>    
     
     
 </form>    

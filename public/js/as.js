@@ -21,6 +21,7 @@ myApp.controller('mainController', function($scope, $http) {
     $scope.myVar = true;
     $scope.var2 = true;
     $scope.btn_disp = true;
+    $scope.login_disp = false;
     
     /* Toggle for category */
     $scope.changed = function () {
@@ -49,6 +50,7 @@ myApp.controller('mainController', function($scope, $http) {
     
     $scope.test = function () {
       $scope.btn_disp = !$scope.btn_disp;
+      $scope.login_disp = !$scope.login_disp;
     }
     
     
