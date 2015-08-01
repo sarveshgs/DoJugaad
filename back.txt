@@ -1,9 +1,0 @@
-         <ul style="list-style:none;">
-            <li ng-repeat="detail in serviceClients" class="posts">
-            <p>
-             <strong>Jugaad Title:</strong> {{ detail.title }}<br/>
-             <strong>Description:</strong> {{ detail.description }}<br/> 
-             <strong>Category:</strong> {{ detail.category }}
-             </p>
-            </li>
-         </ul>
