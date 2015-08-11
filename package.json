@@ -1,0 +1,20 @@
+{
+  "name": "dojugaad",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "dojugaad",
+  "license": "MIT",
+  "private":"true",
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+    "express": "~4.13.3"
+  }
+}

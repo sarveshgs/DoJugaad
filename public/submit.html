@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="textAngular/textAngular.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <title>DoJugaad | Submit</title>
+</head>
+
+<body ng-app="myApp" layout="column" layout-align="top center">
+<header ng-include="'header.htm'"></header>
+
+<div layout="row" layout-margin>
+
+    <!-- Left Column-->
+    <div flex="20">
+
+    </div>
+
+    <div flex class="md-whiteframe-z2">
+        <md-content class="md-padding">
+            <div ng-view></div>
+        </md-content>
+
+    </div>
+
+    <!-- Right Column-->
+    <div flex="20">
+
+    </div>
+
+</div>
+
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="textAngular/textAngular-rangy.min.js"></script>
+<script src="textAngular/textAngular-sanitize.min.js"></script>
+<script src="textAngular/textAngular.min.js"></script>
+<script src="js/submit.js"></script>
+</body>
+</html>

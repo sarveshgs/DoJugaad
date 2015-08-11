@@ -1,0 +1,32 @@
+<form name="jugaad" data-ng-controller="jugaadController as jc">
+    <h3>Ask Jugaad</h3>
+    <md-input-container>
+        <label>Jugaad Title</label>
+        <input type="text" data-ng-model="jc.title" required>
+    </md-input-container>
+
+    <md-input-container>
+        <label>Describe your Jugaad</label>
+        <!--text-angular data-ng-model="description" required></text-angular-->
+        <textarea data-ng-model="jc.description" rows="5" required></textarea>
+    </md-input-container>
+
+    <md-input-container>
+
+        <md-select data-ng-model="jc.category" placeholder="Specify the most suitable category" style="min-width: 450px;" >
+            <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
+        </md-select>
+    </md-input-container>
+
+    <md-input-container>
+        <md-checkbox data-ng-model="jc.auth" aria-label="Author" data-ng-click="tog()">
+            If this idea is not originally your's or is modified, please credit the author.
+        </md-checkbox>
+        <input type="text" data-ng-model="jc.authname" data-ng-disabled="myvar">
+    </md-input-container>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised md-primary" data-ng-click="create()">Submit</md-button>
+        <md-button class="md-raised md-warn" data-ng-click="clear()">Clear</md-button>
+    </section>
+</form>
