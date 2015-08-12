@@ -9,20 +9,16 @@
     <title>DoJugaad</title>
 </head>
 
-<body ng-app="myApp" ng-controller="AppCtrl" layout="column" layout-align="top center">
-<header ng-include="'header.htm'"></header>
+<body ng-app="myApp" ng-controller="AppCtrl" ng-cloak>
+<md-content>
+    <header ng-include="'header.htm'"></header>
+    <div layout="row">
+        <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
 
-<div layout="row" layout-margin>
 
-    <!-- Left Column-->
-    <div flex="20">
 
-    </div>
 
-    <!-- Main Content -->
-    <div flex>
-        <md-card>
-
+        <md-card flex>
             <md-card-content>
                 <md-content>
 
@@ -31,34 +27,30 @@
                     <md-button class="md-raised md-primary" ng-href="submit.html/product">Submit Product</md-button>
 
                 </md-content>
+
+                <md-content>
+                    <md-list>
+                        <md-list-item class="md-3-line" ng-repeat="item in posts">
+
+                            <div flex class="md-whiteframe-z2" style="margin-bottom: 10px;">
+                                <md-content class="md-padding">
+                                    <h3>{{item.title}}</h3>
+                                    <p>{{item.description}}</p>
+                                    <p>{{item.category}}</p>
+                                </md-content>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
             </md-card-content>
         </md-card>
 
-        <md-list>
-            <md-list-item class="md-3-line" ng-repeat="item in posts">
 
-                <div flex class="md-whiteframe-z2" style="margin-bottom: 10px;">
-                    <md-content class="md-padding">
-                        <h3>{{item.title}}</h3>
-                        <p>{{item.description}}</p>
-                        <p>{{item.category}}</p>
-                    </md-content>
-                </div>
-                <!--div class="md-list-item-text">
-                    <h3>{{item.title}}</h3>
-                    <p>{{item.description}}</p>
-                </div-->
-            </md-list-item>
-        </md-list>
+
+        <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
 
     </div>
-
-    <!-- Right Column-->
-    <div flex="20">
-
-    </div>
-
-</div>
+</md-content>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>

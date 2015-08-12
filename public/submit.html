@@ -10,29 +10,23 @@
     <title>DoJugaad | Submit</title>
 </head>
 
-<body ng-app="myApp" layout="column" layout-align="top center">
+<body ng-app="myApp" ng-cloak>
+<md-content>
 <header ng-include="'header.htm'"></header>
 
-<div layout="row" layout-margin>
-
-    <!-- Left Column-->
-    <div flex="20">
-
+    <div layout="row">
+        <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
+        <div flex class="md-whiteframe-z2">
+            <md-content class="md-padding">
+                <ng-view></ng-view>
+            </md-content>
+        </div>
+        <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
     </div>
 
-    <div flex class="md-whiteframe-z2">
-        <md-content class="md-padding">
-            <div ng-view></div>
-        </md-content>
+</md-content>
 
-    </div>
 
-    <!-- Right Column-->
-    <div flex="20">
-
-    </div>
-
-</div>
 
 
 
