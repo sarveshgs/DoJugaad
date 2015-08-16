@@ -1,5 +1,5 @@
-<form name="jugaad" data-ng-controller="jugaadController as jc">
-    <h3>Ask Jugaad</h3>
+<form name="jugaad" data-ng-controller="jugaadController as jc" class="md-padding">
+
     <md-input-container>
         <label>Jugaad Title</label>
         <input type="text" data-ng-model="jc.title" required>
@@ -13,7 +13,7 @@
 
     <md-input-container>
 
-        <md-select data-ng-model="jc.category" placeholder="Specify the most suitable category" style="min-width: 450px;" >
+        <md-select data-ng-model="jc.category" placeholder="Specify the most suitable category" style="width: 50%" >
             <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
         </md-select>
     </md-input-container>
@@ -25,7 +25,7 @@
         <input type="text" data-ng-model="jc.authname" data-ng-disabled="myvar">
     </md-input-container>
 
-    <md-content>
+    <md-content layout="row" layout-align="center center">
         <md-button class="md-raised md-primary" data-ng-click="create()">Submit</md-button>
         <md-button class="md-raised md-warn" data-ng-click="clear()">Clear</md-button>
     </md-content>

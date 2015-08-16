@@ -1,0 +1,37 @@
+<div data-ng-controller="loginController as lc">
+<form name="login" class="md-padding">
+  <md-input-container>
+      <label>Username</label>
+      <input type="text"  required/>
+  </md-input-container>
+
+  <md-input-container>
+      <label>Password</label>
+      <input type="password"  required/>
+  </md-input-container>
+
+
+       <md-checkbox aria-label="Remember" >
+           Remember me
+       </md-checkbox>
+
+
+    <md-input-container>
+        <md-button class="md-raised md-primary">Login</md-button>
+    </md-input-container>
+
+    <span layout="row" layout-align="center center">Or</span>
+</form>
+
+
+<md-content layout="row" layout-align="center center">
+    <md-button class="md-raised md-primary" ng-href="/auth/facebook">Facebook</md-button>
+    <md-button class="md-raised md-warn" data-ng-click="">Google</md-button>
+</md-content>
+<md-divider></md-divider>
+
+<md-content layout="row">
+    <md-button ng-href="" target="_blank">FORGOT PASSWORD ?</md-button>
+    <md-button ng-href="login.html#/register" >REGISTER</md-button>
+</md-content>
+</div>

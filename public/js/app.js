@@ -6,11 +6,11 @@ var app = angular.module('myApp',['ngMaterial']);
 app.controller('AppCtrl',function($scope,$http){
     console.log('App running');
 
+    $scope.userShow = false;
+    $scope.loginbtnShow = true;
+    $scope.logoutbtnShow = false;
 
-   // $scope.posts = [{'title':'Title 1','description':'This is the demo description 1'},{'title':'Title 2','description':'This is the demo description 2'},{'title':'Title 3','description':'This is the demo description 3'}];
-
-
-    var refresh = function() {
+   var refresh = function() {
         $http.get('/posts').success(function(response) {
             console.log("I got the data I requested");
             $scope.posts = response;
@@ -19,4 +19,17 @@ app.controller('AppCtrl',function($scope,$http){
     };
 
     refresh();
+
+
+
+    $http.get('/status').success(function(response){
+       console.log(response);
+        if(response.id){
+            $scope.loginbtnShow = false;
+            $scope.logoutbtnShow = true;
+            $scope.userShow = true;
+            $scope.userName = response.displayName;
+
+        }
+    });
 });
