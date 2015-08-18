@@ -1,0 +1,17 @@
+var port = 8080;
+
+module.exports = {
+	port: port,
+	db: 'mongodb://localhost/dojugaad',
+	facebook: {
+		clientID: '1593285864278038',
+		clientSecret: 'a231d50802f4290c76ff4904946aeda5',
+		callbackURL: 'http://localhost:'+ port +'/auth/facebook/callback/'
+
+	},
+	google: {
+		clientID: '',
+		clientSecret: '',
+		callbackURL: ''
+	}
+};

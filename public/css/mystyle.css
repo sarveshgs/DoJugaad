@@ -1,0 +1,30 @@
+.container{
+    background: #eeeeee;
+}
+
+.head{
+   /* background: #00BCD4;*/
+    padding: 5px;
+    color: #fefefe;
+
+    /*background-color: #06023d;
+    background-image: url(http://www.transparenttextures.com/patterns/bright-squares.png);*/
+    /*background-color: #03c5f5;
+    background-image: url(http://www.transparenttextures.com/patterns/white-diamond-dark.png);*/
+    background-color: #110024;
+    background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /*background-color: #110024;
+    background-image: url(http://www.transparenttextures.com/patterns/escheresque.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+
+}
+
+.head h2{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+
