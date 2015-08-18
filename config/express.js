@@ -1,5 +1,4 @@
-var config = require('./config'),
-	express = require('express'),
+var express = require('express'),
 	bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser')
 	passport = require('passport'),
