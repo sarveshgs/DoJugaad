@@ -20,5 +20,5 @@ var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 app.listen(port, ipaddress);
 
-module.exports = app;
+
 console.log('Server running at '+ ipaddress + 'port:' + port);
