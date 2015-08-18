@@ -1,4 +1,4 @@
-#!/bin/env node
+
 
 var config = require('./config/config'),
 	mongo = require('./config/mongo'),
