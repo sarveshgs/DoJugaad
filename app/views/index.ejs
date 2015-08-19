@@ -10,7 +10,7 @@
 </head>
 
 <body ng-app="myApp" ng-controller="AppCtrl" ng-cloak>
-<md-content>
+<div>
 
     <% include header %>
 
@@ -24,9 +24,9 @@
             <md-card-content>
                 <md-content>
 
-                    <md-button class="md-raised md-primary" ng-href="submit.html">Ask Jugaad</md-button>
-                    <md-button class="md-raised md-primary" ng-href="submit.html#/idea">Submit Idea</md-button>
-                    <md-button class="md-raised md-primary" ng-href="submit.html#/product">Submit Product</md-button>
+                    <md-button class="md-raised md-primary" ng-href="/jugaad">Ask Jugaad</md-button>
+                    <md-button class="md-raised md-primary" ng-href="/idea">Submit Idea</md-button>
+                    <md-button class="md-raised md-primary" ng-href="/product">Submit Product</md-button>
 
                 </md-content>
 
@@ -52,7 +52,7 @@
         <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
 
     </div>
-</md-content>
+</div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>

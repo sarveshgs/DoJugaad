@@ -1,0 +1,31 @@
+<form name="idea" data-ng-controller="ideaController as ic"  class="md-padding">
+
+    <md-input-container>
+        <label>Title your Idea</label>
+        <input type="text" data-ng-model="ic.title" required>
+    </md-input-container>
+
+    <md-input-container>
+        <label>Describe your Idea</label>
+        <!--text-angular data-ng-model="description" required></text-angular-->
+        <textarea data-ng-model="ic.description" rows="5" required></textarea>
+    </md-input-container>
+
+    <md-input-container>
+        <label>Problem solved by Idea</label>
+        <input type="text" data-ng-model="ic.problem" />
+    </md-input-container>
+
+    <md-input-container>
+
+        <md-select data-ng-model="ic.category" placeholder="Specify the most suitable category" style="width: 50%" >
+            <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
+        </md-select>
+    </md-input-container>
+
+
+    <md-content layout="row" layout-align="center center">
+        <md-button class="md-raised md-primary" data-ng-click="create()">Submit</md-button>
+        <md-button class="md-raised md-warn" data-ng-click="clear()">Clear</md-button>
+    </md-content>
+</form>
