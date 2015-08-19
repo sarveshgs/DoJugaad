@@ -5,12 +5,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="css/form_style.css"/>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700"/>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <title>DoJugaad | Login</title>
+    <style>
+        .disp{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+
+        body,html{
+          height: 100%;
+          background-image: url('images/back.jpg');
+        }
+    </style>
 </head>
 
-<body ng-app="myApp" ng-controller="lController as lc" ng-cloak style="background-image: url('images/back.jpg')">
-<div ng-include="'login_form.htm'"></div>
+<body ng-app="myApp" ng-controller="lController as lc">
+<div ng-include="'login_form.htm'" ng-cloak></div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
@@ -18,5 +34,15 @@
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="js/login.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        setTimeout(function(){
+            $('md-card').removeClass('hide').addClass('disp');
+
+        }, 500);
+
+    });
+</script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/preloader.css"/>
 
     <title>DoJugaad</title>
+
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
@@ -51,7 +52,7 @@
                         <md-list-item class="md-3-line" ng-repeat="item in posts">
 
                             <div flex class="md-whiteframe-z2" style="margin-bottom: 10px;">
-                                <md-content class="md-padding">
+                                <md-content class="md-padding" ng-cloak>
                                     <h3>{{item.title}}</h3>
                                     <p>{{item.description}}</p>
                                     <p>{{item.category}}</p>

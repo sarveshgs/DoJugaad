@@ -9,10 +9,10 @@ module.exports = function(db) {
         done(null, user);
     });
 
-    passport.deserializeUser(function(id, done) {
+    passport.deserializeUser(function(user, done) {
         //db.userData.findOne({_id: id}, function (err, user) {
           //  console.log('deserializing user:',user);
-            done(null, id);
+            done(null, user);
         //});
     });
 

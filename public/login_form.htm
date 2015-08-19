@@ -5,25 +5,22 @@
 
 
 
-        <md-card flex>
+        <md-card flex class="hide">
             <img ng-src="{{imagePath}}" class="md-card-image" alt="DoJugaad">
             <md-card-content>
-                <md-content>
-                    <form name="login" method="post" action="/login">
-                      <md-input-container>
-                          <label>Email</label>
-                          <input type="email" required name="email" data-ng-model="lc.email"/>
-                          <div ng-messages="login.email.$error">
-                              <div ng-message="required">This is required.</div>
-                          </div>
+
+                    <form name="login" method="post" action="/login" layout-padding>
+
+                        <md-input-container class="md-icon-float">
+                            <md-icon md-svg-src="images/icons/account.svg" class="email"></md-icon>
+                            <input name="email" data-ng-model="lc.email" type="email" placeholder="Email (required)" ng-required="true">
+                        </md-input-container>
+
+                       <md-input-container class="md-icon-float">
+                           <md-icon md-svg-src="images/icons/lock-outline.svg" class="password"></md-icon>
+                           <input name="password" data-ng-model="lc.password" type="password" placeholder="Password (required)" ng-required="true">
                       </md-input-container>
-                      <md-input-container>
-                          <label>Password</label>
-                          <input type="password" required name="password" data-ng-model="lc.password"/>
-                          <div ng-messages="login.password.$error">
-                              <div ng-message="required">This is required.</div>
-                          </div>
-                      </md-input-container>
+
                       <div layout="row">
                           <div flex="50">
                               <md-checkbox data-ng-model="lc.remember" aria-label="Remember">
@@ -31,7 +28,7 @@
                               </md-checkbox>
                           </div>
                           <div flex="50">
-                              <md-button ng-href="">Forgot Password?</md-button>
+                              <p><a style="text-decoration: none;margin-top: -3px; float: right;" ng-href="">Forgot Password?</a></p>
                           </div>
                       </div>
                         <md-input-container>
@@ -48,13 +45,19 @@
                     </div>
                     <div layout="row" layout-align="center center">
 
-                            <md-button class="md-raised md-primary" ng-href="/auth/facebook">Facebook</md-button>
+                            <md-button class="md-raised md-primary" ng-href="/auth/facebook">
+                                <md-icon md-svg-src="images/icons/facebook.svg"></md-icon>
+                                Facebook
+                            </md-button>
 
-                            <md-button class="md-raised md-warn" ng-href="/auth/google">Google</md-button>
+                            <md-button class="md-raised md-warn" ng-href="/auth/google">
+                                <md-icon md-svg-src="images/icons/google-plus.svg"></md-icon>
+                                Google
+                            </md-button>
                         </div>
 
 
-                </md-content>
+
             </md-card-content>
 
         </md-card>

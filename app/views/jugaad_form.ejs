@@ -1,28 +1,28 @@
-<form name="jugaad" data-ng-controller="jugaadController as jc" class="md-padding">
+<form name="jugaad" class="md-padding">
 
     <md-input-container>
         <label>Jugaad Title</label>
-        <input type="text" data-ng-model="jc.title" required>
+        <input type="text" data-ng-model="sc.title" required>
     </md-input-container>
 
     <md-input-container>
         <label>Describe your Jugaad</label>
         <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea data-ng-model="jc.description" rows="5" required></textarea>
+        <textarea data-ng-model="sc.description" rows="5" required></textarea>
     </md-input-container>
 
     <md-input-container>
 
-        <md-select data-ng-model="jc.category" placeholder="Specify the most suitable category" style="width: 50%" >
+        <md-select data-ng-model="sc.category" placeholder="Specify the most suitable category" style="width: 50%" >
             <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
         </md-select>
     </md-input-container>
 
     <md-input-container>
-        <md-checkbox data-ng-model="jc.auth" aria-label="Author" data-ng-click="tog()">
+        <md-checkbox data-ng-model="sc.auth" aria-label="Author" data-ng-click="tog()">
             If this idea is not originally your's or is modified, please credit the author.
         </md-checkbox>
-        <input type="text" data-ng-model="jc.authname" data-ng-disabled="myvar">
+        <input type="text" data-ng-model="sc.authname" data-ng-disabled="myvar">
     </md-input-container>
 
     <md-content layout="row" layout-align="center center">
