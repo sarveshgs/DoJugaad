@@ -1,16 +1,29 @@
-<md-toolbar layout="row" class="md-whiteframe-z2">
+<style>
+    .avatar {
+        width: 48px;
+        margin: 16px;
+        border-radius: 48px;
+    }
+</style>
+
+<md-toolbar layout="row" class="md-whiteframe-z2" ng-cloak>
     <div class="md-toolbar-tools">
-        <span class="md-flex">DoJugaad</span>
+        <span class="md-flex"><a ng-href="/">DoJugaad</a></span>
         <span flex></span>
 
-        <!--md-button aria-label="Login" ng-click="">
-            <ng-md-icon icon="more_vert"></ng-md-icon>
-        </md-button-->
-        <% if ( user ) { %>
-        <span class="md-flex"><%=user.name.givenName%></span>
+
+        <% if ( data ) { %>
+        <% if (data.name == 'aashish' || data.name == 'Ashish') {%>
+        <md-button  ng-href="/admin"  aria-label="Admin Panel" class="md-raised ">Panel</md-button>
+        <%}%>
+        <img ng-src="{{ avatar }}" alt="" class="md-avatar avatar">
+        <span class="md-flex" ><%=data.name%></span>
         <md-button  ng-href="/logout"  aria-label="Logout" class="md-raised md-accent">Logout</md-button>
         <% }else { %>
-        <md-button  ng-href="/login"  aria-label="Login" class="md-raised md-warn">Login</md-button>
+        <md-button  ng-href="/login"  aria-label="Login" class="md-raised md-warn">
+        <md-icon md-svg-src="images/icons/account-circle.svg"></md-icon>
+            Login
+        </md-button>
         <% } %>
     </div>
 </md-toolbar>

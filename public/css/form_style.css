@@ -1,0 +1,8 @@
+.inputdemoIcons .inputIconDemo {
+    min-height: 48px; }
+ md-input-container:not(.md-input-invalid) > md-icon.email {
+    color: black; }
+ md-input-container:not(.md-input-invalid) > md-icon.name {
+    color: black; }
+ md-input-container.md-input-invalid > md-icon.email,  md-input-container.md-input-invalid > md-icon.password {
+    color: red; }

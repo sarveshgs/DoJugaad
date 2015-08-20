@@ -7,13 +7,18 @@ module.exports = function(app, passport,db) {
 
     app.get('/', function(req, res) {
         res.render('index.ejs', {
-            user : req.user // get the user out of session and pass to template
+            data : req.user, // get the user out of session and pass to template
+            message:null
         });
     });
 
 
     app.get('/data', function(req, res){
-        res.json(req.user);
+      var msg=null;
+        if(req.session.posted){
+            msg = 'posted';
+        }
+        res.json({'data':req.user,'message':msg});
     });
 
 
@@ -79,16 +84,54 @@ module.exports = function(app, passport,db) {
         failureFlash : true // allow flash messages
     }));
 
+
+
+
     // =====================================
-    // PROFILE SECTION =========================
+    // SUBMIT SECTION =========================
     // =====================================
-    // we will want this protected so you have to be logged in to visit
-    // we will use route middleware to verify this (the isLoggedIn function)
-    app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
-            user : req.user // get the user out of session and pass to template
+
+    app.get('/jugaad', function(req, res) {
+        res.render('submit.ejs', {
+            data : req.user, // get the user out of session and pass to template
+            title : 'Ask Jugaad',
+            id: 'j'
         });
     });
+
+
+
+
+    /* Database code for inserting posts */
+    app.post('/posts', function (req, res) {
+
+        var svc = req.body;
+        console.log(svc);
+        req.session.posted = true;
+        db.postData.insert(req.body, function (err, doc) {
+            res.json(doc);
+        });
+
+    });
+
+    app.get('/idea', function(req, res) {
+        res.render('submit.ejs', {
+            user : req.user, // get the user out of session and pass to template
+            title : 'Submit Idea',
+            id: 'i'
+        });
+    });
+
+    app.get('/product', function(req, res) {
+        res.render('submit.ejs', {
+            user : req.user, // get the user out of session and pass to template
+            title : 'Submit Product',
+            id: 'p'
+        });
+    });
+
+
+
 
     // =====================================
     // LOGOUT ==============================
@@ -110,7 +153,16 @@ module.exports = function(app, passport,db) {
         });
     });
 
-};
+    app.get('/check', function(req,res){
+        if(req.isAuthenticated()){
+            res.json({'connected':true,'uid':req.user._id});
+          }
+
+        res.send(false);
+    });
+
+
+};/* End of module */
 
 
 

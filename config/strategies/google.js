@@ -31,25 +31,32 @@ module.exports = function() {
                     return done(err);
 
                 if (!user) {
-                    console.log('No such User found');
-                    db.userData.insert({
+                    var User = {
                         "profileid" : profile.id,
-                        "name": profile.name,
+                        "name": profile.name.givenName,
+                        "fullname":profile.name.givenName+' '+profile.name.familyName,
                         "emailid" : email,
                         "password": null,
+                        "gender":profile.gender,
                         "googlephotourl" : profile.photos[0].value,
                         "facebookphotourl" : null,
                         "facebookConected" : false,
-                        "googleConnected" : true
-                    },function(err, value){
+                        "googleConnected" : true,
+                        "avatar":null
+                    };
+                    console.log('No such User found');
+                    db.userData.insert(User,function(err, value){
                         if(err){
                             console.log("Some error occured while insertion\n");
                         }
                     });
-
+                    return done(null,User);
+                }
+                else{
+                   return done(null,user);
                 }
 
-                return done(null,profile);
+
             });
         }));
 

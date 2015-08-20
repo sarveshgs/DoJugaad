@@ -28,24 +28,34 @@ module.exports = function() {
 
                     if (!user) {
                         console.log('No such User found');
-                        db.userData.insert({
+
+                        var User={
                             "profileid": profile.id,
                             "name": profile.name.givenName,
+                            "fullname":profile.name.givenName+' '+profile.name.familyName,
                             "emailid": email,
                             "password": null,
+                            "gender":profile.gender,
                             "googlephotourl": null,
                             "facebookphotourl": null,
                             "facebookConected": true,
-                            "googleConnected": false
-                        }, function (err, value) {
+                            "googleConnected": false,
+                            "avatar":null
+                        };
+                        db.userData.insert(User, function (err, value) {
                             if (err) {
                                 console.log("Some error occured while insertion\n");
                             }
                         });
 
+
+                        return done(null, User);
+                    }
+                    else{
+                     return done(null,user);
                     }
 
-                    return done(null, profile);
+
                 });
             });
 
