@@ -6,6 +6,10 @@ var app = angular.module('myApp',['ngMaterial']);
 app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
     console.log('App running');
 
+$scope.avatar='images/avatars/male/m1.png';
+
+
+console.log($scope.avatar+'ab');
 
     $scope.toastPosition = {
         bottom: false,
@@ -38,7 +42,7 @@ app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
 
 
     $http.get('/data').success(function(response){
-       console.log(response);
+       //console.log(response);
         if(response.data){
        if(response.data.facebookConected==true){
            console.log('Yes');
@@ -77,6 +81,7 @@ app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
                }
            }
        }
+        console.log($scope.avatar);
         }
 
         else if(response.message){
