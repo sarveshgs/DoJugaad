@@ -9,7 +9,7 @@ app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
 $scope.avatar='images/avatars/male/m1.png';
 
 
-console.log($scope.avatar+'ab');
+
 
     $scope.toastPosition = {
         bottom: false,
@@ -53,6 +53,7 @@ console.log($scope.avatar+'ab');
               else{
                 $scope.avatar='images/avatars/male/m1.png';
              }
+            
           }
            else if(response.data.gender=='female'){
               if(response.data.facebookphotourl!=null){
@@ -62,6 +63,7 @@ console.log($scope.avatar+'ab');
                   $scope.avatar='images/avatars/female/f3.png';
               }
           }
+        console.log($scope.avatar);
        }
         else if(response.data.googleConnected==true){
            if(response.data.gender=='male'){
@@ -80,8 +82,9 @@ console.log($scope.avatar+'ab');
                    $scope.avatar='images/avatars/female/f3.png';
                }
            }
-       }
         console.log($scope.avatar);
+       }
+        //console.log($scope.avatar);
         }
 
         else if(response.message){

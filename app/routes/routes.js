@@ -1,5 +1,5 @@
 // app/routes.js
-module.exports = function(app, passport,db) {
+module.exports = function(app, passport,db,mongojs) {
 
     // =====================================
     // HOME PAGE (with login links) ========
@@ -131,7 +131,12 @@ module.exports = function(app, passport,db) {
     });
 
 
-
+    // =======================================
+    // ADMIN =================================
+    // =======================================
+    app.get('/admin',function(req, res){
+        res.render('admin_index.ejs');
+    });
 
     // =====================================
     // LOGOUT ==============================
@@ -143,15 +148,27 @@ module.exports = function(app, passport,db) {
 
 
 
-    /* Getting all data */
+    /* Getting all post data */
     app.get('/posts', function (req, res) {
         console.log('I received a GET request');
 
         db.postData.find(function (err, docs) {
-            console.log(docs);
+            //console.log(docs);
             res.json(docs);
         });
     });
+
+    /* Getting all users data */
+    app.get('/users', function (req, res) {
+        console.log('I received a GET request');
+
+        db.userData.find(function (err, docs) {
+            //console.log(docs);
+            res.json(docs);
+        });
+    });
+
+
 
     app.get('/check', function(req,res){
         if(req.isAuthenticated()){
@@ -160,6 +177,32 @@ module.exports = function(app, passport,db) {
 
         res.send(false);
     });
+
+
+
+
+    /*Deleting Post data*/
+    app.delete("/posts/:id", function (req, res) {
+        var anID = req.params.id;
+
+        db.postData.remove({_id : mongojs.ObjectId(anID)},
+            function (err, doc){
+                res.json(doc);
+            });
+        //res.json(anID);
+    });
+
+    /*Deleting User data*/
+    app.delete("/users/:id", function (req, res) {
+        var anID = req.params.id;
+
+        db.userData.remove({_id : mongojs.ObjectId(anID)},
+            function (err, doc){
+                res.json(doc);
+            });
+    });
+
+
 
 
 };/* End of module */
