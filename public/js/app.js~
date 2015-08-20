@@ -41,6 +41,7 @@ app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
        console.log(response);
         if(response.data){
        if(response.data.facebookConected==true){
+           console.log('Yes');
           if(response.data.gender=='male'){
              if(response.data.facebookphotourl!=null){
                 $scope.avatar=response.data.facebookphotourl;
