@@ -1,0 +1,46 @@
+
+<div layout="row">
+    <div hide-sm flex-md="20" flex-gt-md="30" flex-lg="35" flex-gt-lg="35"></div>
+
+    <md-card flex class="hide">
+        <h2 style="">SignUp</h2>
+        <!--img ng-src="{{imagePath}}" class="md-card-image" alt="DoJugaad"-->
+        <md-card-content>
+
+            <form name="signup" layout-padding>
+
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/account.svg" class="email"></md-icon>
+                    <input name="email" data-ng-model="lc.email" type="email" placeholder="Email (required)" ng-required="true">
+                </md-input-container>
+
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/lock-outline.svg" class="password"></md-icon>
+                    <input name="password" data-ng-model="lc.password" type="password" placeholder="Password (required)" ng-required="true">
+                </md-input-container>
+
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/account-circle.svg" class="em-ail"></md-icon>
+                    <input name="name" data-ng-model="lc.name" type="text" placeholder="Name" ng-required="true">
+                </md-input-container>
+
+
+                <md-radio-group ng-model="lc.gender">
+
+                    <md-radio-button value="male" class="md-primary" ng-style="{'display':'inline'}">Male</md-radio-button>
+                    <md-radio-button value="female" ng-style="{'display':'inline'}"> Female </md-radio-button>
+                </md-radio-group>
+
+            </form>
+            <md-input-container>
+                <md-button flex class="md-raised md-primary" ng-click="create()">Signup</md-button>
+            </md-input-container>
+
+        </md-card-content>
+
+    </md-card>
+
+
+
+    <div hide-sm flex-md="20" flex-gt-md="30" flex-lg="35" flex-gt-lg="35"></div>
+</div>

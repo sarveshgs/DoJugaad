@@ -18,11 +18,25 @@ module.exports = function() {
             passReqToCallback: true
         },
         function(request, accessToken, refreshToken, profile, done) {
-            //console.log(profile);
+
             var email=null;
+            var avatar = null;
 
             if(profile.emails[0].value!=undefined||profile.emails[0].value!=null){
                 email = profile.emails[0].value;
+            }
+
+            var photourl = profile.photos[0].value;
+
+            //If photourl is not defined
+            if(photourl != null){
+                avatar = photourl;
+            }
+            else{
+                if(profile.gender=='male')
+                    avatar = 'images/avatars/male/m1.png';
+                else
+                    avatar = 'images/avatars/female/f3.png';
             }
 
             db.userData.findOne({profileid:profile.id},function (err, user) {
@@ -38,13 +52,12 @@ module.exports = function() {
                         "emailid" : email,
                         "password": null,
                         "gender":profile.gender,
-                        "googlephotourl" : profile.photos[0].value,
-                        "facebookphotourl" : null,
                         "facebookConected" : false,
                         "googleConnected" : true,
-                        "avatar":null
+                        "avatar":avatar,
+                        "timestamp":new Date().getTime()
                     };
-                    console.log('No such User found');
+
                     db.userData.insert(User,function(err, value){
                         if(err){
                             console.log("Some error occured while insertion\n");
@@ -55,11 +68,8 @@ module.exports = function() {
                 else{
                    return done(null,user);
                 }
-
-
-            });
+           });
         }));
-
 };
 
 

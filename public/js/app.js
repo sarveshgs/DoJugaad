@@ -3,9 +3,13 @@
  */
 var app = angular.module('myApp',['ngMaterial']);
 
-app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
+app.controller('AppCtrl',function($scope,$http,$mdToast, $animate,$rootScope){
     console.log('App running');
 
+
+    if($rootScope.submitData){
+        console.log($rootScope.submitData);
+    }
 
     $scope.toastPosition = {
         bottom: false,
@@ -75,6 +79,10 @@ app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
                    $scope.avatar='images/avatars/female/f3.png';
                }
            }
+       }
+
+           else{
+             $scope.avatar = response.data.avatar;
        }
         }
 

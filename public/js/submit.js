@@ -4,7 +4,7 @@
 
 var app = angular.module('myApp',['ngMaterial']);
 
-app.controller('sController',function($scope,$http,$window){
+app.controller('sController',function($scope,$http,$window,$rootScope){
     console.log('App running');
 
 
@@ -72,7 +72,7 @@ app.controller('sController',function($scope,$http,$window){
             //If Locally connected
             else {
 
-                pid = response.data._id;
+                $scope.avatar = response.data.avatar;
             }
         }
 
@@ -89,6 +89,17 @@ app.controller('sController',function($scope,$http,$window){
      */
     $scope.create = function(){
       var author,postUserId,image,media,Data = null;
+        Data={
+            'postType':'Jugaad',
+            'title':$scope.sc.title,
+            'description':$scope.sc.description,
+            'category':$scope.sc.category,
+            'authorName':author,
+            'postUserId':postUserId,
+            'timestamp':new Date().getTime(),
+            'image':image,
+            'media':media
+        };
         //console.log(isConnected,pid);
         if(isConnected){
             if($scope.sc.auth){
@@ -126,7 +137,13 @@ app.controller('sController',function($scope,$http,$window){
 
         }
         else{
+            $http.post('/temp',Data).success(function(response){
+                console.log('Saved data temporarily');
+            }) ;
 
+            $window.location.href = '/';
+            $window.location.href;
+            //console.log($rootScope.submitData);
         }
     };
 
