@@ -13,12 +13,23 @@ module.exports = function() {
             passReqToCallback: true
         },
         function(req, accessToken, refreshToken, profile, done) {
-            //console.log(profile);
-            var email=null;
-
-             if(profile.emails!=undefined||profile.emails!=null){
+            var email,photourl=null;
+            var avatar = null;
+            //If email is not defined
+            if(profile.emails!=undefined||profile.emails!=null){
                    email = profile.emails[0].value;
                 }
+
+            //If photourl is not defined
+            if(photourl != null){
+                avatar = photourl;
+            }
+            else{
+                if(profile.gender=='male')
+                avatar = 'images/avatars/male/m1.png';
+                else
+                avatar = 'images/avatars/female/f3.png';
+            }
 
             process.nextTick(function() {
                 db.userData.findOne({profileid: profile.id}, function (err, user) {
@@ -36,11 +47,10 @@ module.exports = function() {
                             "emailid": email,
                             "password": null,
                             "gender":profile.gender,
-                            "googlephotourl": null,
-                            "facebookphotourl": null,
                             "facebookConected": true,
                             "googleConnected": false,
-                            "avatar":null
+                            "avatar":avatar,
+                            "timestamp":new Date().getTime()
                         };
                         db.userData.insert(User, function (err, value) {
                             if (err) {
@@ -48,18 +58,13 @@ module.exports = function() {
                             }
                         });
 
-
                         return done(null, User);
                     }
                     else{
                      return done(null,user);
                     }
-
-
                 });
             });
-
         }));
-
 };
 

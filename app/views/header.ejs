@@ -16,7 +16,7 @@
         <% if (data.name == 'aashish' || data.name == 'Ashish') {%>
         <md-button  ng-href="/admin"  aria-label="Admin Panel" class="md-raised ">Panel</md-button>
         <%}%>
-        <img ng-src="images/avatars/male/m1.png" alt="" class="md-avatar avatar">
+        <img ng-src="{{ avatar }}" alt="" class="md-avatar avatar">
         <span class="md-flex" ><%=data.name%></span>
         <md-button  ng-href="/logout"  aria-label="Logout" class="md-raised md-accent">Logout</md-button>
         <% }else { %>
