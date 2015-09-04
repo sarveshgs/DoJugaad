@@ -77,6 +77,10 @@ module.exports = function(app, passport,db,mongojs) {
         res.render('admin_index.ejs');
     });
 
+     app.get('/test',function(req, res){
+        res.render('test.ejs');
+    });
+
 
 
 
