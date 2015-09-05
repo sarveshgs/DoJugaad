@@ -1,24 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
     <link rel="stylesheet" href="css/mystyle.css"/>
+    <link rel="stylesheet" href="css/form_style.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Exo+2:500,600' rel='stylesheet' type='text/css'>
-    <title>DoJugaad | Submit</title>
+    <title>DoJugaad | Jugaad</title>
+
 </head>
+<style>
+.head{
+   /* background: #00BCD4;*/
+    padding: 5px;
+    color: #fefefe;
 
-<body ng-app="myApp"  data-ng-controller="sController as sc">
-<div class="container">
-    <% include header %>
+    /*background-color: #06023d;
+    background-image: url(http://www.transparenttextures.com/patterns/bright-squares.png);*/
+    /*background-color: #03c5f5;
+    background-image: url(http://www.transparenttextures.com/patterns/white-diamond-dark.png);*/
+    background-color: #110024;
+    background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
 
-    <div layout="row">
-        <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
+    /*background-color: #110024;
+    background-image: url(http://www.transparenttextures.com/patterns/escheresque.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
-        <!--md-card flex>
+
+}
+
+.head h2{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+</style>
+
+<body layout="column" data-ng-controller="sController as sc">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="logo">
+        <img src="img/gear.png" alt="DoJugaad">
+        <span>DoJugaad</span>
+    </div>
+</div>
+
+<% include header %>
+<div layout="row" flex style="background-color:#eeeeee;">
+    <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
+ <div layout="row" flex layout-margin>
+        <md-card flex>
             <md-card-component>
                 <div class="head">
                     <h2><%=title%></h2>
@@ -32,13 +66,13 @@
                 <% } %>
 
             </md-card-component>
-        </md-card-->
-        <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
-    </div>
+        </md-card>
+  </div>
+    <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
 
 </div>
 
-
+<% include footer %>
 
 
 
@@ -49,5 +83,6 @@
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="js/submit.js"></script>
+<script src="js/pace.min.js"></script>
 </body>
 </html>
