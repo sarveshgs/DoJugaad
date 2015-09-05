@@ -1,0 +1,62 @@
+<html lang="en" ng-app="StarterApp">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <title>DoJugaad | Submit</title>
+
+</head>
+
+<body layout="column" ng-controller="AppCtrl">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="logo">
+        <img src="img/gear.png" alt="DoJugaad">
+        <span>DoJugaad</span>
+    </div>
+</div>
+
+<% include header %>
+
+<div layout="row" flex>
+    <!--md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+
+    </md-sidenav-->
+    <!--div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding">
+
+        </md-content>
+    </div-->
+    <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
+    <div layout="row" flex layout-margin>
+        <div flex flex-order="3">
+            [flex-order="3"]
+        </div>
+        <div flex flex-order="2">
+            [flex-order="2"]
+        </div>
+        <div flex flex-order="1">
+            [flex-order="1"]
+        </div>
+    </div>
+    <div hide-sm flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20"></div>
+
+</div>
+
+<% include footer %>
+
+<!-- Angular Material Dependencies -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="js/blank.js"></script>
+<script src="js/pace.min.js"></script>
+</body>
+</html>
