@@ -3,13 +3,13 @@
  */
 var app = angular.module('myApp',['ngMaterial']);
 
-app.controller('AppCtrl',function($scope,$http,$mdToast, $animate){
+app.controller('AppCtrl',function($scope,$http,$mdToast, $animate,$rootScope){
     console.log('App running');
 
-$scope.avatar='images/avatars/male/m1.png';
 
-
-
+    if($rootScope.submitData){
+        console.log($rootScope.submitData);
+    }
 
     $scope.toastPosition = {
         bottom: false,
@@ -42,10 +42,9 @@ $scope.avatar='images/avatars/male/m1.png';
 
 
     $http.get('/data').success(function(response){
-       //console.log(response);
+       console.log(response);
         if(response.data){
        if(response.data.facebookConected==true){
-           console.log('Yes');
           if(response.data.gender=='male'){
              if(response.data.facebookphotourl!=null){
                 $scope.avatar=response.data.facebookphotourl;
@@ -53,9 +52,8 @@ $scope.avatar='images/avatars/male/m1.png';
               else{
                 $scope.avatar='images/avatars/male/m1.png';
              }
-            
           }
-           else if(response.data.gender=='female'){
+           else if(response.data.gender==female){
               if(response.data.facebookphotourl!=null){
                   $scope.avatar=response.data.facebookphotourl;
               }
@@ -63,7 +61,6 @@ $scope.avatar='images/avatars/male/m1.png';
                   $scope.avatar='images/avatars/female/f3.png';
               }
           }
-        console.log($scope.avatar);
        }
         else if(response.data.googleConnected==true){
            if(response.data.gender=='male'){
@@ -74,7 +71,7 @@ $scope.avatar='images/avatars/male/m1.png';
                    $scope.avatar='images/avatars/male/m1.png';
                }
            }
-           else if(response.data.gender=='female'){
+           else if(response.data.gender==female){
                if(response.data.googlephotourl!=null){
                    $scope.avatar=response.data.googlephotourl;
                }
@@ -82,9 +79,11 @@ $scope.avatar='images/avatars/male/m1.png';
                    $scope.avatar='images/avatars/female/f3.png';
                }
            }
-        console.log($scope.avatar);
        }
-        //console.log($scope.avatar);
+
+           else{
+             $scope.avatar = response.data.avatar;
+       }
         }
 
         else if(response.message){

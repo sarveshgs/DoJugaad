@@ -18,11 +18,24 @@ module.exports = function(app, passport,db,mongojs) {
     });
 
 
+    app.get('/submit', function(req, res) {
+        res.render('submit.ejs', {
+            data : req.user, // get the user out of session and pass to template
+        });
+    });
+
+    app.get('/blank', function(req, res) {
+        res.render('blank.ejs', {
+            data : req.user, // get the user out of session and pass to template
+        });
+    });
+
+
     //==================================================================================================================
     // ==========================================   2. Jugaad Page    ==================================================
     //==================================================================================================================
     app.get('/jugaad', function(req, res) {
-        res.render('submit.ejs', {
+        res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
             title : 'Ask Jugaad',
             id: 'j'
@@ -34,7 +47,7 @@ module.exports = function(app, passport,db,mongojs) {
     // ==========================================   3. Idea Page    ==================================================
     //==================================================================================================================
     app.get('/idea', function(req, res) {
-        res.render('submit.ejs', {
+        res.render('base.ejs', {
             user : req.user, // get the user out of session and pass to template
             title : 'Submit Idea',
             id: 'i'
@@ -46,7 +59,7 @@ module.exports = function(app, passport,db,mongojs) {
     // ==========================================   3. Product Page    ==================================================
     //==================================================================================================================
     app.get('/product', function(req, res) {
-        res.render('submit.ejs', {
+        res.render('base.ejs', {
             user : req.user, // get the user out of session and pass to template
             title : 'Submit Product',
             id: 'p'
@@ -75,10 +88,6 @@ module.exports = function(app, passport,db,mongojs) {
     //==================================================================================================================
     app.get('/admin',function(req, res){
         res.render('admin_index.ejs');
-    });
-
-     app.get('/test',function(req, res){
-        res.render('test.ejs');
     });
 
 
