@@ -48,7 +48,7 @@ module.exports = function(app, passport,db,mongojs) {
     //==================================================================================================================
     app.get('/idea', function(req, res) {
         res.render('base.ejs', {
-            user : req.user, // get the user out of session and pass to template
+            data : req.user, // get the user out of session and pass to template
             title : 'Submit Idea',
             id: 'i'
         });
@@ -60,7 +60,7 @@ module.exports = function(app, passport,db,mongojs) {
     //==================================================================================================================
     app.get('/product', function(req, res) {
         res.render('base.ejs', {
-            user : req.user, // get the user out of session and pass to template
+            data : req.user, // get the user out of session and pass to template
             title : 'Submit Product',
             id: 'p'
         });

@@ -1,31 +1,31 @@
-<form name="product" data-ng-controller="productController as pc"  class="md-padding">
+<form name="product" class="md-padding">
 
     <md-input-container>
         <label>Product Name</label>
-        <input type="text" data-ng-model="pc.name" required>
+        <input type="text" data-ng-model="sc.name" required>
     </md-input-container>
 
     <md-input-container>
         <label>Describe your Product</label>
         <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea data-ng-model="pc.description" rows="5" required></textarea>
+        <textarea data-ng-model="sc.description" rows="5" required></textarea>
     </md-input-container>
 
     <md-input-container>
         <label>Problem solved by Product</label>
-        <input type="text" data-ng-model="pc.problem"/>
+        <input type="text" data-ng-model="sc.problem"/>
     </md-input-container>
 
     <md-input-container>
 
-        <md-select data-ng-model="pc.category" placeholder="Specify the most suitable category" style="width: 50%" >
+        <md-select data-ng-model="sc.category" placeholder="Specify the most suitable category" style="width: 50%" >
             <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
         </md-select>
     </md-input-container>
 
     <md-input-container style="width: 50%">
         <label>Expected minimum price</label>
-        <input type="number" data-ng-model="pc.price"/>
+        <input type="number" data-ng-model="sc.price"/>
     </md-input-container>
 
     <md-content layout="row" layout-align="center center">
