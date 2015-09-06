@@ -13,10 +13,21 @@
 </head>
 <style>
 .head{
+   /* background: #00BCD4;*/
     padding: 5px;
     color: #fefefe;
+
+    /*background-color: #06023d;
+    background-image: url(http://www.transparenttextures.com/patterns/bright-squares.png);*/
+    /*background-color: #03c5f5;
+    background-image: url(http://www.transparenttextures.com/patterns/white-diamond-dark.png);*/
     background-color: #110024;
     background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
+
+    /*background-color: #110024;
+    background-image: url(http://www.transparenttextures.com/patterns/escheresque.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
 
 }
 

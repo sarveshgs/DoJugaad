@@ -60,45 +60,18 @@
 
 
 
-/*
- * ===================================
- * Footer
- * ===================================
- * */
-.footer-top {
-    background: #272727;
-    padding: 15px 0;
-}
+
+
 .footer-bottom {
     background: #222222;
     padding: 15px 0;
+    width: 100%;
+    text-align: center;
 }
 .footer-bottom p {
     margin: 0;
+    color: #fefefe;
 
 }
-.footer {
-    color: #aaa;
-}
-.footer p,
-.footer a {
-    color: #aaa;
-}
-.footer li:hover,
-.footer p:hover,
-.footer a:hover {
-    color: #dddddd;
-}
-.footer h4 {
-    font-weight: 300;
-    font-size: 20px;
-    border-bottom: 1px solid #aaaaaa;
-    padding-bottom: 5px;
-    width: 80%;
-    color: #1eb9c1;
-}
-.footer .circle-icons i {
-    background: #333333;
-    color: #aaa;
-    box-shadow: none;
-}
+
+
