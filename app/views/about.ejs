@@ -1,0 +1,132 @@
+<html lang="en" ng-app="myApp">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <title>DoJugaad | About</title>
+
+</head>
+
+<body layout="column" ng-controller="aController">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="logo">
+        <img src="img/gear.png" alt="DoJugaad">
+        <span>DoJugaad</span>
+    </div>
+</div>
+
+<% include header %>
+
+<div layout="row" flex style="background-color:#eeeeee;">
+    <!-- Left Margin -->
+    <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
+
+    <!-- Middle Content -->
+    <div layout="column" flex layout-margin layout-padding style="margin-top: 100px;">
+
+        <div class="about md-whiteframe-z3" style="background: #FFFFFF;">
+             <div layout="column" layout-align="start" layout-padding>
+                 <h3 class="center">DoJugaad : A jugaad for everything</h3>
+                 <p style="padding: 0px 15px;">At DoJugaad we intend to unite all the jugaad and jugaadu people of a world
+                     at one place and share their awesome ability of jugaad with others. We are open and welcome for
+                     problems, jugaadu ideas and jugaads of all sorts - from paintings to accessories, from technology
+                     and science to some random day-to-day problem.In short, we aim at making this world an easier place
+                     to live. We aim, to find a jugaad for every problem, together.
+                 </p>
+
+                 <div layout="column" layout-padding layout-wrap>
+
+                     <div flex>
+
+                           <img src="img/serv1.png" class="serv wow fadeInLeft" data-wow-delay="0.5s">
+                           <div class="content">
+                              <h4>Have a problem? Share</h4>
+                           <p>
+                               Problems that you share on DoJugaad, are made open for numerous jugaadu people out there.
+                               These problems are attacked by all those brains and finally, we expect to find a best fit
+                               solution to the problem. The idea will also be made to a product by us.
+                           </p>
+                           </div>
+                     </div>
+
+                     <div flex>
+
+                            <img src="img/serv2.png" class="serv wow fadeInLeft" data-wow-delay="0.5s">
+                         <div class="content">
+                             <h4>Have an idea? Let us know</h4>
+                            <p>
+                                Ideas that you share here with us on DoJugaad will be processed and carefully crafted
+                                into a real product. You may also contribute to the making and working of the product
+                                made out of your idea.
+                            </p>
+                         </div>
+                     </div>
+
+                     <div flex>
+                             <img src="img/serv3.png" class="serv wow fadeInLeft" data-wow-delay="0.5s">
+                         <div class="content">
+                             <h4>Have a product? Let us sell</h4>
+                             <p>
+                                 Great!! you have a nice jugaadu product to be made available to numerous people in need.
+                                 Here we also help people find customers for their products. Just let us know of the
+                                 product and have your customers.
+                             </p>
+                         </div>
+                     </div>
+
+                     <div flex>
+                         <img src="img/serv4.png" class="serv wow fadeInLeft" data-wow-delay="0.5s">
+                         <div class="content">
+                             <h4>None of them? You can still browse</h4>
+                             <p>
+                                 Here you have a nice opportunity to look at the jugaadu products that other people have
+                                 come up with, till now. You can have a look at them and find out if some of them may
+                                 come to your aid.
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div layout="column" layout-align="start" layout-padding>
+
+                     <h3>What do WE do in all this?</h3>
+                     <p>
+                         We, as mentioned above, bring your ideas to life so that they are no longer confined to the
+                         walls of your brain. Nor they are limited by any constraints. In short you need not worry about
+                         how to make a product of it.
+                     </p>
+                 </div>
+
+             </div>
+        </div>
+
+    </div>
+
+    <!-- Right Margin -->
+    <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
+
+</div>
+
+<% include footer %>
+
+<!-- Angular Material Dependencies -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/about.js"></script>
+<script src="js/pace.min.js"></script>
+</body>
+</html>

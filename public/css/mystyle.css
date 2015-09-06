@@ -102,3 +102,25 @@
     color: #aaa;
     box-shadow: none;
 }
+
+
+/*
+ * ===================================
+ * Helper Class
+ * ===================================
+ * */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.serv{
+  float: left;
+
+  margin-right: 20px;
+}
+
+.content{
+
+}
