@@ -1,4 +1,46 @@
 
+html,body{
+    font-family: 'Dosis', sans-serif;
+}
+
+/*
+** Main Container
+*/
+.holder{
+    background-color:#eeeeee;
+    background-image: url('../img/tile.png'); background-repeat: no-repeat;
+}
+
+/*
+** Main Card
+*/
+.card_holder{
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+/*
+** Avatar
+*/
+.avatar {
+    width: 48px;
+    margin: 16px;
+    border-radius: 48px;
+}
+
+
+.qa{
+    color: #607D8B;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.an{
+    color: #212121;
+    font-weight: 500;
+    font-size: 19px;
+    margin-top: 27.5px;
+}
 /** PRELOADER
 *****************************/
 
@@ -112,6 +154,7 @@
 .center{
     margin-left: auto;
     margin-right: auto;
+    display: block;
 }
 
 
@@ -123,4 +166,29 @@
 
 .content{
 
+}
+
+.wrap{
+    /*position: relative;*/
+    padding: 1px 15px;
+}
+
+.inner{
+    /*position: relative;
+    z-index: 2;*/
+}
+
+.wap:after {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 80px;
+    color: lightblue;
+    top: 50%;
+    left: 50%;
+
+    z-index: 1;
+    content: "\f0a1";
 }

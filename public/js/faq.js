@@ -1,18 +1,20 @@
 /**
+ * Created by aashish on 8/9/15.
+ */
+/**
  * Created by aashish on 6/9/15.
  */
 
 var app = angular.module('myApp',['ngMaterial']);
 
-app.controller('aController',function($scope,$http){
+app.controller('fController',function($scope,$http){
     console.log('App running');
 
 
     var isConnected = false;
     var pid = null;
 
-   $scope.title="About";
-
+    $scope.title = "FAQ";
 
     /**
      * To get User information if he/she is logged in
@@ -91,10 +93,8 @@ app.config(function($mdThemingProvider) {
 
     $mdThemingProvider.theme('default')
         .primaryPalette('myBlue')
-        .accentPalette('pink');
+        .accentPalette('blue-grey');
 
     $mdThemingProvider.theme('input', 'default')
         .primaryPalette('grey')
 });
-
-

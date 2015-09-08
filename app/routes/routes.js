@@ -23,6 +23,7 @@ module.exports = function(app, passport,db,mongojs) {
      app.get('/submit', function(req, res) {
         res.render('submit.ejs', {
             data : req.user, // get the user out of session and pass to template
+            title: 'Submit'
         });
     });
 
@@ -94,6 +95,18 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/about', function(req, res) {
         res.render('about.ejs', {
             data : req.user, // get the user out of session and pass to template
+            title: 'About'
+        });
+    });
+
+
+    //==================================================================================================================
+    // ==========================================   10. FAQ Page    ====================================================
+    //==================================================================================================================
+    app.get('/faq', function(req, res) {
+        res.render('faq.ejs', {
+            data : req.user, // get the user out of session and pass to template
+            title: 'FAQ'
         });
     });
 

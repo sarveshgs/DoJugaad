@@ -3,21 +3,20 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1" />
     <link rel="stylesheet" href="css/mystyle.css">
     <link href="css/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <title>DoJugaad | About</title>
+    <title>DoJugaad | FAQ</title>
 
 </head>
 
-<body layout="column" ng-controller="aController">
+<body layout="column" ng-controller="fController">
 <% include preloader %>
 <% include header %>
-<div ng-include="'about_content.htm'"></div>
+<div ng-include="'faq_content.htm'"></div>
 <% include footer %>
-
 
 <!-- Angular Material Dependencies -->
 <script src="bower_components/angular/angular.min.js"></script>
@@ -26,11 +25,11 @@
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
-<!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
-<!--script>
+<script src="js/wow.min.js"></script>
+<script>
     new WOW().init();
-</script-->
-<script src="js/about.js"></script>
+</script>
+<script src="js/faq.js"></script>
 <script src="js/pace.min.js"></script>
 </body>
 </html>
