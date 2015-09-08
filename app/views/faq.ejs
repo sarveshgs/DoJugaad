@@ -1,0 +1,35 @@
+<html lang="en" ng-app="myApp">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <title>DoJugaad | FAQ</title>
+
+</head>
+
+<body layout="column" ng-controller="fController">
+<% include preloader %>
+<% include header %>
+<div ng-include="'faq_content.htm'"></div>
+<% include footer %>
+
+<!-- Angular Material Dependencies -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/faq.js"></script>
+<script src="js/pace.min.js"></script>
+</body>
+</html>

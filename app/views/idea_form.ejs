@@ -1,24 +1,24 @@
-<form name="idea" data-ng-controller="ideaController as ic"  class="md-padding">
+<form name="idea" class="md-padding">
 
     <md-input-container>
         <label>Title your Idea</label>
-        <input type="text" data-ng-model="ic.title" required>
+        <input type="text" data-ng-model="sc.title" required>
     </md-input-container>
 
     <md-input-container>
         <label>Describe your Idea</label>
         <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea data-ng-model="ic.description" rows="5" required></textarea>
+        <textarea data-ng-model="sc.description" rows="5" required></textarea>
     </md-input-container>
 
     <md-input-container>
         <label>Problem solved by Idea</label>
-        <input type="text" data-ng-model="ic.problem" />
+        <input type="text" data-ng-model="sc.problem" />
     </md-input-container>
 
     <md-input-container>
 
-        <md-select data-ng-model="ic.category" placeholder="Specify the most suitable category" style="width: 50%" >
+        <md-select data-ng-model="sc.category" placeholder="Specify the most suitable category" style="width: 50%" >
             <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
         </md-select>
     </md-input-container>

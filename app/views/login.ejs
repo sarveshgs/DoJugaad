@@ -1,40 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
-    <link rel="stylesheet" href="css/form_style.css"/>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700"/>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="css/mystyle.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <title>DoJugaad | Login</title>
-    <style>
-        .disp{
-            display: block;
-        }
-        .hide{
-            display: none;
-        }
 
-        body,html{
-          height: 100%;
-          background-image: url('images/back.jpg');
-        }
-    </style>
 </head>
+<style>
+    .disp{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
 
-<body ng-app="myApp" ng-controller="lController as lc">
-<div ng-include="'login_form.htm'" ng-cloak></div>
+
+</style>
+
+<body layout="column" ng-controller="lController">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="logo">
+        <img src="img/gear.png" alt="DoJugaad">
+        <span>DoJugaad</span>
+    </div>
+</div>
+
+<div layout="row" flex style="background-color:#eeeeee; background-image: url('img/sd.jpg'); background-repeat: no-repeat;">
+    <!-- Left Margin -->
+    <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
+
+    <!-- Middle Content -->
+    <div layout="column" flex layout-padding style="margin-top: 100px;">
+
+        <div class="about md-whiteframe-z4" style="background: #FFFFFF;" layout-padding>
+
+            <form name="login" method="post" action="/login" layout-padding>
+
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/account.svg" class="email"></md-icon>
+                    <input name="email" data-ng-model="lc.email" type="email" placeholder="Email (required)" ng-required="true">
+                </md-input-container>
+
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/lock-outline.svg" class="password"></md-icon>
+                    <input name="password" data-ng-model="lc.password" type="password" placeholder="Password (required)" ng-required="true">
+                </md-input-container>
+
+                <div layout="row">
+                    <div flex="50">
+                        <md-checkbox data-ng-model="lc.remember" aria-label="Remember">
+                            Remember Me
+                        </md-checkbox>
+                    </div>
+                    <div flex="50">
+                        <p><a style="text-decoration: none;margin-top: -3px; float: right;" ng-href="">Forgot Password?</a></p>
+                    </div>
+                </div>
+
+                    <md-button flex class="md-raised md-primary" type="submit">Log In</md-button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Right Margin -->
+    <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
+
+</div>
+
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="js/pace.min.js"></script>
 <script src="js/login.js"></script>
-<script type="text/javascript">
+<!--script type="text/javascript">
     $(document).ready(function() {
 
         setTimeout(function(){
@@ -43,6 +92,6 @@
         }, 500);
 
     });
-</script>
+</script-->
 </body>
 </html>

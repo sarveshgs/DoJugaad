@@ -1,0 +1,83 @@
+<html lang="en" ng-app="myApp">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="css/mystyle.css"/>
+    <link rel="stylesheet" href="css/form_style.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <title>DoJugaad | Jugaad</title>
+
+</head>
+<style>
+.head{
+    padding: 5px;
+    color: #fefefe;
+    background-color: #110024;
+    background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
+
+}
+
+.head h2{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+</style>
+
+<body layout="column" data-ng-controller="sController as sc">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="logo">
+        <img src="img/gear.png" alt="DoJugaad">
+        <span>DoJugaad</span>
+    </div>
+</div>
+
+<% include header %>
+
+<div layout="row" flex style="background-color:#eeeeee;background-image: url('img/head2.png'); background-repeat: no-repeat;">
+    <!-- Left Margin -->
+    <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
+
+    <!-- Middle Content -->
+    <div layout="column" flex layout-padding style="margin-top: 150px;">
+        <md-card flex>
+            <md-card-component>
+                <div class="head">
+                    <h2><%=title%></h2>
+                </div>
+                <% if ( id == 'j' ) { %>
+                    <% include jugaad_form %>
+                <% }else if( id == 'i'){ %>
+                    <% include idea_form %>
+                <% }else if( id == 'p'){ %>
+                    <% include product_form %>
+                <% } %>
+
+            </md-card-component>
+        </md-card>
+  </div>
+
+    <!-- Right Margin -->
+    <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
+
+</div>
+
+<% include footer %>
+
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="js/submit.js"></script>
+<script src="js/pace.min.js"></script>
+</body>
+</html>

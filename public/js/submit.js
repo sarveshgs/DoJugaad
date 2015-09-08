@@ -150,7 +150,21 @@ app.controller('sController',function($scope,$http,$window,$rootScope){
 
 });
 
+app.config(function($mdThemingProvider) {
 
+    var myColor = $mdThemingProvider.extendPalette('blue', {
+        '500': '455A64'
+    });
+
+    $mdThemingProvider.definePalette('myBlue', myColor);
+
+    $mdThemingProvider.theme('default')
+        .primaryPalette('myBlue')
+        .accentPalette('blue-grey');
+
+    $mdThemingProvider.theme('input', 'default')
+        .primaryPalette('grey')
+});
 
 
 
