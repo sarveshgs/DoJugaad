@@ -41,6 +41,55 @@ html,body{
     font-size: 19px;
     margin-top: 27.5px;
 }
+
+
+/*
+** Header css
+*/
+.sh{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.14),0 8px 10px 1px rgba(0,0,0,.098),0 3px 14px 2px rgba(0,0,0,.084);
+}
+
+/*
+** Breadcrumb css
+*/
+.breadcrumb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.breadcrumb  a{
+    text-decoration: none;
+}
+
+.breadcrumb li{
+    display: inline;
+    float: left;
+    padding: 5px;
+}
+
+.breadcrumb .home{
+    color: #CFD8DC;
+    line-height: 48px;
+}
+
+.breadcrumb .home:hover{
+    color: #ffffff;
+}
+
+.breadcrumb .ar{
+    color: #ffffff;
+    line-height: 48px;
+}
+
+.breadcrumb .title {
+    font-size: 34px;
+    color: #ffffff;
+}
+
+
 /** PRELOADER
 *****************************/
 
@@ -169,26 +218,25 @@ html,body{
 }
 
 .wrap{
-    /*position: relative;*/
+    position: relative;
     padding: 1px 15px;
 }
 
-.inner{
-    /*position: relative;
-    z-index: 2;*/
+/*.inner{
+    position: relative;
+    z-index: 2;
 }
 
-.wap:after {
+.wrap:before {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     position: absolute;
-    font-size: 80px;
-    color: lightblue;
-    top: 50%;
-    left: 50%;
-
-    z-index: 1;
+    font-size: 72px;
+    color: #C5CAE9;
+    top: 70%;
+    left: 60%;
     content: "\f0a1";
-}
+    z-index: 1;
+}*/
