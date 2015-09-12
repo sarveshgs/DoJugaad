@@ -110,6 +110,16 @@ module.exports = function(app, passport,db,mongojs) {
         });
     });
 
+    //==================================================================================================================
+    // =====================================   11. How It Works Page    ================================================
+    //==================================================================================================================
+    app.get('/hiw', function(req, res) {
+        res.render('hiw.ejs', {
+            data : req.user, // get the user out of session and pass to template
+            title: 'How It Works'
+        });
+    });
+
 
     /**
      * Login processing will be done here
