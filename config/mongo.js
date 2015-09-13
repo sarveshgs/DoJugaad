@@ -1,5 +1,4 @@
-var config = require('./config'),
-             mongojs = require('mongojs');
+var  mongojs = require('mongojs');
 
 module.exports = function() {
     var mongodbConnectionString = process.env.OPENSHIFT_MONGODB_DB_URL;

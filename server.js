@@ -1,4 +1,3 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var config = require('./config/config'),
 	mongo = require('./config/mongo'),
@@ -9,7 +8,16 @@ var db = mongo(),
 	app = express(db),
 	passport = passport(db);
 
-app.listen(config.port);
+app.get('/env',function(req, res){
+   res.json(process.env);
+});
 
-module.exports = app;
-console.log(process.env.NODE_ENV + ' server running at http://localhost:' + config.port);
+//app.listen(config.port);
+
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+
+app.listen(port, ipaddress);
+
+
+console.log('Server running at '+ ipaddress + 'port:' + port);

@@ -1,10 +1,22 @@
 
 <div class="holder" layout="row" flex>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-list class="muppet-list">
+            <md-item ng-repeat="it in muppets">
+                <md-item-content>
+                    <md-button ng-click="selectMuppet(it)" ng-class="{'selected' : it === selected }">
+                        <img ng-src="{{it.iconurl}}" class="face" alt="">
+                        {{it.name}}
+                    </md-button>
+                </md-item-content>
+            </md-item>
+        </md-list>
+    </md-sidenav>
     <!-- Left Margin -->
     <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
 
     <!-- Middle Content -->
-    <div layout="column" flex layout-padding style="margin-top: 120px;">
+    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px;">
 
         <div ng-include="'breadcrumb.htm'"></div>
 
@@ -12,7 +24,7 @@
 
             <div layout="column" layout-align="start" layout-padding>
 
-                <img src="img/logo_head.png" alt="DoJugaad" class="center" width="300px" height="80px"/>
+                <img src="img/logo_head.png" alt="DoJugaad" class="center" />
 
                 <h3 class="center" style="color: #607D8B; font-size: 22px; ">A jugaad for everything</h3>
 
@@ -130,7 +142,9 @@
     </div>
 
     <!-- Right Margin -->
-    <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
+    <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10">
+
+    </div>
 
 </div>
 
