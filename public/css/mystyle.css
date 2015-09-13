@@ -8,7 +8,8 @@ html,body{
 */
 .holder{
     background-color:#eeeeee;
-    background-image: url('../img/tile.png'); background-repeat: no-repeat;
+    background-image: url('../img/tile.png');
+    background-repeat: no-repeat;
 }
 
 /*
@@ -41,8 +42,6 @@ html,body{
     font-size: 19px;
     margin-top: 27.5px;
 }
-<<<<<<< HEAD
-=======
 
 
 /*
@@ -92,7 +91,6 @@ html,body{
 }
 
 
->>>>>>> openshift/master
 /** PRELOADER
 *****************************/
 
@@ -189,7 +187,8 @@ html,body{
     border-bottom: 1px solid #aaaaaa;
     padding-bottom: 5px;
     width: 80%;
-    color: #1eb9c1;
+    color: #eb2641;
+
 }
 .footer .circle-icons i {
     background: #333333;
@@ -228,10 +227,9 @@ html,body{
 /*.inner{
     position: relative;
     z-index: 2;
-}*/
+}
 
 .wrap:before {
->>>>>>> openshift/master
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -243,14 +241,14 @@ html,body{
     left: 60%;
     content: "\f0a1";
     z-index: 1;
-}
+}*/
 
 .hiwtitle{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 32px;
     color:#FFFFFF;
 }
-
+ 
 .hiwcontent{
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 19px;

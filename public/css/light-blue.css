@@ -1509,7 +1509,7 @@ ul.primary span {
  * */
 /* Basic Colors of icons */
 .i-primary i {
-    color: #1eb9c1;
+    color: #eb2641;
 }
 .i-success i {
     color: #3c948b;
@@ -3968,7 +3968,8 @@ ul.thumbs {
     border-bottom: 1px solid #aaaaaa;
     padding-bottom: 5px;
     width: 80%;
-    color: #1eb9c1;
+    /*color: #1eb9c1;*/
+    /*color: #063642;*/
 }
 .footer .circle-icons i {
     background: #333333;

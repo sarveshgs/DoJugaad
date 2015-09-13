@@ -30,14 +30,18 @@
     </div>
 </div>
 
-<div layout="row" flex style="background-color:#eeeeee; background-image: url('img/sd.jpg'); background-repeat: no-repeat;">
+<div class="holder" layout="row" flex>
     <!-- Left Margin -->
     <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
 
     <!-- Middle Content -->
-    <div layout="column" flex layout-padding style="margin-top: 100px;">
+    <div layout="column" flex layout-padding style="margin-top: 80px;">
 
-        <div class="about md-whiteframe-z4" style="background: #FFFFFF;" layout-padding>
+        <!--md-button class="md-fab md-primary md-hue-3" aria-label="DoJugaad">
+            <md-icon md-svg-src="img/gear.svg"></md-icon>
+        </md-button-->
+
+        <div class="about md-whiteframe-z4" style="background: #FFFFFF; margin: 10px;" layout-padding>
 
             <form name="login" method="post" action="/login" layout-padding>
 
@@ -83,15 +87,6 @@
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="js/pace.min.js"></script>
 <script src="js/login.js"></script>
-<!--script type="text/javascript">
-    $(document).ready(function() {
 
-        setTimeout(function(){
-            $('md-card').removeClass('hide').addClass('disp');
-
-        }, 500);
-
-    });
-</script-->
 </body>
 </html>

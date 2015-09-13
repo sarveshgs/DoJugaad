@@ -120,6 +120,7 @@ module.exports = function(app, passport,db,mongojs) {
         });
     });
 
+
     /**
      * Login processing will be done here
      */
