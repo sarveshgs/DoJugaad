@@ -132,16 +132,16 @@ a {
     color: #1eb9c1;
 }
 .btn-primary {
-    background-color: #1eb9c1;
-    border-color: #1eb9c1;
+    background-color: #eb2641;
+    border-color: #eb2641;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    background-color: #147a7f;
-    border-color: #106469;
+    background-color: #fc1543;
+    border-color: #fb2541;
 }
 .btn-primary.disabled,
 .btn-primary[disabled],
@@ -375,7 +375,7 @@ a.thumbnail.active {
     color: #777777 !important;
 }
 .text-primary {
-    color: #1eb9c1 !important;
+    color: #eb2641 !important;
 }
 a.text-primary:hover {
     color: #147a7f;
@@ -1289,7 +1289,7 @@ ul.primary span {
 
 /* === Background Color === */
 .bg-grey {
-    background: #f0f0f0 !important;
+    background: #f5f4f4 !important;
 }
 .bg-grey-1 {
     background: #f0eeed !important;
@@ -1530,7 +1530,7 @@ ul.primary span {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    color: #1eb9c1;
+    color: #eb2641;
     font-size: 15px !important;
     background: #ffffff;
     background: rgba(255, 255, 255, 0.9);
@@ -1539,7 +1539,7 @@ ul.primary span {
     transition: all 0.5s ease-out;
 }
 .circle-icons li:hover i {
-    background: #1eb9c1;
+    background: #eb2641;
     color: #ffffff;
 }
 .trn.circle-icons i {
@@ -1751,7 +1751,7 @@ h3 > .blue-i {
 }
 /* using on the Home Page version 2 (features) */
 .icon-o {
-    color: #1eb9c1;
+    color: #eb2641;
     box-shadow: 0 0 0 1px #dddddd;
     border-radius: 50%;
     height: 100px;
@@ -3653,7 +3653,7 @@ ul.thumbs {
     line-height: 45px;
     text-align: center;
     border-radius: 50%;
-    color: #1eb9c1;
+    color: #eb2641;
     font-size: 30px;
     background: #ffffff;
     -moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
@@ -3668,7 +3668,7 @@ ul.thumbs {
 .back-to-top:focus,
 .back-to-top:active {
     color: #ffffff;
-    background: #1eb9c1;
+    background: #eb2641;
 }
 /* === Clients === */
 .client-logo {
