@@ -1,0 +1,27 @@
+<div layout="row" flex style="background-color:#eeeeee;background-image: url('img/head2.png'); background-repeat: no-repeat;">
+    <!-- Left Margin -->
+    <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
+
+    <!-- Middle Content -->
+    <div layout="column" flex layout-padding style="margin-top: 150px;">
+        <md-card flex>
+            <md-card-component>
+                <div class="head">
+                    <h2><%=title%></h2>
+                </div>
+                <% if ( id == 'j' ) { %>
+                    <% include jugaad_form %>
+                <% }else if( id == 'i'){ %>
+                    <% include idea_form %>
+                <% }else if( id == 'p'){ %>
+                    <% include product_form %>
+                <% } %>
+
+            </md-card-component>
+        </md-card>
+  </div>
+
+    <!-- Right Margin -->
+    <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
+
+</div>

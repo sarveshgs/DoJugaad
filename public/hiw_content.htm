@@ -1,54 +1,135 @@
-<div class="holder" layout="row" flex>
+<div class="holder hiw" layout="row" flex layout-fill>
     <!-- Left Margin -->
     <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
 
     <!-- Middle Content -->
-    <div layout="column" flex layout-padding style="margin-top: 120px;">
+    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px; margin-bottom: 100px;">
 
         <div ng-include="'breadcrumb.htm'"></div>
+        <div class="md-whiteframe-z2 card_holder">
+            <md-content class="md-padding">
+                <md-tabs md-dynamic-height md-border-bottom >
+                    <!-- Problem Submission -->
+                    <md-tab>
+                        <md-tab-label>
+                            <md-icon md-svg-icon="images/icons/ic_help.svg"></md-icon>
+                            <div>I need Jugaad</div>
+                        </md-tab-label>
+                        <md-tab-body>
+                               <div layout-gt-sm="row" layout-padding layout-margin>
+                                   <div flex>
+                                       <img src="img/doubt.png" class="center" alt="Problem">
+                                   </div>
+                                   <div layout="column" flex>
+                                       <p>Mr. Sharma is a senior professor at an engineering college. Being in the
+                                       profession for years, he is very much aware of the amount of time that goes waste
+                                       because of tedious attendance taking procedure. Mr. Sharma always wished if he
+                                       could somehow automate this. So,he posted his problem at DoJugaad. The team at
+                                       DoJugaad analyzed his problem and developed a biometric sensor based portable
+                                       device that could be easily rotated in the class. This device could be easily
+                                       connected to any computer to generate excel sheet of the attendance. This sheet
+                                       would get periodically updated to the college server. This simple yet smart
+                                       device has helped not just Mr. Sharma but the entire college to take quick and
+                                       automatic attendance.</p>
+                                       <md-button class="md-raised md-primary" style="width: 50%" onclick="document.location.href='jugaad';">Submit Problem</md-button>
+                                   </div>
+                               </div>
 
-        <div class="md-whiteframe-z2 card_holder" style="background: #00BCD4; color: #ffffff;" layout-padding layout-margin>
-            <div layout="row" layout-padding>
-                <h4 class="hiwtitle">Hey!! I have an idea</h4>
-                <img src="img/idea_hiw.png" style="height:200px;width:100px">
-            </div>
-            <md-divider style="margin-top: -15px; margin-bottom: -15px;"></md-divider>
-            <div layout="row" layout-padding>
-                <p class="hiwcontent" style="text-align: justify;">Young and energetic Akshat is quite observant. Watching around, he often ends up thinking about some simple yet creative ideas that might help the surrounding to be a better place. However, Akshat faced a serious issue, he felt short of resources and expertise to mould his idea into a working model.<br /><br />
-                So, Akshat shared his idea with our team. Our team of talented engineers and experts discussed and helped to improvise his idea. We presented the idea to our partners.They valued the idea and decided to make it real!<br /><br />
-                The world was introduced to a brilliant invention all thanks to Akshat's role in idea contribution. While Akshat enjoyed his part of share, the world enjoyed his idea as a real time product.</p>
-            </div>
-            <div layout="row" layout-padding>
-                <md-button class="md-raised md-hue" onclick="document.location.href='idea';">Submit Idea</md-button>
-            </div>
+                        </md-tab-body>
+                    </md-tab>
+
+                    <!-- Idea Submission -->
+                    <md-tab>
+                        <md-tab-label>
+                            <md-icon md-svg-icon="images/icons/ic_palette.svg"></md-icon>
+                            <div>I have an Idea</div>
+                        </md-tab-label>
+                        <md-tab-body>
+
+                            <div layout-gt-sm="row" layout-padding layout-margin>
+                                <div flex>
+                                  <img src="img/idea.png" class="center">
+                                </div>
+                                <div layout="column" flex>
+                                    <p>Young and energetic Akshat is quite observant. Watching around, he often ends up
+                                        thinking about some simple yet creative ideas that might help the surrounding to
+                                        be a better place. However, Akshat faced a serious issue, he felt short of
+                                        resources and expertise to mould his idea into a working model.<br /><br />
+                                        So, Akshat shared his idea with our team. Our team of talented engineers and
+                                        experts discussed and helped to improvise his idea. We presented the idea to our
+                                        partners.They valued the idea and decided to make it real!<br /><br />
+                                        The world was introduced to a brilliant invention all thanks to Akshat's role in
+                                        idea contribution. While Akshat enjoyed his part of share, the world enjoyed his
+                                        idea as a real time product.</p>
+                                    <md-button class="md-raised md-primary" style="width: 50%" onclick="document.location.href='idea';">Submit Idea</md-button>
+                                </div>
+                            </div>
+
+                        </md-tab-body>
+                    </md-tab>
+
+                    <!-- Product Submission -->
+                    <md-tab>
+                        <md-tab-label>
+                            <md-icon md-svg-icon="images/icons/ic_local.svg"></md-icon>
+                            <div>I have a Product</div>
+                        </md-tab-label>
+                        <md-tab-body>
+
+                            <div layout-gt-sm="row" layout-padding layout-margin>
+                                <div flex>
+                                    <img src="img/sell.png" class="center">
+                                </div>
+                                <div layout="column" flex>
+                                    <p>Raju and his team are always fascinated in building real life model projects.
+                                    During college days, they would earn money by developing academic projects for other
+                                    colleagues. However, they wanted to invest their talent into market(or however now
+                                    they wanted to try their luck in real market). They were ready with many sample
+                                    products and all they needed was a platform to meet interested investors. Raju and
+                                    his team approached DoJugaad. We carefully analyzed their products and extended them
+                                    a chance to interact with our interested investors/sellors/buyers.<br/><br/>
+                                    DoJugaad thus helped Raju and his team to turn their talent into a full time
+                                    profession.</p>
+                                    <md-button class="md-raised md-primary" style="width: 50%" onclick="document.location.href='product';">Submit Product</md-button>
+                                </div>
+                            </div>
+
+                        </md-tab-body>
+                    </md-tab>
+
+                    <!-- Contribute -->
+                    <md-tab>
+                        <md-tab-label>
+                            <md-icon md-svg-icon="images/icons/ic_build.svg"></md-icon>
+                            <div>I have a skill</div>
+                        </md-tab-label>
+                        <md-tab-body>
+
+                            <div layout-gt-sm="row" layout-padding layout-margin>
+                                <div flex>
+                                    <img src="img/skill_girl1.png" class="center">
+                                </div>
+                                <div layout="column" flex>
+                                    <p>Miss Shruti is an established product design engineer. She is a hardworking and
+                                        workoholic person. one day while browsing DoJugaad, Shruti came across an
+                                        interesting idea description. She knew that this idea perfectly aligned with her
+                                        expertise in product design. Shruti submitted her product design model. It was
+                                        reviewed and accepted by the team experts.<br /><br />
+                                        Shruti's design helped DoJugaad to release a well designed product into market.
+                                        Shruti not only became a product share partner but also recieved a new platform
+                                        to practise her interest.<br /><br /></p>
+                                    <md-button class="md-raised md-hue" style="width: 50%">Coming Soon..</md-button>
+                                </div>
+                            </div>
+
+                        </md-tab-body>
+                    </md-tab>
+
+                </md-tabs>
+            </md-content>
         </div>
-        <div class="md-whiteframe-z2" style="background: #00BCD4; color: #ffffff;" layout-padding layout-margin>
-            <div layout="row" layout-padding>
-                <h4 class="hiwtitle">Hey!! I have a skill</h4>
-                <img src="img/skill_hiw.png" style="height:200px;width:100px">
-            </div>
-            <md-divider style="margin-top: -15px; margin-bottom: -15px;"></md-divider>
-            <div layout="row" layout-padding>
-            	<p class="hiwcontent" style="text-align: justify;">Miss Shruti is an established product design engineer. She is a hardworking and workoholic person. one day while browsing DoJugaad, Shruti came across an interesting idea description. She knew that this idea perfectly aligned with her expertise in product design. Shruti submitted her product design model. It was reviewed and accepted by the team experts.<br /><br />
-            	Shruti's design helped DoJugaad to release a well designed product into market. Shruti not only became a product share partner but also recieved a new platform to practise her interest.<br /><br />
-            	</p>
-            </div>
-<!--             <div layout="row" layout-padding>
-                <md-button class="md-raised md-hue" onclick="document.location.href='idea';">Submit Idea</md-button>
-            </div> -->
-        </div>
-        <div class="md-whiteframe-z2 card_holder" style="background: #00BCD4; color: #ffffff;" layout-padding layout-margin>
-            <div layout="row" layout-padding>
-                <h4 class="hiwtitle">Hey!! I have a problem</h4>
-            </div>
-            <md-divider style="margin-top: -15px; margin-bottom: -15px;"></md-divider>
-            <div layout="row" layout-padding>
-                <p class="hiwcontent" style="text-align: justify;">Mr. Sharma is a senior professor at an engineering college. Being in the profession for years, he is very much aware of the amount of time that goes waste because of tedious attendance taking procedure. Mr. Sharma always wished if he could somehow automate this. So,he posted his problem at DoJugaad. The team at DoJugaad analyzed his problem and developed a biometric sensor based portable device that could be easily rotated in the class. This device could be easily connected to any computer to generate excel sheet of the attendance. This sheet would get periodically updated to the college server. This simple yet smart device has helped not just Mr. Sharma but the entire college to take quick and automatic attendance.</p>
-            </div>
-            <div layout="row" layout-padding>
-                <md-button class="md-raised md-hue" onclick="document.location.href='jugaad';">Submit Problem</md-button>
-            </div>
-        </div>
+
+
     </div>
 
     <!-- Right Margin -->

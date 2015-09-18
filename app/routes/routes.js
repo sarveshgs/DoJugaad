@@ -1,5 +1,5 @@
 // app/routes.js
-module.exports = function(app, passport,db,mongojs) {
+module.exports = function(app, passport,db,mongojs,nodemailer) {
 
 
     /**
@@ -35,7 +35,7 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/jugaad', function(req, res) {
         res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
-            title : 'Ask Jugaad',
+            head : 'Ask Jugaad',
             id: 'j'
         });
     });
@@ -47,7 +47,7 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/idea', function(req, res) {
         res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
-            title : 'Submit Idea',
+            head : 'Submit Idea',
             id: 'i'
         });
     });
@@ -59,7 +59,7 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/product', function(req, res) {
         res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
-            title : 'Submit Product',
+            head : 'Submit Product',
             id: 'p'
         });
     });
@@ -69,7 +69,8 @@ module.exports = function(app, passport,db,mongojs) {
     // ==========================================   6. Login Page    ===================================================
     //==================================================================================================================
     app.get('/login', function(req, res) {
-      res.render('login.ejs', { message: req.flash('loginMessage') });
+        console.log(req.session.postData);
+        res.render('login.ejs', { message: req.flash('loginMessage') });
     });
 
 
@@ -95,7 +96,6 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/about', function(req, res) {
         res.render('about.ejs', {
             data : req.user, // get the user out of session and pass to template
-            title: 'About'
         });
     });
 
@@ -106,7 +106,6 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/faq', function(req, res) {
         res.render('faq.ejs', {
             data : req.user, // get the user out of session and pass to template
-            title: 'FAQ'
         });
     });
 
@@ -116,10 +115,70 @@ module.exports = function(app, passport,db,mongojs) {
     app.get('/hiw', function(req, res) {
         res.render('hiw.ejs', {
             data : req.user, // get the user out of session and pass to template
-            title: 'How It Works'
         });
     });
 
+    //==================================================================================================================
+    // =====================================   12. Successful Post Page    =============================================
+    //==================================================================================================================
+    app.get('/success', function(req, res) {
+        req.session.nextPage = null;
+        res.render('success.ejs', {
+            data : req.user, // get the user out of session and pass to template
+        });
+    });
+
+    //==================================================================================================================
+    // =====================================   13. Who we are Page    ================================================
+    //==================================================================================================================
+    app.get('/hwa', function(req, res) {
+        res.render('team.ejs', {
+            data : req.user, // get the user out of session and pass to template
+        });
+    });
+
+
+
+    var smtpTransport = nodemailer.createTransport("SMTP",{
+        service: "Gmail",
+        auth: {
+            user: "adroitinnovate@gmail.com",
+            pass: "DoJug@@d"
+        }
+    });
+
+    var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'aashishkatlam@gmail.com',
+            pass: 'Ashrock_1993'
+        }
+    });
+
+
+    app.get('/send',function(req,res){
+
+
+        var mailOptions = {
+            from: req.query.from, // sender address
+            to: req.query.to, // list of receivers
+            subject: 'DoJugaad Query', // Subject line
+            text: req.query.text + ' '+ req.query.name + '( '+ req.query.from + ' )', // plaintext body
+
+        };
+
+        console.log(mailOptions);
+
+        transporter.sendMail(mailOptions, function(error, info){
+            if(error){
+                return console.log(error);
+                res.end("error");
+            }
+            console.log('Message sent: ' + info.response);
+            res.end("sent");
+        });
+
+    });
 
     /**
      * Login processing will be done here
@@ -127,11 +186,21 @@ module.exports = function(app, passport,db,mongojs) {
     //==================================================================================================================
     // ==========================================   1. Local Login    ==================================================
     //==================================================================================================================
-    app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/', // redirect to the secure profile section
+    app.post('/auth/local', passport.authenticate('local-login', {
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
-    }));
+    }),function(req,res){
+          if(req.session.nextPage == 'success'){
+              var Data = req.session.postData;
+              Data.postUserId = req.user._id;
+              db.postData.insert(Data, function (err, doc) {
+              });
+              res.redirect('/success');
+          }
+          else{
+              res.redirect('/');
+          }
+    });
 
 
     //==================================================================================================================
@@ -143,9 +212,19 @@ module.exports = function(app, passport,db,mongojs) {
     ));
 
     app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-        failureRedirect: '/login',
-        successRedirect: '/'
-    }));
+        failureRedirect: '/login'
+    }),function(req,res){
+        if(req.session.nextPage == 'success'){
+            var Data = req.session.postData;
+            Data.postUserId = req.user._id;
+            db.postData.insert(Data, function (err, doc) {
+            });
+            res.redirect('/success');
+        }
+        else{
+            res.redirect('/');
+        }
+    });
 
 
     //==================================================================================================================
@@ -157,9 +236,20 @@ module.exports = function(app, passport,db,mongojs) {
     ));
 
     app.get( '/auth/google/callback',passport.authenticate( 'google', {
-        successRedirect: '/',
+
         failureRedirect: '/login'
-    }));
+    }),function(req,res){
+        if(req.session.nextPage == 'success'){
+            var Data = req.session.postData;
+            Data.postUserId = req.user._id;
+            db.postData.insert(Data, function (err, doc) {
+            });
+            res.redirect('/success');
+        }
+        else{
+            res.redirect('/');
+        }
+    });
 
 
 
@@ -172,8 +262,9 @@ module.exports = function(app, passport,db,mongojs) {
         var gender = req.body.gender;
         var name = req.body.name;
         var avatar = null;
+        var id;
 
-        if(gender=='male') {
+        if(gender == 'male') {
             avatar = 'images/avatars/male/m1.png';
         }
         else {
@@ -195,9 +286,22 @@ module.exports = function(app, passport,db,mongojs) {
 
 
         db.userData.insert(User, function (err, doc) {
-          res.json(doc);
+          //res.json(doc);
+            id = doc._id;
         });
 
+        if(req.session.nextPage == 'success'){
+
+                var Data = req.session.postData;
+                Data.postUserId = id;
+                db.postData.insert(Data, function (err, doc) {
+                });
+
+           res.send('success');
+        }
+        else{
+            res.send('continue');
+        }
     });
 
 
@@ -232,6 +336,8 @@ module.exports = function(app, passport,db,mongojs) {
     //==================================================================================================================
     app.post('/temp',function(req,res){
         req.session.postData = req.body;
+        req.session.nextPage = 'success';
+        res.send('Data Saved');
     });
 
 
@@ -299,25 +405,6 @@ module.exports = function(app, passport,db,mongojs) {
          }
         res.json({'data':req.user,'message':msg});
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

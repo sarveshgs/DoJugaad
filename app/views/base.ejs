@@ -6,78 +6,73 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1" />
     <link rel="stylesheet" href="css/mystyle.css"/>
-    <link rel="stylesheet" href="css/form_style.css"/>
+
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <title>DoJugaad | Jugaad</title>
 
 </head>
-<style>
-.head{
-    padding: 5px;
-    color: #fefefe;
-    background-color: #110024;
-    background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
 
-}
 
-.head h2{
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 500;
-    margin-left: 10px;
-
-}
-</style>
-
-<body layout="column" data-ng-controller="sController as sc">
-<!-- Preloader -->
-<div id="preloader">
-    <div class="logo">
-        <img src="img/gear.png" alt="DoJugaad">
-        <span>DoJugaad</span>
-    </div>
-</div>
-
+<body layout="column" ng-controller="common">
+<% include preloader %>
 <% include header %>
 
-<div layout="row" flex style="background-color:#eeeeee;background-image: url('img/head2.png'); background-repeat: no-repeat;">
+<div class="holder" layout="row" flex ng-controller="sub">
+
     <!-- Left Margin -->
     <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
 
     <!-- Middle Content -->
-    <div layout="column" flex layout-padding style="margin-top: 150px;">
-        <md-card flex>
-            <md-card-component>
-                <div class="head">
-                    <h2><%=title%></h2>
-                </div>
-                <% if ( id == 'j' ) { %>
-                    <% include jugaad_form %>
-                <% }else if( id == 'i'){ %>
-                    <% include idea_form %>
-                <% }else if( id == 'p'){ %>
-                    <% include product_form %>
-                <% } %>
+    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px;">
 
-            </md-card-component>
+        <div ng-include="'breadcrumb.htm'"></div>
+
+        <md-card>
+                <% if ( id == 'j' ) { %>
+                <div class="form_title"><h2>Submit Problem</h2></div>
+                <md-divider></md-divider>
+                <% include jugaad_form %>
+                <% }else if( id == 'i'){ %>
+                <div class="form_title"><h2>Submit Idea</h2></div>
+                <md-divider></md-divider>
+                <% include idea_form %>
+                <% }else if( id == 'p'){ %>
+                <div class="form_title"><h2>Submit Product</h2></div>
+                <md-divider></md-divider>
+                <% include product_form %>
+                <% } %>
         </md-card>
-  </div>
+
+    </div>
 
     <!-- Right Margin -->
     <div hide-sm flex-md="15" flex-gt-md="15" flex-lg="15" flex-gt-lg="15"></div>
 
 </div>
 
+
+
+<% include top %>
 <% include footer %>
 
 
 
+<!-- Angular Material Dependencies -->
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="js/submit.js"></script>
+<script src="js/angular-scroll.min.js"></script>
+<script src="js/material-icons.js"></script>
+
+<!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
+<!--script>
+    new WOW().init();
+</script-->
+<script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
+
 </body>
 </html>

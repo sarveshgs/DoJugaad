@@ -12,10 +12,11 @@
 
 </head>
 
-<body layout="column" ng-controller="hiwController">
+<body layout="column" ng-controller="common" layout-fill>
 <% include preloader %>
 <% include header %>
-<div ng-include="'hiw_content.htm'"></div>
+<main ng-include="'hiw_content.htm'" ng-controller="hiwController"></main>
+<% include top %>
 <% include footer %>
 
 <!-- Angular Material Dependencies -->
@@ -25,11 +26,14 @@
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script>
+<script src="js/angular-scroll.min.js"></script>
+
+<!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
+<!--script>
     new WOW().init();
-</script>
-<script src="js/hiw.js"></script>
+</script-->
+<script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
+
 </body>
 </html>

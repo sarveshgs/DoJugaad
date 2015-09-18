@@ -10,83 +10,29 @@
     <title>DoJugaad | Login</title>
 
 </head>
-<style>
-    .disp{
-        display: block;
-    }
-    .hide{
-        display: none;
-    }
 
 
-</style>
-
-<body layout="column" ng-controller="lController">
-<!-- Preloader -->
-<div id="preloader">
-    <div class="logo">
-        <img src="img/gear.png" alt="DoJugaad">
-        <span>DoJugaad</span>
-    </div>
-</div>
-
-<div class="holder" layout="row" flex>
-    <!-- Left Margin -->
-    <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
-
-    <!-- Middle Content -->
-    <div layout="column" flex layout-padding style="margin-top: 80px;">
-
-        <!--md-button class="md-fab md-primary md-hue-3" aria-label="DoJugaad">
-            <md-icon md-svg-src="img/gear.svg"></md-icon>
-        </md-button-->
-
-        <div class="about md-whiteframe-z4" style="background: #FFFFFF; margin: 10px;" layout-padding>
-
-            <form name="login" method="post" action="/login" layout-padding>
-
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/account.svg" class="email"></md-icon>
-                    <input name="email" data-ng-model="lc.email" type="email" placeholder="Email (required)" ng-required="true">
-                </md-input-container>
-
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/lock-outline.svg" class="password"></md-icon>
-                    <input name="password" data-ng-model="lc.password" type="password" placeholder="Password (required)" ng-required="true">
-                </md-input-container>
-
-                <div layout="row">
-                    <div flex="50">
-                        <md-checkbox data-ng-model="lc.remember" aria-label="Remember">
-                            Remember Me
-                        </md-checkbox>
-                    </div>
-                    <div flex="50">
-                        <p><a style="text-decoration: none;margin-top: -3px; float: right;" ng-href="">Forgot Password?</a></p>
-                    </div>
-                </div>
-
-                    <md-button flex class="md-raised md-primary" type="submit">Log In</md-button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-    <!-- Right Margin -->
-    <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
-
-</div>
+<body layout="column" layout-fill>
+<% include preloader %>
+<main ng-include="'login_form.htm'"></main>
 
 
+
+<!-- Angular Material Dependencies -->
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="js/angular-scroll.min.js"></script>
+
+<!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
+<!--script>
+    new WOW().init();
+</script-->
+<script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
-<script src="js/login.js"></script>
 
 </body>
 </html>

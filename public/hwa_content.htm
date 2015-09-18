@@ -1,0 +1,76 @@
+
+<div class="holder" layout="row" flex layout-fill>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-list class="muppet-list">
+            <md-item ng-repeat="it in muppets">
+                <md-item-content>
+                    <md-button ng-click="selectMuppet(it)" ng-class="{'selected' : it === selected }">
+                        <img ng-src="{{it.iconurl}}" class="face" alt="">
+                        {{it.name}}
+                    </md-button>
+                </md-item-content>
+            </md-item>
+        </md-list>
+    </md-sidenav>
+    <!-- Left Margin -->
+    <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
+
+    <!-- Middle Content -->
+    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px;">
+
+        <div ng-include="'breadcrumb.htm'"></div>
+
+
+
+        <div layout="row" layout-align="center center">
+            <h2>Our Team</h2>
+        </div>
+
+        <!-- Small Card -->
+        <div layout="row" layout-sm="column" flex layout-margin>
+
+,
+
+            <md-card flex style="">
+                <img src="img/pic2.png" class="md-card-image">
+                <md-card-content>
+                <h4>Abhijeet Dixit</h4>
+                <p>A Co-Founder of DoJugaad, an executioner with a technical hand. He plays a support guy to technical
+                   stuff while managing customer relations and finances. He is a a graduate from SGSITS, Indore
+                    in 2015 (B.E. with honors) from Computer Engineering department. He currently works as an Engineer
+                    in ITTIAM systems pvt. ltd.
+                </p>
+                </md-card-content>
+            </md-card>
+
+            <md-card flex style="">
+                <img src="img/pic2.png" class="md-card-image">
+                <md-card-content>
+
+
+                </md-card-content>
+            </md-card>
+
+            <md-card flex style="">
+                <img src="img/pic2.png" class="md-card-image">
+                <md-card-content>
+
+
+                </md-card-content>
+            </md-card>
+
+
+
+        </div>
+        <!-- End of Small Card -->
+
+
+    </div>
+
+    <!-- Right Margin -->
+    <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10">
+
+    </div>
+
+</div>
+

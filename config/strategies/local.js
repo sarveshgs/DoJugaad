@@ -21,6 +21,7 @@ module.exports = function() {
             passReqToCallback : true // allows us to pass back the entire request to the callback
         },
         function(req, email, password, done) { // callback with email and password from our form
+            console.log(email+""+password);
 
             db.userData.findOne({emailid:email},function (err, user) {
 
@@ -31,7 +32,7 @@ module.exports = function() {
                     return done(null, false, {message: 'Unknown user'});
                 }
 
-                if (!user.password == password) {
+                if (user.password != password) {
                     return done(null, false, {message: 'Invalid password'});
                 }
 

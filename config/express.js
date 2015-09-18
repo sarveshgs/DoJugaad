@@ -1,10 +1,11 @@
 var config = require('./config'),
 	express = require('express'),
 	bodyParser = require('body-parser'),
-    cookieParser = require('cookie-parser')
+    cookieParser = require('cookie-parser'),
 	passport = require('passport'),
 	flash = require('connect-flash'),
 	session = require('express-session'),
+    nodemailer = require("nodemailer"),
 	mongojs = require('mongojs');
 
 module.exports = function(db) {
@@ -29,9 +30,10 @@ module.exports = function(db) {
 	app.use(passport.initialize());
 	app.use(passport.session());
 
-	require('../app/routes/routes.js')(app,passport,db,mongojs);
+	require('../app/routes/routes.js')(app,passport,db,mongojs,nodemailer);
 
 
+	//app.use(express.static('./public'));
 	app.use(express.static('./public'));
 
 	return app;

@@ -1,35 +1,47 @@
-<form name="product" class="md-padding">
+<md-card-content>
+    <form name="product" class="md-padding" ng-controller="pController" ng-submit="$event.preventDefault()">
 
     <md-input-container>
-        <label>Product Name</label>
-        <input type="text" data-ng-model="sc.name" required>
+        <label class="form_fonts">Product Name</label>
+        <input class="form_fonts" type="text" data-ng-model="product.name" required aria-label="Product Name">
     </md-input-container>
 
     <md-input-container>
-        <label>Describe your Product</label>
+        <label class="form_fonts">Describe your Product</label>
         <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea data-ng-model="sc.description" rows="5" required></textarea>
+        <textarea class="form_fonts" data-ng-model="product.description" rows="5" required aria-label="Product Description"></textarea>
     </md-input-container>
 
     <md-input-container>
-        <label>Problem solved by Product</label>
-        <input type="text" data-ng-model="sc.problem"/>
+        <label class="form_fonts">Problem solved by Product</label>
+        <input class="form_fonts" type="text" data-ng-model="product.problem" aria-label="Problem Solved">
     </md-input-container>
 
+        <div layout-gt-sm="row">
+            <md-input-container>
+                <md-select data-ng-model="product.category" placeholder="Specify the most suitable category" class="form_fonts" >
+                    <md-tooltip>Choose</md-tooltip>
+                    <md-option ng-repeat="op in opt" value="{{op}}" class="form_fonts">{{op}}</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+    <div layout-gt-sm="row">
     <md-input-container>
-
-        <md-select data-ng-model="sc.category" placeholder="Specify the most suitable category" style="width: 50%" >
-            <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
-        </md-select>
+        <label class="form_fonts">Expected minimum price</label>
+        <input type="number" data-ng-model="product.price" aria-label="Product Price" >
     </md-input-container>
-
-    <md-input-container style="width: 50%">
-        <label>Expected minimum price</label>
-        <input type="number" data-ng-model="sc.price"/>
-    </md-input-container>
+    </div>
 
     <md-content layout="row" layout-align="center center">
-        <md-button class="md-raised md-primary" data-ng-click="create()">Submit</md-button>
-        <md-button class="md-raised md-warn" data-ng-click="clear()">Clear</md-button>
+        <md-button class="md-raised md-primary form_fonts" data-ng-click="create()">
+
+            Submit
+        </md-button>
+        <md-button class="md-raised md-warn form_fonts" data-ng-click="clear()">
+            <md-tooltip>Clear Fields</md-tooltip>
+            Clear
+        </md-button>
     </md-content>
 </form>
+</md-card-content>

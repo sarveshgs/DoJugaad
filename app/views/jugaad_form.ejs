@@ -1,32 +1,39 @@
-<form name="jugaad" class="md-padding">
+<md-card-content>
+<form name="jugaad" class="md-padding" ng-controller="jController" ng-submit="$event.preventDefault()">
 
     <md-input-container>
-        <label>Jugaad Title</label>
-        <input type="text" data-ng-model="sc.title" required>
+        <label class="form_fonts">Jugaad/Problem Title</label>
+        <input class="form_fonts" type="text" data-ng-model="jugaad.title" required aria-label="Problem Title">
     </md-input-container>
 
     <md-input-container>
-        <label>Describe your Jugaad</label>
+        <label class="form_fonts">Describe your Jugaad/Product</label>
         <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea data-ng-model="sc.description" rows="5" required></textarea>
+        <textarea class="form_fonts" data-ng-model="jugaad.description" rows="5" required aria-label="Problem Description"></textarea>
     </md-input-container>
 
-    <md-input-container>
 
-        <md-select data-ng-model="sc.category" placeholder="Specify the most suitable category" style="width: 50%" >
-            <md-option ng-repeat="op in opt" value="{{op}}">{{op}}</md-option>
-        </md-select>
-    </md-input-container>
+    <div layout-gt-sm="row">
+        <md-input-container>
+            <md-select data-ng-model="jugaad.category" placeholder="Specify the most suitable category" class="form_fonts" >
+                <md-option ng-repeat="op in opt" value="{{op}}" class="form_fonts">{{op}}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
 
     <md-input-container>
-        <md-checkbox data-ng-model="sc.auth" aria-label="Author" data-ng-click="tog()">
+        <md-checkbox class="form_fonts" data-ng-model="jugaad.auth" aria-label="Author" data-ng-click="tog()">
             If this idea is not originally your's or is modified, please credit the author.
         </md-checkbox>
-        <input type="text" data-ng-model="sc.authname" data-ng-disabled="myvar">
+        <input type="text" data-ng-model="jugaad.authname" data-ng-disabled="myvar">
     </md-input-container>
 
     <md-content layout="row" layout-align="center center">
-        <md-button class="md-raised md-primary" data-ng-click="create()">Submit</md-button>
-        <md-button class="md-raised md-warn" data-ng-click="clear()">Clear</md-button>
+        <md-button class="md-raised md-primary form_fonts" data-ng-click="create()" >Submit</md-button>
+        <md-button class="md-raised md-warn form_fonts" data-ng-click="clear()" >
+          <md-tooltip>Clear Fields</md-tooltip>
+            Clear
+        </md-button>
     </md-content>
 </form>
+</md-card-content>

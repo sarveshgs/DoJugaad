@@ -1,15 +1,15 @@
 
-html,body{
+a{
     font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
 }
-
 /*
 ** Main Container
 */
 .holder{
-    background-color:#eeeeee;
-    background-image: url('../img/tile.png');
-    background-repeat: no-repeat;
+    background: #eeeeee url('../img/tile2.png') no-repeat;
 }
 
 /*
@@ -86,8 +86,11 @@ html,body{
 }
 
 .breadcrumb .title {
+    font-family: 'Dosis', sans-serif;
     font-size: 34px;
     color: #ffffff;
+
+
 }
 
 
@@ -124,6 +127,7 @@ html,body{
     font-size: 30px;
     font-weight: 300;
     color: #999;
+    font-family: 'Dosis', sans-serif;
 }
 .pace {
     -webkit-pointer-events: none;
@@ -141,7 +145,7 @@ html,body{
     display: none;
 }
 .pace .pace-progress {
-    background: #96cb4b;
+    background: #303F9F;
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -167,7 +171,10 @@ html,body{
 }
 .footer-bottom p {
     margin: 0;
-
+   text-align: center;
+   font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
 }
 .footer {
     color: #aaa;
@@ -182,8 +189,9 @@ html,body{
     color: #dddddd;
 }
 .footer h4 {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 20px;
+    font-family: 'Dosis', sans-serif;
     border-bottom: 1px solid #aaaaaa;
     padding-bottom: 5px;
     width: 80%;
@@ -196,6 +204,11 @@ html,body{
     box-shadow: none;
 }
 
+.tb{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
 
 /*
  * ===================================
@@ -243,6 +256,15 @@ html,body{
     z-index: 1;
 }*/
 
+
+/*Slider css*/
+#slide h1,p,a{
+    font-family: 'Dosis', sans-serif;
+
+}
+
+
+
 .hiwtitle{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 32px;
@@ -253,4 +275,62 @@ html,body{
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 19px;
     color:#FFFFFF;
+}
+
+
+.about-bg{
+    background:
+    linear-gradient(
+            rgba(0, 0, 255, 0.2),
+            rgba(0, 0, 0, 0.35)
+    ),
+        /* bottom, image */
+    url('../img/abb.png');
+   ;
+}
+
+
+.big-title{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+}
+
+
+.text-grey{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: match-parent;
+}
+
+.text-about{
+    font-family: 'Dosis', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form_title h2{
+   font-family: 'Dosis', sans-serif;
+   margin-left: 15px;
+    color: #727272;
+}
+
+.form_fonts{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+.hiw md-icon {
+    margin: 20px;
+    margin-top: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.hiw .md-tab > md-icon {
+    margin-bottom: 5px;
+}
+.hiw md-pagination-wrapper, md-tabs-canvas {
+    height: 72px;
 }

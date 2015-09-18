@@ -17,7 +17,12 @@ app.get('/env',function(req, res){
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-app.listen(port, ipaddress);
+
+var server = require("http").Server(app);
+
+server.listen(port, ipaddress);
+
+//var server = app.listen(port, ipaddress);
 
 
 console.log('Server running at '+ ipaddress + 'port:' + port);

@@ -1,65 +1,56 @@
+<div class="holder" layout="row" flex layout-fill>
 
-    <div layout="row">
-        <div hide-sm flex-md="20" flex-gt-md="30" flex-lg="35" flex-gt-lg="35"></div>
+    <!-- Left Margin -->
+    <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
 
-        <md-card flex class="hide">
-            <!--img ng-src="{{imagePath}}" class="md-card-image" alt="DoJugaad"-->
-            <md-card-content>
+    <!-- Middle Content -->
+    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px;">
+        <div class="md-whiteframe-z3 card_holder" layout-padding>
+            <div layout="row" layout-align="center center" class="form_title">
+                <h2>Login to DoJugaad</h2>
+            </div>
+            <form name="login" method="post" action="auth/local" ng-controller="loginController" class="md-padding">
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/ic_account_circle.svg" class="email"></md-icon>
+                    <input class="form_fonts" name="email" data-ng-model="l.email" type="email" placeholder="Email (required)" ng-required="true">
+                </md-input-container>
 
-                    <form name="login" method="post" action="/login" layout-padding>
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="images/icons/ic_lock.svg" class="password"></md-icon>
+                    <input class="form_fonts" name="password" data-ng-model="l.password" type="password" placeholder="Password (required)" ng-required="true">
+                </md-input-container>
 
-                        <md-input-container class="md-icon-float">
-                            <md-icon md-svg-src="images/icons/account.svg" class="email"></md-icon>
-                            <input name="email" data-ng-model="lc.email" type="email" placeholder="Email (required)" ng-required="true">
-                        </md-input-container>
+                <md-content layout="row">
+                    <md-button flex class="md-raised md-primary form_fonts" type="submit">
+                        Log In
+                    </md-button>
+                </md-content>
 
-                       <md-input-container class="md-icon-float">
-                           <md-icon md-svg-src="images/icons/lock-outline.svg" class="password"></md-icon>
-                           <input name="password" data-ng-model="lc.password" type="password" placeholder="Password (required)" ng-required="true">
-                      </md-input-container>
+            </form>
+            <md-divider></md-divider>
+            <md-content layout="row" layout-align="center center">
+                <h4 class="form_fonts">Or Use</h4>
+            </md-content>
+            <md-content layout="row" flex>
+                <md-button class="md-raised md-primary form_fonts" flex onclick="document.location.href='auth/facebook';">
+                    <md-icon md-svg-src="images/icons/facebook.svg"></md-icon>
+                    Facebook
+                </md-button>
+                <md-button class="md-raised md-warn form_fonts" flex onclick="document.location.href='auth/google';">
+                    <md-icon md-svg-src="images/icons/google-plus.svg"></md-icon>
+                    Google
+                </md-button>
+            </md-content>
+        </div>
 
-                      <div layout="row">
-                          <div flex="50">
-                              <md-checkbox data-ng-model="lc.remember" aria-label="Remember">
-                                  Remember Me
-                              </md-checkbox>
-                          </div>
-                          <div flex="50">
-                              <p><a style="text-decoration: none;margin-top: -3px; float: right;" ng-href="">Forgot Password?</a></p>
-                          </div>
-                      </div>
-                        <md-input-container>
-                            <md-button flex class="md-raised md-primary" type="submit">Log In</md-button>
-                        </md-input-container>
-                    </form>
+       <div layout="row">
+           <p>Do not have an account ? <a href="signup" class="form_fonts">Create an account now</a></p>
 
-                    <div layout="row" layout-align="center center">
-                        <p><a style="text-decoration: none" ng-href="/signup">Don't have an account? Create one now</a></p>
-                    </div>
-                    <md-divider ></md-divider>
-                    <div layout="row" layout-align="center center">
-                        <p>or login with</p>
-                    </div>
-                    <div layout="row" layout-align="center center">
+       </div>
 
-                            <md-button class="md-raised md-primary" ng-href="/auth/facebook">
-                                <md-icon md-svg-src="images/icons/facebook.svg"></md-icon>
-                                Facebook
-                            </md-button>
-
-                            <md-button class="md-raised md-warn" ng-href="/auth/google">
-                                <md-icon md-svg-src="images/icons/google-plus.svg"></md-icon>
-                                Google
-                            </md-button>
-                        </div>
-
-
-
-            </md-card-content>
-
-        </md-card>
-
-
-
-        <div hide-sm flex-md="20" flex-gt-md="30" flex-lg="35" flex-gt-lg="35"></div>
     </div>
+
+    <!-- Right Margin -->
+    <div hide-sm flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30"></div>
+
+</div>

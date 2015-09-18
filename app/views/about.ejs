@@ -12,10 +12,10 @@
 
 </head>
 
-<body layout="column" ng-controller="aController">
+<body layout="column" ng-controller="common">
 <% include preloader %>
 <% include header %>
-<div ng-include="'about_content.htm'" ></div>
+<div ng-include="'about_content.htm'" ng-controller="aController"></div>
 <% include top %>
 <% include footer %>
 
@@ -28,13 +28,13 @@
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="js/angular-scroll.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
+
 
 <!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
 <!--script>
     new WOW().init();
 </script-->
-<script src="js/about.js"></script>
+<script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
 
 </body>

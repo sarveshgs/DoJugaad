@@ -1,26 +1,25 @@
-<md-toolbar layout="row" scroll ng-class="{sh:boolChangeClass}" style="position: fixed;">
+<header>
+<md-toolbar  scroll ng-class="{sh:boolChangeClass}" style="position: fixed;">
 <!--md-toolbar layout="row" scroll class="md-whiteframe-z4" style="position: fixed;"-->
     <div class="md-toolbar-tools">
-        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button menuBtn">
+        <!--md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button menuBtn">
             <ng-md-icon icon="menu" style="fill: #ffffff;"></ng-md-icon>
-        </md-button>
+        </md-button-->
 
-        <span class="md-flex" ><a ng-href="/"><img src="img/logos/log.png" alt="logo" height="35px;" /></a></span>
+        <span class="md-flex" ><a ng-href="/"><img src="img/logos/logo_light2.png" alt="logo"  /></a></span>
         <span flex></span>
 
-
         <% if ( data ) { %>
-        <% if (data.name == 'aashish' || data.name == 'Ashish') {%>
-        <md-button  ng-href="/admin"  aria-label="Admin Panel" class="md-raised ">Panel</md-button>
-        <%}%>
         <img ng-src="{{ avatar }}" alt="" class="md-avatar avatar">
         <span class="md-flex" ><%=data.name%></span>
         <md-button  ng-href="/logout"  aria-label="Logout" class="md-raised md-accent">Logout</md-button>
         <% }else { %>
-        <md-button  ng-href="/login"  aria-label="Login" class="md-raised md-warn">
-        <md-icon md-svg-src="images/icons/account-circle.svg"></md-icon>
+        <md-button  ng-href="/login"  aria-label="Login" class="md-raised md-warn" hide-sm>
+        <!--md-icon md-svg-src="images/icons/account-circle.svg"></md-icon-->
+            <i class="ion-log-in" style="font-size: 24px;position: relative;"></i>
             Login
         </md-button>
         <% } %>
     </div>
 </md-toolbar>
+</header>
