@@ -89,6 +89,7 @@ a{
     font-family: 'Dosis', sans-serif;
     font-size: 34px;
     color: #ffffff;
+    text-align: justify;
 
 
 }
@@ -208,6 +209,7 @@ a{
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
     font-size: 16px;
+    text-align: justify;
 }
 
 /*
@@ -260,6 +262,7 @@ a{
 /*Slider css*/
 #slide h1,p,a{
     font-family: 'Dosis', sans-serif;
+    text-align: justify;
 
 }
 
@@ -269,12 +272,14 @@ a{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 32px;
     color:#FFFFFF;
+    text-align: justify;
 }
  
 .hiwcontent{
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 19px;
     color:#FFFFFF;
+    text-align: justify;
 }
 
 
@@ -293,6 +298,7 @@ a{
 .big-title{
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
+    text-align: justify;
 }
 
 
@@ -301,6 +307,7 @@ a{
     font-weight: 500;
     font-size: 16px;
     text-align: match-parent;
+    text-align: justify;
 }
 
 .text-about{
@@ -308,29 +315,81 @@ a{
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
+    text-align: justify;
 }
 
 .form_title h2{
    font-family: 'Dosis', sans-serif;
    margin-left: 15px;
     color: #727272;
+    text-align: justify;
 }
 
 .form_fonts{
     font-family: 'Dosis', sans-serif;
     font-weight: 600;
+    text-align: justify;
 }
 
-.hiw md-icon {
-    margin: 20px;
-    margin-top: 0;
-    width: 24px;
-    height: 24px;
+
+.active{
+    display: block;
 }
 
-.hiw .md-tab > md-icon {
-    margin-bottom: 5px;
+.disabled{
+    display: none;
 }
-.hiw md-pagination-wrapper, md-tabs-canvas {
-    height: 72px;
+
+
+.tab_head{
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    cursor: hand;
+    text-align: justify;
+}
+
+
+
+
+.current {
+    color:#303F9F;
+    border-bottom: 3px solid #FF5252;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.description{
+    font-family: 'Dosis', sans-serif;
+    color: #212121;
+    font-size: 18px;
+    margin-top: -5px;
+    text-align: justify;
+}
+
+.hiw-title{
+    font-family: 'Dosis', sans-serif;
+    color:#303F9F;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: justify;
+
+}
+
+md-item-content{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.cur{
+    background: #ffffff;
+    color: #212121;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.def{
+    background: #F5F5F5;
+
 }

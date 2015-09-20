@@ -1,6 +1,6 @@
 
 <div class="holder" layout="row" flex layout-fill>
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <!--md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
         <md-list class="muppet-list">
             <md-item ng-repeat="it in muppets">
                 <md-item-content>
@@ -11,7 +11,7 @@
                 </md-item-content>
             </md-item>
         </md-list>
-    </md-sidenav>
+    </md-sidenav-->
     <!-- Left Margin -->
     <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
 
@@ -20,46 +20,91 @@
 
         <div ng-include="'breadcrumb.htm'"></div>
 
+        <div class="md-whiteframe-z2 card_holder" layout-margin>
+          <div layout-gt-sm="row" flex>
+              <div flex hide-sm>
+                  <img src="img/team2.png"/>
+              </div>
+              <div flex layout-padding>
+                 <h3 class="hiw-title">About Us</h3>
+                  <p class="description">Three young, energetic and ambitious people, came together with a common dream, an idea and a plan
+                  to make the DoJugaad team. The idea been to bring recognition to the offbeat innovation. Bring glory
+                  the "makeshift" creativity known as <b>Jugaad</b>.<br/>The ambition of bringing out the together
+                  all such jugaad and make this world an easier place to be. The co founders are similar yet different.
+                  Their interests and inclinations range from technalities of systems to minutes of management and
+                  leadership. Though still budding, they together posses the abilities and qualities to make "jugaad"
+                  be accepted by the world.</p>
+              </div>
+          </div>
+        </div>
 
 
-        <div layout="row" layout-align="center center">
+        <div layout="row" layout-align="center center" class="form_title">
             <h2>Our Team</h2>
         </div>
 
         <!-- Small Card -->
         <div layout="row" layout-sm="column" flex layout-margin>
 
-,
+          <div flex="5"></div>
 
-            <md-card flex style="">
-                <img src="img/pic2.png" class="md-card-image">
-                <md-card-content>
-                <h4>Abhijeet Dixit</h4>
-                <p>A Co-Founder of DoJugaad, an executioner with a technical hand. He plays a support guy to technical
-                   stuff while managing customer relations and finances. He is a a graduate from SGSITS, Indore
-                    in 2015 (B.E. with honors) from Computer Engineering department. He currently works as an Engineer
-                    in ITTIAM systems pvt. ltd.
+           <div class="md-whiteframe-z2" flex>
+
+               <div class="top">
+
+               </div>
+
+               <div class="card_holder" layout-padding>
+                   <h4 class="hiw-title">Abhijeet Dixit</h4>
+                   <p class="description">A Co-Founder of DoJugaad, an executioner with a technical hand. He plays a support guy to technical
+                       stuff while managing customer relations and finances. He is a a graduate from SGSITS, Indore
+                       in 2015 (B.E. with honors) from Computer Engineering department. He currently works as an Engineer
+                       in ITTIAM systems pvt. ltd.
+                   </p>
+                   <md-divider></md-divider>
+                   <ul class="breadcrumb">
+                       <li><i class="fa fa-facebook"></i></li>
+                       <li><i class="fa fa-google"></i></li>
+                       <li><i class="fa fa-linkedin"></i></li>
+                   </ul>
+               </div>
+
+           </div>
+
+            <div class="md-whiteframe-z2" flex>
+
+                <div class="card_holder" layout-padding>
+                <h4 class="hiw-title">Ashish Katlam</h4>
+                <p class="description">A Co-Founder of DoJugaad, leads the technical department. He is a a graduate from SGSITS, Indore
+                    in 2015 (B.E. with honors) from Computer Engineering department.
                 </p>
-                </md-card-content>
-            </md-card>
+                <md-divider></md-divider>
+                <ul class="breadcrumb">
+                    <li><i class="fa fa-facebook"></i></li>
+                    <li><i class="fa fa-google"></i></li>
+                    <li><i class="fa fa-linkedin"></i></li>
+                </ul>
+                </div>
+            </div>
 
-            <md-card flex style="">
-                <img src="img/pic2.png" class="md-card-image">
-                <md-card-content>
+            <div class="md-whiteframe-z2" flex>
 
+             <div class="card_holder" layout-padding>
+                <h4 class="hiw-title">Sarvesh Jain</h4>
+                <p class="description">A Co-Founder of DoJugaad, leads the product development process at DoJugaad. He is a graduate from
+                    SGSITS, Indore in 2015(B.E. with honors) from Computer Engineering department. He is currently working
+                    at Persistent System as a Software Engineer.
+                </p>
+                <md-divider></md-divider>
+                <ul class="breadcrumb">
+                    <li><i class="fa fa-facebook"></i></li>
+                    <li><i class="fa fa-google"></i></li>
+                    <li><i class="fa fa-linkedin"></i></li>
+                </ul>
+             </div>
+            </div>
 
-                </md-card-content>
-            </md-card>
-
-            <md-card flex style="">
-                <img src="img/pic2.png" class="md-card-image">
-                <md-card-content>
-
-
-                </md-card-content>
-            </md-card>
-
-
+<div flex="5"></div>
 
         </div>
         <!-- End of Small Card -->

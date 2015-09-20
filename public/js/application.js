@@ -162,6 +162,79 @@ app.controller('fController',function($scope) {
  */
 app.controller('hiwController', function ($scope) {
     $scope.title="How It Works";
+    $scope.class1 = "active";
+    $scope.class2 = "disabled";
+    $scope.class3 = "disabled";
+    $scope.class4 = "disabled";
+
+    $scope.status1 = "current";
+    $scope.cur1 = "cur";
+    $scope.cur2="def";
+    $scope.cur3="def";
+    $scope.cur4="def";
+
+    $scope.tog1 = function () {
+        $scope.class1 = "active";
+        $scope.class2 = "disabled";
+        $scope.class3 = "disabled";
+        $scope.class4 = "disabled";
+        $scope.status1 = "current";
+        $scope.status2 = "";
+        $scope.status3 = "";
+        $scope.status4 = "";
+        $scope.cur1 = "cur";
+        $scope.cur2="def";
+        $scope.cur3="def";
+        $scope.cur4="def";
+    };
+
+    $scope.tog2 = function () {
+        $scope.class1 = "disabled";
+        $scope.class2 = "active";
+        $scope.class3 = "disabled";
+        $scope.class4 = "disabled";
+        $scope.status1 = "";
+        $scope.status2 = "current";
+        $scope.status3 = "";
+        $scope.status4 = "";
+        $scope.cur1 = "def";
+        $scope.cur2="cur";
+        $scope.cur3="def";
+        $scope.cur4="def";
+
+    };
+
+    $scope.tog3 = function () {
+        $scope.class1 = "disabled";
+        $scope.class2 = "disabled";
+        $scope.class3 = "active";
+        $scope.class4 = "disabled";
+        $scope.status1 = "";
+        $scope.status2 = "";
+        $scope.status3 = "current";
+        $scope.status4 = "";
+        $scope.cur1 = "def";
+        $scope.cur2="def";
+        $scope.cur3="cur";
+        $scope.cur4="def";
+    };
+
+    $scope.tog4 = function () {
+        $scope.class1 = "disabled";
+        $scope.class2 = "disabled";
+        $scope.class3 = "disabled";
+        $scope.class4 = "active";
+        $scope.status1 = "";
+        $scope.status2 = "";
+        $scope.status3 = "";
+        $scope.status4 = "current";
+        $scope.cur1 = "def";
+        $scope.cur2="def";
+        $scope.cur3="def";
+        $scope.cur4="cur";
+    };
+
+
 });
 
 /**
