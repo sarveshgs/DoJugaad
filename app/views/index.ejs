@@ -240,11 +240,35 @@
 
 
 
+<div class="sticker hidden-xs">
+    <p>Currently in Beta</p>
+</div>
+
+
 <!-- Scripts-->
 <!--Back to top-->
 <a href="#" class="back-to-top">
     <i class="fa fa-angle-up"></i>
 </a>
+
+
+<!-- Feedback Form -->
+<!--divid="loginmodal" style="display:none;">
+    <h1>Feedback</h1>
+    <form id="feedform" name="feedform" method="post" action="/feed">
+        <label for="message">Suggestion</label>
+        <textarea id="message" name="message" class="txtfield" tabindex="1" rows="3"/>
+
+        <label for="email">Your email</label>
+        <input type="text" name="email" id="email" class="txtfield" tabindex="2">
+
+        <div class="center">
+            <input type="submit" name="submitbtn" id="submitbtn" class="flatbtn-blu hidemodal" value="Submit" tabindex="3">
+        </div>
+    </form>
+</div-->
+
+
 
 
 <script src="js/modernizr.custom.min.js"></script>
@@ -259,6 +283,7 @@
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/pace.min.js"></script>
 <script src="js/vegas.min.js"></script>
+<script src="js/jquery.leanModal.min.js"></script>
 
 <!-- Must be last of all scripts -->
 <script src="js/scripts.min.js"></script>
@@ -274,6 +299,8 @@
                 { src: "/img/slide5.jpg" }
             ]
         });
+
+        //$('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
     });
 </script>
 <!--[if lt IE 9]>
@@ -354,18 +381,18 @@
                     <h4>Follow Us</h4>
                     <ul class="circle-icons icons-list">
                         <li>
-                            <a href="#" title="Follow us">
+                            <a href="https://plus.google.com/u/0/b/100580450086875087162/+DojugaadInd/about" title="Follow us" target="_blank">
                                 <i class="fa fa-google-plus"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Follow us">
-                                <i class="fa fa-linkedin"></i>
+                            <a href="https://twitter.com/do_jugaad" title="Follow us" target="_blank">
+                                <i class="fa fa-twitter"></i>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" title="Follow us">
+                            <a href="https://www.facebook.com/DoJugaad" title="Follow us" target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>

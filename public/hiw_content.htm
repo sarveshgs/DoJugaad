@@ -1,181 +1,207 @@
-<div class="holder hiw" layout="row" flex layout-fill>
-    <!-- Left Margin -->
-    <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
+<div flex-container="column" ng-cloak>
 
-    <!-- Middle Content -->
-    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px; margin-bottom: 100px;">
+    <div flex-container="row" class="space_inner"></div>
 
-        <div ng-include="'breadcrumb.htm'"></div>
+    <div flex-container="row" flex-gutter="24">
 
-        <div class="md-whiteframe-z2 card_holder">
-            <md-content>
-                <div layout="row" hide-sm>
-                    <div flex></div>
+        <!-- Left Margin -->
+        <div flex-item="1" class="left"></div>
 
-                    <div flex ng-click="tog1()" class="tab_head" ng-class="status1">
-                        <md-item-content md-ink-ripple layout="column" layout-align="center center">
-                            <img src="images/icons/ic_help_48.svg"  />
-                            <div style="margin-top: 5px;">I need Jugaad</div>
-                        </md-item-content>
-                    </div>
+        <!-- Main Content -->
+        <div flex-item="10" class="main_content" id="main_content">
 
-                    <div flex  ng-click="tog2()" class="tab_head" ng-class="status2">
-                        <md-item-content md-ink-ripple layout="column" layout-align="center center">
-                            <img src="images/icons/ic_palette_48.svg"  />
-                            <div style="margin-top: 5px;">I have an Idea</div>
-                        </md-item-content>
-                    </div>
+            <!-- Breadcrumb -->
+            <div ng-include="'breadcrumb.htm'" class="bread"></div>
+            <!-- End of Breadcrumb -->
 
-                    <div flex ng-click="tog3()" class="tab_head" ng-class="status3">
-                        <md-item-content md-ink-ripple layout="column" layout-align="center center" >
-                            <img src="images/icons/ic_local_48.svg"  />
-                            <div style="margin-top: 5px;">I have a Product</div>
-                        </md-item-content>
-                    </div>
-
-                    <div flex ng-click="tog4()" class="tab_head" ng-class="status4">
-                        <md-item-content md-ink-ripple layout="column" layout-align="center center" >
-                            <img src="images/icons/ic_build_48.svg"  />
-                            <div style="margin-top: 5px;">I have a skill</div>
-                        </md-item-content>
-                    </div>
-
-                    <div flex></div>
-
-                </div>
+            <!-- Top Banner -->
+            <div flex-container="column" class="card k">
 
 
-                <div layout="column" hide-gt-sm>
-                   <md-list style="margin-top: -8px;">
-                       <md-list-item md-ink-ripple ng-class="cur1">
-                           <md-item-content layout="row" layout-align="start center" ng-click="tog1()">
-                               <img src="images/icons/ic_help.svg"/>
-                               <div>&nbsp;I need Jugaad</div>
-                           </md-item-content>
-                       </md-list-item>
-                       <md-list-item md-ink-ripple ng-class="cur2">
-                           <md-item-content layout="row" layout-align="start center" ng-click="tog2()">
-                               <img src="images/icons/ic_palette.svg"/>
-                               <div>&nbsp;I have an Idea</div>
-                           </md-item-content>
-                       </md-list-item>
-                       <md-list-item md-ink-ripple ng-class="cur3">
-                           <md-item-content layout="row" layout-align="start center" ng-click="tog3()">
-                               <img src="images/icons/ic_local.svg"/>
-                               <div>&nbsp;I have a Product</div>
-                           </md-item-content>
-                       </md-list-item>
-                       <md-list-item md-ink-ripple ng-class="cur4">
-                           <md-item-content layout="row" layout-align="start center" ng-click="tog4()">
-                               <img src="images/icons/ic_build.svg"/>
-                               <div>&nbsp;I have a skill</div>
-                           </md-item-content>
-                       </md-list-item>
-                   </md-list>
-                </div>
 
-                <md-divider hide-sm></md-divider>
+                    <div class="tab_nav" flex-container="row">
 
-                <div ng-class="class1" >
-                <div layout-gt-sm="row" flex layout-padding class="wow fadeInRight" data-wow-delay="0.7s">
+                        <div flex-item="2" ><div>&nbsp;</div></div>
 
-                    <div flex>
-                        <img src="img/doubt.png" class="center" alt="Problem" hide-sm>
-                    </div>
-                    <div layout="column" flex>
-                        <h3 class="hiw-title">Ask us</h3>
-                        <p class="description">Mr. Sharma is a senior professor at an engineering college. Being in the
-                            profession for years, he is very much aware of the amount of time that goes waste
-                            because of tedious attendance taking procedure. Mr. Sharma always wished if he
-                            could somehow automate this. So,he posted his problem at DoJugaad. The team at
-                            DoJugaad analyzed his problem and developed a biometric sensor based portable
-                            device that could be easily rotated in the class. This device could be easily
-                            connected to any computer to generate excel sheet of the attendance. This sheet
-                            would get periodically updated to the college server. This simple yet smart
-                            device has helped not just Mr. Sharma but the entire college to take quick and
-                            automatic attendance.</p>
-                        <md-button class="md-raised md-primary" style="width: 50%" onclick="document.location.href='jugaad';">Submit Problem</md-button>
-                    </div>
-
-                </div>
-                </div>
-
-                <div ng-class="class2" >
-                    <div layout-gt-sm="row" flex layout-padding class="wow fadeInLeft">
-
-                        <div flex hide-sm>
-                            <img src="img/idea.png" class="center">
-                        </div>
-                        <div layout="column" flex>
-                            <h3 class="hiw-title">Share</h3>
-                            <p class="description">Young and energetic Akshat is quite observant. Watching around, he often ends up
-                                thinking about some simple yet creative ideas that might help the surrounding to
-                                be a better place. However, Akshat faced a serious issue, he felt short of
-                                resources and expertise to mould his idea into a working model.<br />
-                                So, Akshat shared his idea with our team. Our team of talented engineers and
-                                experts discussed and helped to improvise his idea. We presented the idea to our
-                                partners.They valued the idea and decided to make it real!<br />
-                                The world was introduced to a brilliant invention all thanks to Akshat's role in
-                                idea contribution. While Akshat enjoyed his part of share, the world enjoyed his
-                                idea as a real time product.</p>
-                            <md-button class="md-raised md-primary" style="width: 50%" onclick="document.location.href='idea';">Submit Idea</md-button>
+                        <div flex-item="2" >
+                           <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog1()" class="tab_head" ng-class="status1">
+                            <img src="images/icons/ic_help_48.svg" style="cursor: hand;"/>
+                            <div class="tab_title">I need Jugaad</div>
+                           </div>
                         </div>
 
-                    </div>
-                </div>
-
-                <div ng-class="class3">
-                    <div layout-gt-sm="row" flex layout-padding  class="wow fadeInLeft">
-
-                        <div flex hide-sm>
-                            <img src="img/sell.png" class="center">
+                        <div flex-item="2" >
+                            <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog2()" class="tab_head" ng-class="status2">
+                            <img src="images/icons/ic_palette_48.svg" style="cursor: hand;"/>
+                            <div class="tab_title">I have an Idea</div>
+                            </div>
                         </div>
-                        <div layout="column" flex>
-                            <h3 class="hiw-title">Sell</h3>
-                            <p class="description">Raju and his team are always fascinated in building real life model projects.
-                                During college days, they would earn money by developing academic projects for other
-                                colleagues. However, they wanted to invest their talent into market(or however now
-                                they wanted to try their luck in real market). They were ready with many sample
-                                products and all they needed was a platform to meet interested investors. Raju and
-                                his team approached DoJugaad. We carefully analyzed their products and extended them
-                                a chance to interact with our interested investors/sellors/buyers.<br/>
-                                DoJugaad thus helped Raju and his team to turn their talent into a full time
-                                profession.</p>
-                            <md-button class="md-raised md-primary" style="width: 50%" onclick="document.location.href='product';">Submit Product</md-button>
+                        <div flex-item="2" >
+                            <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog3()" class="tab_head" ng-class="status3">
+                            <img src="images/icons/ic_local_48.svg" style="cursor: hand;"/>
+                            <div class="tab_title">I have a product</div>
+                            </div>
+                        </div>
+                        <div flex-item="2" >
+                            <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog4()" class="tab_head" ng-class="status4">
+                               <img src="images/icons/ic_build_48.svg" style="cursor: hand;"/>
+                               <div class="tab_title">I have a skill</div>
+                            </div>
+                        </div>
+                        <div flex-item="2" ><div>&nbsp;</div></div>
+                    </div>
+
+                    <div flex-container="row" class="divider divider--dark"></div>
+
+
+                    <div flex-container="column" class="small_nav">
+                        <ul class="list mt++">
+                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur1" ng-click="tog1()">
+                                <div class="list-row__primary" style="cursor: hand">
+                                    <img src="images/icons/ic_help.svg">
+                                </div>
+
+                                <div class="list-row__content">
+                                    <span class="tab_title">I need Jugaad</span>
+                                </div>
+                            </li>
+
+                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur2" ng-click="tog2()">
+                                <div class="list-row__primary" style="cursor: hand">
+                                    <img src="images/icons/ic_palette.svg">
+                                </div>
+
+                                <div class="list-row__content">
+                                    <span class="tab_title">I have an idea</span>
+                                </div>
+                            </li>
+
+                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur3" ng-click="tog3()">
+                                <div class="list-row__primary" style="cursor: hand">
+                                    <img src="images/icons/ic_local.svg">
+                                </div>
+
+                                <div class="list-row__content">
+                                    <span class="tab_title">I have a product</span>
+                                </div>
+                            </li>
+
+                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur4" ng-click="tog4()">
+                                <div class="list-row__primary" style="cursor: hand">
+                                    <img src="images/icons/ic_build.svg">
+                                </div>
+
+                                <div class="list-row__content">
+                                    <span class="tab_title">I have a skill</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                <div  ng-class="class1">
+                    <div flex-container="row" class="mt++ sm">
+                        <div flex-item="3" class="pic">
+                            <img src="img/doubt.png" class="center">
+                        </div>
+                        <div flex-item="9" class="p+">
+                            <h3 class="hiw-title">Ask us</h3>
+                            <br/>
+                            <p class="description">Mr. Sharma is a senior professor at an engineering college. Being in the
+                                profession for years, he is very much aware of the amount of time that goes waste
+                                because of tedious attendance taking procedure. Mr. Sharma always wished if he
+                                could somehow automate this. So,he posted his problem at DoJugaad. The team at
+                                DoJugaad analyzed his problem and developed a biometric sensor based portable
+                                device that could be easily rotated in the class. This device could be easily
+                                connected to any computer to generate excel sheet of the attendance. This sheet
+                                would get periodically updated to the college server. This simple yet smart
+                                device has helped not just Mr. Sharma but the entire college to take quick and
+                                automatic attendance.</p>
+
+                            <button class="btn btn--l btn--blue btn--raised" lx-ripple onclick="document.location.href='jugaad';">Submit Problem</button>
                         </div>
 
                     </div>
-                </div>
+                    </div>
 
-                <div ng-class="class4">
-                    <div layout-gt-sm="row" flex layout-padding  class="wow fadeInLeft">
-
-                        <div flex hide-sm>
-                            <img src="img/skill_girl1.png" class="center">
-                        </div>
-                        <div layout="column" flex>
-                            <h3 class="hiw-title">Contribute</h3>
-                            <p class="description">Miss Shruti is an established product design engineer. She is a hardworking and
-                                workoholic person. one day while browsing DoJugaad, Shruti came across an
-                                interesting idea description. She knew that this idea perfectly aligned with her
-                                expertise in product design. Shruti submitted her product design model. It was
-                                reviewed and accepted by the team experts.<br />
-                                Shruti's design helped DoJugaad to release a well designed product into market.
-                                Shruti not only became a product share partner but also recieved a new platform
-                                to practise her interest.<br /></p>
-                            <md-button class="md-raised md-hue" style="width: 50%">Coming Soon..</md-button>
-                        </div>
-
+                <div  ng-class="class2">
+                <div flex-container="row" class="mt++ sm">
+                    <div flex-item="4" class="pic">
+                        <img src="img/idea.png" class="center">
+                    </div>
+                    <div flex-item="8" class="p+">
+                        <h3 class="hiw-title">Share</h3>
+                        <br/>
+                        <p class="description">Young and energetic Akshat is quite observant. Watching around, he often
+                            ends up thinking about some simple yet creative ideas that might help the surrounding to be
+                            a better place. However, Akshat faced a serious issue, he felt short of resources and
+                            expertise to mould his idea into a working model. So, Akshat shared his idea with our team.
+                            Our team of talented engineers and experts discussed and helped to improvise his idea.
+                            We presented the idea to our partners.They valued the idea and decided to make it real!
+                            The world was introduced to a brilliant invention all thanks to Akshat's role in idea
+                            contribution.
+                            While Akshat enjoyed his part of share, the world enjoyed his idea as a real time product.
+                        </p>
+                        <br/>
+                        <button class="btn btn--l btn--blue btn--raised" lx-ripple onclick="document.location.href='idea';">Submit Idea</button>
                     </div>
                 </div>
+                </div>
 
-            </md-content>
-        </div>
+                <div  ng-class="class3">
+                <div flex-container="row" class="mt++ sm">
+                    <div flex-item="5" class="pic">
+                        <img src="img/sell.png" class="center">
+                    </div>
+                    <div flex-item="7" class="p+">
+                        <h3 class="hiw-title">Sell</h3>
+                        <br/>
+                        <p class="description">Raju and his team are always fascinated in building real life model
+                            projects. During college days, they would earn money by developing academic projects for
+                            other colleagues. However, they wanted to invest their talent into market(or however now
+                            they wanted to try their luck in real market). They were ready with many sample products
+                            and all they needed was a platform to meet interested investors. Raju and his team approached
+                            DoJugaad. We carefully analyzed their products and extended them a chance to interact with
+                            our interested investors/sellors/buyers. DoJugaad thus helped Raju and his team to turn their
+                            talent into a full time profession.</p>
+                        <br/>
+                        <button class="btn btn--l btn--blue btn--raised" lx-ripple onclick="document.location.href='product';">Submit Product</button>
+                    </div>
+                </div>
+                </div>
 
+                <div  ng-class="class4">
+                <div flex-container="row" class="mt++ sm">
+                    <div flex-item="4" class="pic">
+                        <img src="img/skill_girl1.png" class="center">
+                    </div>
+                    <div flex-item="8" class="p+">
+                        <h3 class="hiw-title">Contribute</h3>
+                        <br/>
+                        <p class="description">Miss Shruti is an established product design engineer. She is a
+                            hardworking and workoholic person. one day while browsing DoJugaad, Shruti came across an
+                            interesting idea description. She knew that this idea perfectly aligned with her expertise
+                            in product design. Shruti submitted her product design model. It was reviewed and accepted
+                            by the team experts.Shruti's design helped DoJugaad to release a well designed product into
+                            market. Shruti not only became a product share partner but also recieved a new platform to
+                            practise her interest.</p>
+                        <br/>
+                        <button class="btn btn--l btn--white btn--raised" lx-ripple>Coming soon</button>
+                    </div>
+                </div>
+                </div>
 
+            </div>
+            <!-- End of Top Banner -->
+
+        </div> <!-- End of Main Content -->
+
+        <!-- Right Margin -->
+        <div flex-item="1" class="right"></div>
     </div>
 
-    <!-- Right Margin -->
-    <div hide-sm flex-md="10" flex-gt-md="10" flex-lg="10" flex-gt-lg="10"></div>
-
 </div>
+
+
+

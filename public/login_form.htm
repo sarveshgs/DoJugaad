@@ -1,56 +1,45 @@
-<div class="holder" layout="row" flex layout-fill>
+<div class="main_content card p+">
 
-    <!-- Left Margin -->
-    <div hide-sm flex-md="35" flex-gt-md="35" flex-lg="35" flex-gt-lg="35"></div>
+    <div class="p+" flex-container="column">
+        <strong class="fs-headline center">Login to DoJugaad</strong>
 
-    <!-- Middle Content -->
-    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px;">
-        <div class="md-whiteframe-z3 card_holder" layout-padding>
-            <div layout="row" layout-align="center center" class="form_title">
-                <h2>Login to DoJugaad</h2>
-            </div>
-            <form name="login" method="post" action="auth/local" ng-controller="loginController" class="md-padding">
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/ic_account_circle.svg" class="email"></md-icon>
-                    <input class="form_fonts" name="email" data-ng-model="l.email" type="email" placeholder="Email (required)" ng-required="true">
-                </md-input-container>
+                <form method="post" action="auth/local">
 
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/ic_lock.svg" class="password"></md-icon>
-                    <input class="form_fonts" name="password" data-ng-model="l.password" type="password" placeholder="Password (required)" ng-required="true">
-                </md-input-container>
+                    <lx-text-field label="Email address" fixed-label="true">
+                        <input type="email" name="email" ng-model="login.email">
+                    </lx-text-field>
 
-                <md-content layout="row">
-                    <md-button flex class="md-raised md-primary form_fonts" type="submit">
-                        Log In
-                    </md-button>
-                </md-content>
+                    <lx-text-field label="Password">
+                     <input type="password" name="password" ng-model="login.password" >
+                    </lx-text-field>
 
-            </form>
-            <md-divider></md-divider>
-            <md-content layout="row" layout-align="center center">
-                <h4 class="form_fonts">Or Use</h4>
-            </md-content>
-            <md-content layout="row" flex>
-                <md-button class="md-raised md-primary form_fonts" flex onclick="document.location.href='auth/facebook';">
-                    <md-icon md-svg-src="images/icons/facebook.svg"></md-icon>
-                    Facebook
-                </md-button>
-                <md-button class="md-raised md-warn form_fonts" flex onclick="document.location.href='auth/google';">
-                    <md-icon md-svg-src="images/icons/google-plus.svg"></md-icon>
-                    Google
-                </md-button>
-            </md-content>
+                    <button  style="width: 100%;margin-top: 10px;" class="btn btn--m btn--blue btn--raised center" lx-ripple>Login</button>
+                </form>
+
+        <span class="fs-subhead center" style="margin-top: 10px;">Or use</span>
+
+
+        <div class="tc-white-1" flex-container="row" flex-gutter="24" style="margin-top: 10px;">
+            <div flex-item="6" ><div>
+                <button style="width: 100%" onclick="document.location.href='auth/facebook';"class="btn btn--l btn--raised bgc-indigo-500 tc-white" lx-ripple="white"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-facebook"></i>Facebook</button>
+            </div></div>
+            <div flex-item="6" ><div>
+                <button style="width: 100%" onclick="document.location.href='auth/google';"class="btn btn--l btn--red btn--raised" lx-ripple><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-google-plus"></i>Google</button>
+            </div></div>
+
         </div>
-
-       <div layout="row">
-           <p>Do not have an account ? <a href="signup" class="form_fonts">Create an account now</a></p>
-
-       </div>
-
     </div>
 
-    <!-- Right Margin -->
-    <div hide-sm flex-md="35" flex-gt-md="35" flex-lg="35" flex-gt-lg="35"></div>
+</div>
+
+
+
+<div layout-container="row" style="margin-top: 10px;">
+
+    <ul style="list-style:none; ">
+        <li style="display: inline" class="fs-subhead">Do not have an account ?</li>
+        <li style="display: inline">&nbsp;</li>
+        <li style="display: inline"><a href="signup">Create one now</a></li>
+    </ul>
 
 </div>

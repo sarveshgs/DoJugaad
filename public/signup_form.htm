@@ -1,53 +1,41 @@
-<div class="holder" layout="row" flex layout-fill>
+<div class="main_content card p+">
 
-    <!-- Left Margin -->
-    <div hide-sm flex-md="35" flex-gt-md="35" flex-lg="35" flex-gt-lg="35"></div>
+    <div class="p+" flex-container="column">
+        <strong class="fs-headline center">Welcome to DoJugaad</strong>
 
-    <!-- Middle Content -->
-    <div id="main_content" layout="column" flex layout-padding style="margin-top: 120px;">
-        <div class="md-whiteframe-z3 card_holder" layout-padding>
-            <div layout="row" layout-align="center center" class="form_title">
-                <h2>Welcome to DoJugaad</h2>
+        <form name="signup" layout-padding ng-controller="signController" ng-submit="$event.preventDefault()">
+            <lx-text-field label="Email address">
+                <input type="email" name="email" ng-model="sign.email" ng-required="true">
+            </lx-text-field>
+
+            <lx-text-field label="Password">
+                <input type="password" name="password" ng-model="sign.password" ng-required="true">
+            </lx-text-field>
+
+            <lx-text-field label="Full name">
+                <input type="text" name="name" ng-model="sign.name" ng-required="true">
+            </lx-text-field>
+
+            <div class="radio-group" ng-model="sign.gender" flex-container="row" style="margin-top: 10px;">
+                <div class="radio-button" flex-item>
+                    <input type="radio" id="radio1" name="radio1" value="male" class="radio-button__input">
+                    <label for="radio1" class="radio-button__label">Male</label>
+                </div>
+
+                <div class="radio-button" flex-item>
+                    <input type="radio" id="radio2" name="radio1" value="female" class="radio-button__input">
+                    <label for="radio2" class="radio-button__label">Female</label>
+                </div>
             </div>
-            <form name="signup" layout-padding ng-controller="signController" ng-submit="$event.preventDefault()">
-
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/ic_mail.svg" class="email"></md-icon>
-                    <input name="email" data-ng-model="sign.email" type="email" placeholder="Email (required)" ng-required="true">
-                </md-input-container>
-
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/lock-outline.svg" class="password"></md-icon>
-                    <input name="password" data-ng-model="sign.password" type="password" placeholder="Password (required)" ng-required="true">
-                </md-input-container>
-
-                <md-input-container class="md-icon-float">
-                    <md-icon md-svg-src="images/icons/account.svg" class="email"></md-icon>
-                    <input name="name" data-ng-model="sign.name" type="text" placeholder="Name" ng-required="true">
-                </md-input-container>
 
 
-                <md-radio-group ng-model="sign.gender">
+            <button ng-click="create()" style="width: 100%;margin-top: 10px;" class="btn btn--m btn--blue btn--raised center" lx-ripple>Signup</button>
+        </form>
 
-                    <md-radio-button value="male" class="md-primary" ng-style="{'display':'inline'}">Male</md-radio-button>
-                    <md-radio-button value="female" ng-style="{'display':'inline'}"> Female </md-radio-button>
-                </md-radio-group>
-
-                <md-content layout="row" flex>
-                    <md-button flex class="md-raised md-primary" data-ng-click="create()">Signup</md-button>
-                </md-content>
-
-            </form>
-
-
-
-
-
-        </div>
     </div>
-
-    <!-- Right Margin -->
-    <div hide-sm flex-md="35" flex-gt-md="35" flex-lg="35" flex-gt-lg="35"></div>
 
 </div>
 
+<div flex-layout="row">
+    <span class="center"><i class="fa fa-long-arrow-left">&nbsp;</i><a href="/"> Back to Home</a></span>
+</div>

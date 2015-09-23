@@ -3,7 +3,7 @@
  *
  */
 
-var app = angular.module('myApp',['ngMaterial','duScroll']) .value('duScrollDuration', 2000)
+var app = angular.module('myApp',['lumx','duScroll']) .value('duScrollDuration', 2000)
     .value('duScrollOffset', 30);
 
 /**
@@ -28,43 +28,16 @@ app.directive("scroll", function ($window) {
     };
 });
 
-/**
- * Theming the Application
- */
-app.config(function($mdThemingProvider) {
-
-    var myColor = $mdThemingProvider.extendPalette('indigo', {
-        //  '500': '512DA8'
-        '500': '303F9F'
-    });
-
-    $mdThemingProvider.definePalette('myBlue', myColor);
-
-    $mdThemingProvider.theme('default')
-        .primaryPalette('myBlue')
-        .accentPalette('pink');
-
-    $mdThemingProvider.theme('input', 'default')
-        .primaryPalette('grey')
-});
 
 
 /**
  * Common Controller
  */
-app.controller('common',function($scope,$http,$document,$mdSidenav,$rootScope) {
+app.controller('common',function($scope,$http,$document,$rootScope) {
     console.log('App running');
     $rootScope.isConnected = false;
     $rootScope.pid = null;
 
-
-
-    //SideBar Toggle
-    $scope.toggleSidenav = toggleSidenav;
-
-    function toggleSidenav(name) {
-        $mdSidenav(name).toggle();
-    }
 
 
         // Scroll to Top Function
@@ -305,7 +278,7 @@ app.controller('sub',function($scope){
 /**
  * Submit Idea Controller
  */
-app.controller('iController', function ($scope,$http,$rootScope,$mdDialog,$window) {
+app.controller('iController', function ($scope,$http,$rootScope,$window,LxDialogService) {
     var valid = false;
     var defaultForm = {
         title:"",
@@ -314,6 +287,7 @@ app.controller('iController', function ($scope,$http,$rootScope,$mdDialog,$windo
         problem:""
     }
     $scope.opt = ["Technology","Science","Daily Life","General","Other"];
+    $scope.cvar = true;
     console.log($rootScope.isConnected);
 
     var validate = function(){
@@ -322,19 +296,8 @@ app.controller('iController', function ($scope,$http,$rootScope,$mdDialog,$windo
         }
     };
 
-    var showAlert = function(ev) {
-        // Appending dialog to document.body to cover sidenav in docs app
-        var confirm = $mdDialog.confirm()
-            .title('Information')
-            .content('We appreciate your submission. But it would be useful for us to identify you.')
-            .ariaLabel('Info')
-            .targetEvent(ev)
-            .ok('Login');
-        $mdDialog.show(confirm).then(function() {
-            //$scope.status = 'You decided to get rid of your debt.';
-            $window.location.href = '/login';
-            $window.location.href;
-        });
+    var showAlert = function(dialogId) {
+        LxDialogService.open(dialogId);
     };
 
    $scope.create = function(){
@@ -358,7 +321,7 @@ app.controller('iController', function ($scope,$http,$rootScope,$mdDialog,$windo
        if(!$rootScope.isConnected){
            $http.post('/temp',Data).success(function(response){
                console.log(response);
-               showAlert();
+               showAlert('test');
            }) ;
        }else{
            Data.postUserId = $rootScope.pid;
@@ -390,7 +353,7 @@ app.controller('iController', function ($scope,$http,$rootScope,$mdDialog,$windo
 /**
  * Submit Jugaad Controller
  */
-app.controller('jController', function ($scope,$http,$rootScope,$mdDialog,$window) {
+app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialogService) {
     var valid = false;
     var defaultForm = {
         title:"",
@@ -400,8 +363,16 @@ app.controller('jController', function ($scope,$http,$rootScope,$mdDialog,$windo
     }
     $scope.opt = ["Technology","Science","Daily Life","General","Other"];
     $scope.myvar = true;
+    $scope.cvar = true;
     $scope.tog = function(){
         $scope.myvar = !$scope.myvar;
+    }
+
+
+    $scope.ch = function(){
+        if($scope.jugaad.category == "Other"){
+            $scope.cvar = false;
+        }
     }
 
     console.log($rootScope.isConnected);
@@ -415,19 +386,8 @@ app.controller('jController', function ($scope,$http,$rootScope,$mdDialog,$windo
 
 
 
-    var showAlert = function(ev) {
-        // Appending dialog to document.body to cover sidenav in docs app
-        var confirm = $mdDialog.confirm()
-            .title('Information')
-            .content('We appreciate your submission. But it would be useful for us to identify you.')
-            .ariaLabel('Info')
-            .targetEvent(ev)
-            .ok('Login');
-        $mdDialog.show(confirm).then(function() {
-            //$scope.status = 'You decided to get rid of your debt.';
-            $window.location.href = '/login';
-            $window.location.href;
-        });
+    var showAlert = function(dialogId) {
+        LxDialogService.open(dialogId);
     };
 
     $scope.create = function(){
@@ -451,7 +411,7 @@ app.controller('jController', function ($scope,$http,$rootScope,$mdDialog,$windo
         if(!$rootScope.isConnected){
             $http.post('/temp',Data).success(function(response){
                 console.log(response);
-                showAlert();
+                showAlert('test');
             });
         }else{
             Data.postUserId = $rootScope.pid;
@@ -485,7 +445,7 @@ app.controller('jController', function ($scope,$http,$rootScope,$mdDialog,$windo
 /**
  * Submit Product Controller
  */
-app.controller('pController', function ($scope,$http,$rootScope,$mdDialog,$window) {
+app.controller('pController', function ($scope,$http,$rootScope,$window,LxDialogService) {
     var valid = false;
     var defaultForm = {
         name:"",
@@ -494,21 +454,11 @@ app.controller('pController', function ($scope,$http,$rootScope,$mdDialog,$windo
         problem:""
     }
     $scope.opt = ["Technology","Science","Daily Life","General","Other"];
+    $scope.cvar = true;
     console.log($rootScope.isConnected);
 
-    var showAlert = function(ev) {
-        // Appending dialog to document.body to cover sidenav in docs app
-        var confirm = $mdDialog.confirm()
-            .title('Information')
-            .content('We appreciate your submission. But it would be useful for us to identify you.')
-            .ariaLabel('Info')
-            .targetEvent(ev)
-            .ok('Login');
-        $mdDialog.show(confirm).then(function() {
-            //$scope.status = 'You decided to get rid of your debt.';
-            $window.location.href = '/login';
-            $window.location.href;
-        });
+    var showAlert = function(dialogId) {
+        LxDialogService.open(dialogId);
     };
 
 
@@ -545,7 +495,7 @@ app.controller('pController', function ($scope,$http,$rootScope,$mdDialog,$windo
 
             $http.post('/temp',Data).success(function(response){
                 console.log(response);
-                showAlert();
+                showAlert('test');
             }) ;
         }else{
             Data.postUserId = $rootScope.pid;

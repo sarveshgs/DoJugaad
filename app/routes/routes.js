@@ -2,6 +2,10 @@
 module.exports = function(app, passport,db,mongojs,nodemailer) {
 
 
+    app.get('/test', function (req,res) {
+        res.render('test.ejs');
+    })
+
     /**
      * Page Rendering/Page path definition goes here
      */
@@ -198,7 +202,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
               res.redirect('/success');
           }
           else{
-              res.redirect('/');
+              res.redirect('/hiw');
           }
     });
 
@@ -222,7 +226,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
             res.redirect('/success');
         }
         else{
-            res.redirect('/');
+            res.redirect('/hiw');
         }
     });
 
@@ -247,7 +251,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
             res.redirect('/success');
         }
         else{
-            res.redirect('/');
+            res.redirect('/hiw');
         }
     });
 

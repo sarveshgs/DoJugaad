@@ -1,47 +1,39 @@
-<md-card-content>
-    <form name="product" class="md-padding" ng-controller="pController" ng-submit="$event.preventDefault()">
+    <form name="product" ng-controller="pController" ng-submit="$event.preventDefault()">
 
-    <md-input-container>
-        <label class="form_fonts">Product Name</label>
-        <input class="form_fonts" type="text" data-ng-model="product.name" required aria-label="Product Name">
-    </md-input-container>
 
-    <md-input-container>
-        <label class="form_fonts">Describe your Product</label>
-        <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea class="form_fonts" data-ng-model="product.description" rows="5" required aria-label="Product Description"></textarea>
-    </md-input-container>
+        <lx-text-field label="Product name">
+            <input type="text" ng-model="product.name">
+        </lx-text-field>
 
-    <md-input-container>
-        <label class="form_fonts">Problem solved by Product</label>
-        <input class="form_fonts" type="text" data-ng-model="product.problem" aria-label="Problem Solved">
-    </md-input-container>
+        <lx-text-field label="Describe your idea">
+            <textarea ng-model="idea.description" rows="5"></textarea>
+        </lx-text-field>
 
-        <div layout-gt-sm="row">
-            <md-input-container>
-                <md-select data-ng-model="product.category" placeholder="Specify the most suitable category" class="form_fonts" >
-                    <md-tooltip>Choose</md-tooltip>
-                    <md-option ng-repeat="op in opt" value="{{op}}" class="form_fonts">{{op}}</md-option>
-                </md-select>
-            </md-input-container>
+        <lx-text-field label="Problem solved by the product ">
+            <input type="text" ng-model="product.problem">
+        </lx-text-field>
+
+        <div flex-container="row" flex-gutter="24">
+            <div flex-item>
+                <lx-select ng-model="product.category" placeholder="Suitable category" choices="opt" floating-label>
+                    <lx-select-selected>
+                        {{ $selected }}
+                    </lx-select-selected>
+
+                    <lx-select-choices>
+                        {{ $choice }}
+                    </lx-select-choices>
+                </lx-select>
+            </div>
+            <div flex-item>
+                <lx-text-field label="Specify" ng-hide="cvar">
+                    <input type="text" ng-model="product.specify" >
+                </lx-text-field>
+            </div>
         </div>
 
-    <div layout-gt-sm="row">
-    <md-input-container>
-        <label class="form_fonts">Expected minimum price</label>
-        <input type="number" data-ng-model="product.price" aria-label="Product Price" >
-    </md-input-container>
-    </div>
-
-    <md-content layout="row" layout-align="center center">
-        <md-button class="md-raised md-primary form_fonts" data-ng-click="create()">
-
-            Submit
-        </md-button>
-        <md-button class="md-raised md-warn form_fonts" data-ng-click="clear()">
-            <md-tooltip>Clear Fields</md-tooltip>
-            Clear
-        </md-button>
-    </md-content>
+        <div layout-container="row" style="margin-top: 10px;">
+            <button class="btn btn--m btn--raised bgc-indigo-500 tc-white-1" lx-ripple="indigo-400" ng-click="create()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-send"></i>Submit</button>
+            <button class="btn btn--m btn--orange btn--raised" lx-ripple ng-click="clear()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-refresh"></i>Reset</button>
+        </div>
 </form>
-</md-card-content>

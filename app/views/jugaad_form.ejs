@@ -1,39 +1,45 @@
-<md-card-content>
-<form name="jugaad" class="md-padding" ng-controller="jController" ng-submit="$event.preventDefault()">
+        <form name="jugaad" ng-controller="jController" ng-submit="$event.preventDefault()">
 
-    <md-input-container>
-        <label class="form_fonts">Jugaad/Problem Title</label>
-        <input class="form_fonts" type="text" data-ng-model="jugaad.title" required aria-label="Problem Title">
-    </md-input-container>
+            <lx-text-field label="Problem Title">
+                <input type="text" ng-model="jugaad.title">
+            </lx-text-field>
 
-    <md-input-container>
-        <label class="form_fonts">Describe your Jugaad/Product</label>
-        <!--text-angular data-ng-model="description" required></text-angular-->
-        <textarea class="form_fonts" data-ng-model="jugaad.description" rows="5" required aria-label="Problem Description"></textarea>
-    </md-input-container>
+            <lx-text-field label="Describe your problem">
+                <textarea ng-model="jugaad.description" rows="5"></textarea>
+            </lx-text-field>
+
+            <div flex-container="row" flex-gutter="24">
+                <div flex-item>
+                    <lx-select ng-model="jugaad.category" placeholder="Suitable category" choices="opt" floating-label>
+                        <lx-select-selected>
+                            {{ $selected }}
+                        </lx-select-selected>
+
+                        <lx-select-choices>
+                            {{ $choice }}
+                        </lx-select-choices>
+                    </lx-select>
+                </div>
+                <div flex-item>
+                    <lx-text-field label="Specify" ng-hide="cvar">
+                        <input type="text" ng-model="jugaad.specify" >
+                    </lx-text-field>
+                </div>
+            </div>
 
 
-    <div layout-gt-sm="row">
-        <md-input-container>
-            <md-select data-ng-model="jugaad.category" placeholder="Specify the most suitable category" class="form_fonts" >
-                <md-option ng-repeat="op in opt" value="{{op}}" class="form_fonts">{{op}}</md-option>
-            </md-select>
-        </md-input-container>
-    </div>
+                <div class="checkbox" style="margin-top: 15px;">
+                    <input type="checkbox" id="checkbox1" class="checkbox__input" data-ng-model="jugaad.auth" data-ng-click="tog()">
+                    <label for="checkbox1" class="checkbox__label">If this idea is not originally your's or is modified, please credit the author.</label>
+                </div>
 
-    <md-input-container>
-        <md-checkbox class="form_fonts" data-ng-model="jugaad.auth" aria-label="Author" data-ng-click="tog()">
-            If this idea is not originally your's or is modified, please credit the author.
-        </md-checkbox>
-        <input type="text" data-ng-model="jugaad.authname" data-ng-disabled="myvar">
-    </md-input-container>
+                <lx-text-field label="Author name" style="margin-top: -10px;">
+                    <input type="text" data-ng-model="jugaad.authname" ng-disabled="myvar" />
+                </lx-text-field>
 
-    <md-content layout="row" layout-align="center center">
-        <md-button class="md-raised md-primary form_fonts" data-ng-click="create()" >Submit</md-button>
-        <md-button class="md-raised md-warn form_fonts" data-ng-click="clear()" >
-          <md-tooltip>Clear Fields</md-tooltip>
-            Clear
-        </md-button>
-    </md-content>
-</form>
-</md-card-content>
+            <div layout-container="row" style="margin-top: 10px;">
+                <button class="btn btn--m btn--raised bgc-indigo-500 tc-white-1" lx-ripple="indigo-400" ng-click="create()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-send"></i>Submit</button>
+                <button class="btn btn--m btn--orange btn--raised" lx-ripple ng-click="clear()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-refresh"></i>Reset</button>
+            </div>
+
+        </form>
