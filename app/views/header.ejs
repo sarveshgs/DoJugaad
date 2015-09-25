@@ -1,105 +1,45 @@
-<header scroll ng-class="{sh:boolChangeClass}" class="header bgc-indigo-500" ng-cloak>
+<header id="header">
+    <nav id="appbar" class="mui-container-fluid">
+        <table width="100%">
+            <tr class="mui-appbar-height">
+                <td>
+                    <a href="/" id="appbar-sidenav-hide" class="mui-hidden-lg mui-hidden-md"><i class="mdi mdi-arrow-left"></i></a>
+                    <a class="appbar-brand" href="/"><img src="img/logo.png"></a>
+                </td>
 
-    <div class="menubar">
-        <a class="btn btn--l btn--icon btn--white" lx-ripple="white" ng-href="/" lx-tooltip="Back" tooltip-position="bottom">
-            <i class="mdi mdi-arrow-left"></i>
-        </a>
-    </div>
-
-    <h1 class="main-logo">
-        <a ui-sref="text" class="main-logo__link" lx-ripple="white" ng-href="/" lx-tooltip="Home" tooltip-position="bottom">
-            <img class="main-nav--icon" src="img/logo.png"/>
-            <span class="main-nav--title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-
-        </a>
-    </h1>
-
-    <!-- Right Nav -->
-    <nav class="main-nav main-nav--lap-and-up">
-        <ul style="list-style: none;">
-            <li>
-                <a href="about" class="main-nav__link" lx-ripple="white">About</a>
-            </li>
-            <li>
-                <a href="hiw" class="main-nav__link" lx-ripple="white">How it Works</a>
-            </li>
-            <li>
-                <a href="faq" class="main-nav__link" lx-ripple="white">FAQ</a>
-            </li>
-            <% if ( data ) { %>
-            <li>
-                <div>
-                    <img ng-src="{{ avatar }}" width="40" height="40" class="img-round">
-                </div>
-            </li>
-            <li>
-                <a href="" class="main-nav__link" lx-ripple="white"><%=data.name%></a>
-            </li>
-            <li>
-                <a href="logout" class="myBtn btn btn--m btn--white btn--raised" lx-ripple><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--black icon--flat mdi mdi-logout"></i>Logout</a>
-            </li>
-            <% }else { %>
-            <li>
-                <a href="login" class="myBtn btn btn--m btn--red btn--raised" lx-ripple><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-login"></i>Login</a>
-            </li>
-            <% } %>
-        </ul>
+                <td class="mui-text-right">
+                    <div id="appbar-nav-links" class="mui-hidden-xs">
+                        <a href="about">About</a>
+                        <a href="hiw">How It Works</a>
+                        <a href="faq">FAQ</a>
+                        <% if(data) {%>
+                        <img src="images/avatars/male/m1.png"class="avatar"/>
+                        <a><% data.name%></a>
+                        <button onclick="document.location.href='logout';" style="margin-top: -5px;" class="mui-btn abtn" data-mui-color="default" ><i class="mdi mdi-logout"></i>Logout</button>
+                        <%} else {%>
+                        <button onclick="document.location.href='login';" style="margin-top: -5px;" class="mui-btn abtn" data-mui-color="danger"><i class="mdi mdi-login"></i>Login</button>
+                        <%}%>
+                    </div>
+                    <div class="mui-dropdown mui-hidden-lg mui-hidden-md">
+                        <a id="appbar-more-vert" data-mui-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+                        <ul class="mui-dropdown-menu mui-dropdown-menu-right">
+                            <li><a class="ah" href="about">About</a></li>
+                            <li><a class="ah" href="hiw">How It Works</a></li>
+                            <li><a class="ah" href="faq">FAQ</a></li>
+                            <li><div class="mui-divider"></div></li>
+                            <% if ( data ) { %>
+                            <li><a class="ah"><i class="mdi mdi-account"></i><% data.name%></a></li>
+                            <li><a class="ah" href="logout"><i class="mdi mdi-logout"></i>Logout</a></li>
+                            <% } else {%>
+                            <li><a class="ah" href="login"><i class="mdi mdi-login"></i>Login</a></li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </nav>
-    <!-- Right Nav End -->
-
-    <!-- Collapsed Menu -->
-    <nav class="main-nav main-nav--palm">
-        <lx-dropdown position="right" from-top="true" width="150px">
-            <button class="btn btn--l btn--white btn--icon" lx-ripple="white" lx-dropdown-toggle>
-                <i class="mdi mdi-dots-vertical"></i>
-            </button>
-
-            <lx-dropdown-menu>
-                <ul>
-                    <li>
-                        <a ng-href="about" class="main-nav__link" lx-ripple="white">
-                            <span style="color: rgba(0, 0, 0, 0.541176)">About</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a ng-href="hiw" class="main-nav__link" lx-ripple="white">
-                            <span style="color: rgba(0, 0, 0, 0.541176)">How it Works</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a ng-href="faq" class="main-nav__link" lx-ripple="white">
-                            <span style="color: rgba(0, 0, 0, 0.541176)">FAQ</span>
-                        </a>
-                    </li>
-                    <li class="dropdown-divider">
-                    </li>
-                    <% if ( data ) { %>
-                    <li>
-                        <a ng-href="" class="main-nav__link" lx-ripple="white">
-                            <i class="icon icon--m icon--blue icon--flat mdi mdi-account"></i>
-                            <span style="color: rgba(0, 0, 0, 0.541176)"><%=data.name%></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a ng-href="logout" class="main-nav__link" lx-ripple="white">
-                            <i class="icon icon--m icon--red icon--flat mdi mdi-logout"></i>
-                            <span style="color: rgba(0, 0, 0, 0.541176)">Logout</span>
-                        </a>
-                    </li>
-                    <% }else { %>
-                    <li>
-                        <a ng-href="login" class="main-nav__link" lx-ripple="white">
-                            <i class="icon icon--m icon--blue icon--flat mdi mdi-login"></i>
-                            <span style="color: rgba(0, 0, 0, 0.541176)">Login</span>
-                        </a>
-                    </li>
-                    <% } %>
-
-
-                </ul>
-            </lx-dropdown-menu>
-        </lx-dropdown>
-    </nav>
-    <!-- Collapsed Menu  End-->
 </header>
+
+
+

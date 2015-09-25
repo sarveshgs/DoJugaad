@@ -5,25 +5,25 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-    <title>DoJugaad - Invent your Imagination </title>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="description" content="DoJugaad provides you the platform to bring alive your ideas or imagination into a real market ready product. We provide you the solution to solve daily life problems with a simple hack.">
-    <meta name="author" content="DoJugaad Inc.">
-    <meta name="keywords" content="Jugaad, jugaad, Indian Tech, indian tech, innovation, Innovation, dojugaad, do jugaad">
-    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
+	<title>DoJugaad - Invent your Imagination </title>
+	<!-- Meta Tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<meta name="description" content="DoJugaad provides you the platform to bring alive your ideas or imagination into a real market ready product. We provide you the solution to solve daily life problems with a simple hack.">
+	<meta name="author" content="DoJugaad Inc.">
+	<meta name="keywords" content="Jugaad, jugaad, Indian Tech, indian tech, innovation, Innovation, dojugaad, do jugaad">
+	<link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
 
     <script>
-        document.write('<link href="css/bootstrap.min.css" rel="stylesheet">');
-        document.write('<link href="css/design.css" rel="stylesheet" id="colors">');
-        document.write('<link href="css/font-awesome.min.css" rel="stylesheet">');
-        document.write('<link href="css/animate.min.css" rel="stylesheet">');
-        document.write('<link href="css/slippry.min.css" rel="stylesheet">');
+		document.write('<link href="css/bootstrap.min.css" rel="stylesheet">');
+		document.write('<link href="css/light-blue.css" rel="stylesheet" id="colors">');
+		document.write('<link href="css/font-awesome.min.css" rel="stylesheet">');
+		document.write('<link href="css/animate.min.css" rel="stylesheet">');
+		document.write('<link href="css/slippry.min.css" rel="stylesheet">');
         document.write('<link href="css/vegas.min.css" rel="stylesheet">');
         document.write('<link rel="stylesheet" href="css/mystyle.css">');
-    </script>
+	</script>
 </head>
 
 <body id="font-resize">
@@ -31,7 +31,7 @@
 <!-- Preloader -->
 <div id="preloader">
     <div class="logo">
-        <img src="img/gear.svg" alt="DoJugaad">
+        <img src="img/gear.png" alt="DoJugaad">
         <span>DoJugaad</span>
     </div>
 </div>
@@ -39,26 +39,28 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-trn navbar-fixed-top" role="navigation" id="navbarSettings">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" style="padding: 10px;"><img src="img/logos/logo_light.png" alt="DoJugaad"></a>
-        </div>
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href=""><img src="img/logos/logo_light.png" alt="DoJugaad"></a>
+		</div>
 
-        <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right ">
-                <li><a href="about">About</a></li>
-                <li><a href="hiw">How it Works</a></li>
-                <li><a href="faq">FAQ</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
+		<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right ">
+			  <li><a href="about">About</a></li>
+              <li><a href="hiw">How it Work</a></li>
+			  <li><a href="#">Features</a></li>
+              <li><a href="faq">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
 </nav>
 
 
@@ -67,204 +69,206 @@
 <!-- Introduction section -->
 
 <section id="slide">
-    <div class="bg-filter sTop">
-        <div class="container">
-            <div class="jumbotron trn v-center">
-                <h1 class="wow fadeInUp" data-wow-delay="0.1s">DoJugaad - Invent your imagination</h1>
-                <div class="space-sm"></div>
-                <p class="wow fadeInUp" data-wow-delay="0.2s">Every thing changes with just a simple idea, So let your imagination change the world. </p>
-                <div class="space-sm"></div>
-                <ul class="list-inline wow fadeInUp" data-wow-delay="0.3s">
-                    <li>
-                        <a href="hiw" class="btn btn-default-trn btn-xlg scroll"><i class="fa fa-gear"></i>Start your Jugaad</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+	<div class="bg-filter sTop">
+		<div class="container">
+			<div class="jumbotron trn v-center">
+				<h1 class="wow fadeInUp" data-wow-delay="0.1s">DoJugaad - Invent your imagination</h1>
+				<div class="space-sm"></div>
+				<p class="wow fadeInUp" data-wow-delay="0.2s">Every thing changes with just a simple idea, So let your imagination change the world. </p>
+				<div class="space-sm"></div>
+				<ul class="list-inline wow fadeInUp" data-wow-delay="0.3s">
+					<li>
+						<a href="submit" class="btn btn-default-trn btn-xlg scroll"><i class="fa fa-gear"></i>Start your Jugaad</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </section>
-
 
 
 
 <div class="section-lg">
-    <div class="container">
-        <h2 class="big-title text-center">How It Works</h2>
-        <div class="space"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1s">
+				<div class="text-center">
+					<i class="fa fa-tint icon-o"></i>
+					<h3 class="text-primary">Step 1</h3>
+					<!--p class="text-grey">Fusce aliquam vestibulum ipsum.
+						<br>Aenean vel massa quis mauris vehicula.</p-->
+				</div>
+				<div class="space visible-xs visible-sm"></div>
+			</div>
 
-        <div class="row">
-            <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                <div class="text-center">
-                    <i class="fa fa-lightbulb-o icon-o"></i>
-                    <h3 class="text-primary">Step 1: Submit</h3>
-                    <p class="text-grey">Do you face any problem that seeks a juggad solution? Do you have any
-                        innovative idea We at DoJugaad call for submission of innovative idea or a problem.
-                    </p>
-                </div>
-                <div class="space visible-xs visible-sm"></div>
-            </div>
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.1s">
+				<div class="text-center">
+					<i class="fa fa-paper-plane-o icon-o"></i>
+					<h3 class="text-primary">Step 2</h3>
+					<!--p class="text-grey">Fusce aliquam vestibulum ipsum.
+						<br>Aenean vel massa quis mauris vehicula.</p-->
+				</div>
+				<div class="space visible-xs visible-sm"></div>
+			</div>
+			<div class="col-md-3 col-sm-6  wow fadeIn" data-wow-delay="1.2s">
+				<div class="text-center">
+					<i class="fa fa-heart-o icon-o"></i>
+					<h3 class="text-primary">Step 3</h3>
+					<!--p class="text-grey">Fusce aliquam vestibulum ipsum.
+						<br>Aenean vel massa quis mauris vehicula.</p-->
+				</div>
+				<div class="space visible-xs"></div>
+			</div>
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.3s">
+				<div class="text-center">
+					<i class="fa fa-sliders icon-o"></i>
+					<h3 class="text-primary">Step 4</h3>
+					<!--p class="text-grey">Fusce aliquam vestibulum ipsum.
+						<br>Aenean vel massa quis mauris vehicula.</p-->
+				</div>
+			</div>
 
-            <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                <div class="text-center">
-                    <i class="fa fa-filter icon-o"></i>
-                    <h3 class="text-primary">Step 2: Review</h3>
-                    <p class="text-grey">We get lots of Ideas and Problems. Our team of experts rigrously discuss all
-                        the submissions  by taking into consideration various aspects. The idea/problem is finally
-                        opened for development process.
-                    </p>
-                </div>
-                <div class="space visible-xs visible-sm"></div>
-            </div>
-            <div class="col-md-3 col-sm-6  wow fadeIn" data-wow-delay="0.4s">
-                <div class="text-center">
-                    <i class="fa fa-wrench icon-o"></i>
-                    <h3 class="text-primary">Step 3: Develop</h3>
-                    <p class="text-grey">Do you have a skill that you wish to pursue and utilize it to earn some easy
-                        bucks? Well then Do Jugaad is the place. We invite all tech savy people to contributed in the
-                        process of realizing/developing an idea to a product using their expertise and skills.
-                    </p>
-                </div>
-                <div class="space visible-xs"></div>
-            </div>
-            <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                <div class="text-center">
-                    <i class="fa fa-rocket icon-o"></i>
-                    <h3 class="text-primary">Step 4: Release</h3>
-                    <p class="text-grey">With the contribution of many change makers and team of experts, we at Do Jugaad
-                        finally develop a product that is ready to be released in market amongst the customers.
-                        In this way, DoJugaad strives to create a small yet significant change in the standard of
-                        living of the society.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+		</div>
+	</div>
 
 </div>
 
-
 <!-- about us section -->
-<section class="about-bg section-lg">
-    <div class="container">
+<section class="bg-grey  section-lg ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 class="text-primary wow fadeIn" data-wow-delay="0.2s" id="responsive_headline">Who We Are</h2>
+				<p class="text-block wow fadeIn" data-wow-delay="0.4s">
+				</p>
+				<div class="space-sm visible-xs visible-sm"></div>
+			</div>
+			<div class="col-md-6">
+				<h2 class="text-primary wow fadeIn" data-wow-delay="0.5s">What We Believe</h2>
+				<p class="text-block  wow fadeIn" data-wow-delay="0.7s">
 
-        <div class="row">
-            <div class="col-md-8">
-                <h2 class="big-title text-center" style="color:#c71f36;">What is DoJugaad</h2>
-                <div class="space"></div>
-                <!--h2 class="text-primary wow fadeIn" data-wow-delay="0.2s" id="responsive_headline">Who We Are</h2-->
-                <p class="text-about wow fadeIn" data-wow-delay="0.2s">
-                    Everyday, common people do their own kind of innovation,which people simply term as ‘Jugaad’.
-                    What if all such ‘Jugaads’ of the world are found somewhere? At a single place? What if you find a
-                    magical place which turns your jugaad ideas to actual things? The same questions led us to think of
-                    making DoJugaad. It is a platform that aims to earn jugaadu people a place to showcase their awesome
-                    creative thinking, give skilfull people a place to put their talents to get some offbeat earning and
-                    to provide them all with a pleasure of having done something good. The idea is, to bring the ability
-                    to jugaad, to a common platform, where it is not confined by boundaries, physical or otherwise, and
-                    is used to benefit players and spectators equally.
-                </p>
-
-            </div>
-
-            <div class="col-md-4 hidden-sm hidden-xs">
-                <img src="img/per.png" class="img-responsive" >
-            </div>
-
-        </div>
-    </div>
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
+
+<div class="bg-11 bg-center bg-fixed">
+	<div class="filling-section bg-filter-v1"></div>
+</div>
+
+
+
+
+
 
 
 <!--  Contact us  -->
 <span id="contact-us"></span>
-<section class=" bg-grey section-lg">
-    <div class="container ">
-        <h2 class="big-title text-center">Contact Us</h2>
-        <p class="big-subtitle text-center"></p>
-        <div class="space"></div>
-        <div class="row">
-            <div class="col-md-6 col-sm-7">
+<section class="section-lg">
+	<div class="container ">
+		<h2 class="big-title text-center">Contact Us</h2>
+		<p class="big-subtitle text-center"></p>
+		<div class="space"></div>
+		<div class="row">
+			<div class="col-md-6 col-sm-7">
 
-                <!-- Contact Form -->
-                <div id="form-messages"></div>
-                <form class="form-horizontal">
-                    <div class="form-group icon">
-                        <label for="name" class="col-sm-3 control-label form_fonts">Full name</label>
-                        <div class="col-sm-9 ">
-                            <div class="control">
-                                <input type="text" class="form-control form_fonts" id="name" placeholder="Full name" name="name" required>
-                                <i class="fa fa-user"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group icon">
-                        <label for="email" class="col-sm-3 control-label form_fonts">Email</label>
-                        <div class="col-sm-9 ">
-                            <div class="control">
-                                <input type="email" class="form-control form_fonts" id="email" placeholder="Enter email" name="email" required>
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group icon">
-                        <label for="Message" class="col-sm-3 control-label form_fonts">Message</label>
-                        <div class="col-sm-9 ">
-                            <div class="control">
-                                <textarea class="form-control form_fonts" rows="8" id="message" placeholder="Message" name="message" required></textarea>
-                                <i class="fa fa-comment"></i>
-                            </div>
-                        </div>
-                    </div>
+				<!-- Contact Form -->
+				<div id="form-messages"></div>
+				<form class="form-horizontal" role="form" id="ajax-contact" method="post" action="assets/php/mailer.php">
+					<div class="form-group icon">
+						<label for="name" class="col-sm-3 control-label">Full name</label>
+						<div class="col-sm-9 ">
+							<div class="control">
+								<input type="text" class="form-control" id="name" placeholder="Full name" name="name" required>
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-group icon">
+						<label for="email" class="col-sm-3 control-label">Email</label>
+						<div class="col-sm-9 ">
+							<div class="control">
+								<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+								<i class="fa fa-envelope"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-group icon">
+						<label for="Message" class="col-sm-3 control-label">Message</label>
+						<div class="col-sm-9 ">
+							<div class="control">
+								<textarea class="form-control" rows="8" id="Message" placeholder="Message" name="message" required></textarea>
+								<i class="fa fa-comment"></i>
+							</div>
+						</div>
+					</div>
 
-                    <div class="form-group icon">
+					<div class="form-group icon">
+						<div class="col-sm-offset-3 col-sm-9">
+							<button type="submit" class="btn btn-primary">
+								<i class="fa fa-paper-plane-o"></i>Send Message</button>
+						</div>
+					</div>
+				</form>
 
-                    </div>
-                </form>
+				<div class="space visible-xs"></div>
+			</div>
 
-                <div class="col-sm-offset-3 col-sm-9">
-                    <button class="btn btn-primary send form_fonts">
-                        <i class="fa fa-paper-plane-o"></i>Send Message</button>
-                </div>
-
-
-                <div class="space visible-xs"></div>
-            </div>
-
-            <div class="col-md-6">
-                <img src="img/contact.png" class="img-responsive center hidden-xs hidden-sm">
-                <div id="mail-status" class="form_fonts"></div>
-            </div>
-        </div>
-    </div>
+			<div class="col-md-6 col-sm-5">
+				<ul class="list-unstyled info-bar">
+					<!--li>
+						<h4>Additional info</h4>
+						<p>If you have any questiong about our products or something else, please email us or call us. We'll get in touch with you as soon as possible.</p>
+					</li>
+					<li>
+						<h4>Our Location</h4>
+						<p></p>
+					</li-->
+					<li>
+						<h4>Email Us</h4>
+						<p>
+							<a href="mailto:adroitinnovate@gmail.com"></a>
+						</p>
+					</li>
+					<!--li>
+						<h4>Business Hours</h4>
+						<ul class="list-unstyled">
+							<li>Mo - Fr: 9am to 6pm</li>
+							<li>Sa, Su: 9am to 2pm</li>
+						</ul>
+					</li-->
+				</ul>
+			</div>
+		</div>
+	</div>
 </section>
 
-
-
-<div class="sticker hidden-xs">
-    <p>Currently in Beta</p>
-</div>
 
 
 <!-- Scripts-->
 <!--Back to top-->
 <a href="#" class="back-to-top">
-    <i class="fa fa-angle-up"></i>
+	<i class="fa fa-angle-up"></i>
 </a>
 
 
 <script src="js/modernizr.custom.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-hover-dropdown.min.js"></script>
-<script src="js/wow.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.knob/1.2.9/jquery.knob.min.js"></script>
 <script src="js/slippry.min.js"></script>
-<script src="js/jquery.mixitup.min.js"></script>
-<script src="js/jquery.sticky.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mixitup/1.5.6/jquery.mixitup.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.sticky/1.0.0/jquery.sticky.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.nicescroll/3.5.4/jquery.nicescroll.min.js"></script>
+<script src="js/contact-form.min.js"></script>
 <script src="js/pace.min.js"></script>
 <script src="js/vegas.min.js"></script>
-
 
 <!-- Must be last of all scripts -->
 <script src="js/scripts.min.js"></script>
@@ -280,115 +284,109 @@
                 { src: "/img/slide5.jpg" }
             ]
         });
-
-
     });
 </script>
 <!--[if lt IE 9]>
-<script src="js/html5shiv.min.js"></script>
-<script src="js/respond.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 
 
 <!-- Footer-->
 <footer class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <h4>Contact</h4>
-                    <ul class="info-list md-list i-primary">
-                        <li>
-                            <i class="fa fa-envelope fa-fw"></i>
-                            <a href="mailto:adroitinnovate@gmail.com">adroitinnovate@gmail.com</a>
-                        </li>
-                        <li>
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+					<h4>Contact</h4>
+					<ul class="info-list md-list i-primary">
+						<li>
+							<i class="fa fa-envelope fa-fw"></i>
+							<a href="mailto:adroitinnovate@gmail.com">adroitinnovate@gmail.com</a>
+						</li>
+						<li>
+<!-- 							<i class="fa fa-phone fa-fw">+91 9826359429, +91 8884749270, +91 9806669175</i> -->
 
-                            <table style="width:100%" class="tb">
-                                <tr>
-                                    <td>Aashish Katlam</td>
-                                    <td>+91 9806669175</td>
-                                </tr>
-                                <tr>
-                                    <td>Abhijeet Dixit</td>
-                                    <td>+91 8884749270</td>
-                                </tr><tr>
-                                    <td>Sarvesh Jain</td>
-                                    <td>+91 9826359429</td>
-                                </tr>
-                            </table>
+							<table style="width:100%">
+								<tr>
+									<td>Aashish Katlam</td>
+									<td>+91 9806669175</td>
+								</tr>
+								<tr>
+									<td>Abhijeet Dixit</td>
+									<td>+91 8884749270</td>
+								</tr><tr>
+									<td>Sarvesh Jain</td>
+									<td>+91 9826359429</td>
+								</tr>
+							</table>
 
-                        </li>
-                        <li>
-                            <!--i class="fa fa-map-marker fa-fw"></i-->
+						</li>
+						<li>
+							<!--i class="fa fa-map-marker fa-fw"></i-->
 
-                        </li>
-                    </ul>
-                </div>
-                <div class="space-sm visible-sm visible-xs"></div>
-                <div class="col-md-4 col-lg-4 col-xs-12">
-                    <h4>Quick Links</h4>
-                    <ul class="info-list md-list i-primary">
+						</li>
+					</ul>
+				</div>
+				<div class="space-sm visible-sm visible-xs"></div>
+				<div class="col-md-4 col-lg-4 col-xs-12">
+					<h4>Quick Links</h4>
+					<ul class="info-list md-list i-primary">
 
+						<li>
+							<i class="fa fa-angle-right fa-fw"></i>
+							<a href="hiw">
+								<span class="link-title">How It Works</span></a>
+						</li>
                         <li>
                             <i class="fa fa-angle-right fa-fw"></i>
-                            <a href="about">
-                                <span class="link-title">About</span>- What is DoJugaad</a>
+                            <a href="#">
+                                <span class="link-title">Features</span>- What we do</a>
                         </li>
-                        <li>
-                            <i class="fa fa-angle-right fa-fw"></i>
-                            <a href="hiw">
-                                <span class="link-title">How It Works</span></a>
-                        </li>
-                        <li>
-                            <i class="fa fa-angle-right fa-fw"></i>
-                            <a href="">
-                                <span class="link-title">Who we are</span></a>
-                        </li>
-                        <li>
-                            <i class="fa fa-angle-right fa-fw"></i>
-                            <a href="faq">
-                                <span class="link-title">FAQ</span>- Know more</a>
-                        </li>
+						<li>
+							<i class="fa fa-angle-right fa-fw"></i>
+							<a href="faq">
+								<span class="link-title">FAQ</span>- Know more</a>
+						</li>
 
-                    </ul>
-                </div>
-                <div class="space-sm visible-sm visible-xs"></div>
-                <div class="col-md-4 col-lg-4  col-xs-12">
-                    <!--h4>About Us</h4>
-                    <p>At DoJugaad we intend to unite all the jugaad and jugaadu people of a world at one place and share their awesome ability of jugaad with others.</p>
-                    <div class="space-sm"></div-->
-                    <h4>Follow Us</h4>
-                    <ul class="circle-icons icons-list">
-                        <li>
-                            <a href="https://plus.google.com/u/0/b/100580450086875087162/+DojugaadInd/about" title="Follow us" target="_blank">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/do_jugaad" title="Follow us" target="_blank">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
+					</ul>
+				</div>
+				<div class="space-sm visible-sm visible-xs"></div>
+				<div class="col-md-4 col-lg-4  col-xs-12">
+					<h4>About Us</h4>
+					<p>At DoJugaad we intend to unite all the jugaad and jugaadu people of a world at one place and share their awesome ability of jugaad with others.</p>
+					<div class="space-sm"></div>
+					<h4>Follow Us</h4>
+					<ul class="circle-icons icons-list">
+						<li>
+							<a href="#" title="Follow us">
+								<i class="fa fa-google-plus"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Follow us">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</li>
 
-                        <li>
-                            <a href="https://www.facebook.com/DoJugaad" title="Follow us" target="_blank">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
+						<li>
+							<a href="#" title="Follow us">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <div class="footer-bottom">
-        <div class="container">
-            <p>© 2015 DoJugaad. All rights reserved.</p>
-        </div>
-    </div>
+	<div class="footer-bottom">
+		<div class="container">
+			<p>© 2015 DoJugaad. All rights reserved.</p>
+		</div>
+	</div>
 </footer>
 
 

@@ -1,40 +1,68 @@
+<!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="dist/lumx.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1" />
-    <link rel="stylesheet" href="css/header.css"/>
-    <link rel="stylesheet" href="css/mystyle.css">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <script>
+        document.write('<link href="css/animate.min.css" rel="stylesheet">');
+        document.write('<link href="css/mui.min.css" rel="stylesheet" type="text/css" />');
+        document.write('<link rel="stylesheet" href="css/sweet-alert.css" type="text/css" />');
+        document.write('<link href="bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet"/>');
+        document.write('<link href="css/app.min.css" rel="stylesheet"/>');
+    </script>
     <title>DoJugaad | FAQ</title>
 
 </head>
 
-<body ng-controller="common" ng-cloak class="holder">
+<body class="holder">
+
 <% include preloader %>
 <% include header %>
-<div ng-include="'faq_content.htm'" ng-controller="fController"></div>
+
+<!-- Main Container-->
+<div id="content-wrapper">
+    <div id="appbar-placeholder" class="mui-appbar-height"></div>
+
+    <div class="mui-container-fluid">
+
+        <div class="mui-row">
+            <!-- Left Margin -->
+            <div class="mui-col-md-2 mui-hidden-xs mui-hidden-sm"></div>
+            <!-- End of Left Margin -->
+
+            <!-- Center Content -->
+            <div class="mui-col-md-8 mui-col-sm-12 mui-col-xs-12" ng-controller="fController">
+                <div class="space-top"></div>
+                <div ng-include="'breadcrumb.htm'"></div>
+                <div ng-include="'faq_content.htm'"></div>
+
+            </div>
+            <!-- End of Center Content-->
+
+            <!-- Right Margin -->
+            <div class="mui-col-md-2 mui-hidden-xs mui-hidden-sm"></div>
+            <!-- End of Right Margin -->
+        </div>
+
+    </div>
+
+</div>
+
+
 <% include footer %>
 
+
 <script src="js/jquery.min.js"></script>
+<script src="js/mui.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
-<script src="dist/lumx.min.js"></script>
-<script src="dist/velocity/velocity.min.js"></script>
-<script src="dist/moment/moment.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="js/angular-scroll.min.js"></script>
-
-
-<!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
-<!--script>
-    new WOW().init();
-</script-->
+<script src="js/sweet-alert.min.js"></script>
+<script src="js/SweetAlert.js"></script>
 <script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
 

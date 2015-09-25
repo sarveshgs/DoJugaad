@@ -1,91 +1,95 @@
+<!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="dist/lumx.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1" />
-    <link rel="stylesheet" href="css/header.css"/>
-    <link rel="stylesheet" href="css/mystyle.css">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/textAngular.css"/>
+    <script>
+        document.write('<link href="css/animate.min.css" rel="stylesheet">');
+        document.write('<link href="css/mui.min.css" rel="stylesheet" type="text/css" />');
+        document.write('<link rel="stylesheet" href="css/sweet-alert.css" type="text/css" />');
+        document.write('<link href="bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet"/>');
+        document.write('<link href="css/app.min.css" rel="stylesheet"/>');
+    </script>
     <title>DoJugaad | Submit</title>
 
 </head>
 
+<body class="holder">
 
-<body ng-controller="common" ng-cloak class="holder">
 <% include preloader %>
 <% include header %>
 
+<!-- Main Container-->
+<div id="content-wrapper">
+    <div id="appbar-placeholder" class="mui-appbar-height"></div>
 
-<div flex-container="column" ng-cloak ng-controller="sub">
+    <div class="mui-container-fluid">
 
-    <div flex-container="row" class="space_inner"></div>
+        <div class="mui-row">
+            <!-- Left Margin -->
+            <div class="mui-col-md-2 mui-hidden-xs mui-hidden-sm"></div>
+            <!-- End of Left Margin -->
 
-    <div flex-container="row" flex-gutter="24">
+            <!-- Center Content -->
+            <div class="mui-col-md-8 mui-col-sm-12 mui-col-xs-12">
+                <div class="space-top"></div>
 
-        <!-- Left Margin -->
-        <div flex-item="2" class="left"></div>
+                <div class="card">
 
-        <!-- Main Content -->
-        <div flex-item="8" class="main_content" id="main_content" style="margin-top: 50px;">
+                    <div class="card-main">
 
+                <% if ( id == 'j' ) { %>
+                        <div class="form_title"><h2>Submit Problem</h2></div>
+                        <div class="mui-divider"></div>
+                <% include jugaad_form %>
+                <% }else if( id == 'i'){ %>
+                            <div class="form_title"><h2>Submit Idea</h2></div>
+                        <div class="mui-divider"></div>
+                <% include idea_form %>
+                <% }else if( id == 'p'){ %>
+                            <div class="form_title"><h2>Submit Product</h2></div>
+                        <div class="mui-divider"></div>
+                <% include product_form %>
+                <% } %>
 
-            <div flex-container="column" class="card mt++ p++">
-
-                    <% if ( id == 'j' ) { %>
-                    <div class="form_title"><h2>Submit Problem</h2></div>
-                    <md-divider></md-divider>
-                    <% include jugaad_form %>
-                    <% }else if( id == 'i'){ %>
-                    <div class="form_title"><h2>Submit Idea</h2></div>
-                    <md-divider></md-divider>
-                    <% include idea_form %>
-                    <% }else if( id == 'p'){ %>
-                    <div class="form_title"><h2>Submit Product</h2></div>
-                    <md-divider></md-divider>
-                    <% include product_form %>
-                    <% } %>
-
+                    </div>
+                </div>
+                <div class="space-top"></div>
             </div>
+            <!-- End of Center Content-->
 
-         <div ng-include="'dailog.htm'"></div>
+            <!-- Right Margin -->
+            <div class="mui-col-md-2 mui-hidden-xs mui-hidden-sm"></div>
+            <!-- End of Right Margin -->
         </div>
 
-        <!-- Right Margin -->
-        <div flex-item="2" class="left"></div>
-
     </div>
-</div>
 
+</div>
 
 <% include footer %>
 
-
-
 <script src="js/jquery.min.js"></script>
+<script src="js/mui.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
-<script src="dist/lumx.min.js"></script>
-<script src="dist/velocity/velocity.min.js"></script>
-<script src="dist/moment/moment.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="js/angular-scroll.min.js"></script>
-
-<script src="js/textAngular.min.js"></script>
-<script src="js/textAngular-rangy.min.js"></script>
-<script src="js/textAngular-sanitize.min.js"></script>
-
-<!--script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script-->
-<!--script>
-    new WOW().init();
-</script-->
+<script src="js/sweet-alert.min.js"></script>
+<script src="js/SweetAlert.js"></script>
 <script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+

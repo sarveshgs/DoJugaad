@@ -1,45 +1,53 @@
-        <form name="jugaad" ng-controller="jController" ng-submit="$event.preventDefault()">
+<div class="card-inner">
+    <form ng-controller="jController">
 
-            <lx-text-field label="Problem Title">
-                <input type="text" ng-model="jugaad.title">
-            </lx-text-field>
-
-            <lx-text-field label="Describe your problem">
-                <textarea ng-model="jugaad.description" rows="5"></textarea>
-            </lx-text-field>
-
-            <div flex-container="row" flex-gutter="24">
-                <div flex-item>
-                    <lx-select ng-model="jugaad.category" placeholder="Suitable category" choices="opt" floating-label>
-                        <lx-select-selected>
-                            {{ $selected }}
-                        </lx-select-selected>
-
-                        <lx-select-choices>
-                            {{ $choice }}
-                        </lx-select-choices>
-                    </lx-select>
-                </div>
-                <div flex-item>
-                    <lx-text-field label="Specify" ng-hide="cvar">
-                        <input type="text" ng-model="jugaad.specify" >
-                    </lx-text-field>
-                </div>
-            </div>
+        <div class="mui-form-group">
+            <input type="text" class="mui-form-control form-fonts" ng-model="jugaad.title" required>
+            <label class="mui-form-floating-label form-fonts">Problem Title</label>
+        </div>
 
 
-                <div class="checkbox" style="margin-top: 15px;">
-                    <input type="checkbox" id="checkbox1" class="checkbox__input" data-ng-model="jugaad.auth" data-ng-click="tog()">
-                    <label for="checkbox1" class="checkbox__label">If this idea is not originally your's or is modified, please credit the author.</label>
-                </div>
+        <div class="mui-form-group">
+            <textarea class="mui-form-control form-fonts" ng-model="jugaad.description" required></textarea>
+            <label class="mui-form-floating-label form-fonts">Describe your problem</label>
+        </div>
 
-                <lx-text-field label="Author name" style="margin-top: -10px;">
-                    <input type="text" data-ng-model="jugaad.authname" ng-disabled="myvar" />
-                </lx-text-field>
+        <div class="mui-select form-fonts">
+            <select ng-model="jugaad.category">
+                <option value="" disabled selected>Specify the related field</option>
+                <option>Technology</option>
+                <option>Science</option>
+                <option>Daily Life</option>
+                <option>General</option>
+                <option>Other</option>
+            </select>
+        </div>
 
-            <div layout-container="row" style="margin-top: 10px;">
-                <button class="btn btn--m btn--raised bgc-indigo-500 tc-white-1" lx-ripple="indigo-400" ng-click="create()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-send"></i>Submit</button>
-                <button class="btn btn--m btn--orange btn--raised" lx-ripple ng-click="clear()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-refresh"></i>Reset</button>
-            </div>
+        <div class="mui-form-group">
+            <input type="text" class="mui-form-control form-fonts" ng-model="jugaad.authname">
+            <label class="mui-form-floating-label">
+                If this idea is not originally your's or is modified, please credit the author.
+            </label>
+        </div>
 
-        </form>
+
+
+        <div class="mui-row">
+
+                <button class="mui-btn abtn" data-mui-style="raised" style="background: #303F9F;color: #ffffff;" ng-click="create()">
+                    <i class="mdi mdi-send" style="font-size: 20px;"></i>
+                    Submit
+                </button>
+
+
+                <button class="mui-btn abtn" data-mui-style="raised" style="background: #FFC107;color: #ffffff;" ng-click="clear()">
+                    <i class="mdi mdi-refresh" style="color: #ffffff;font-size: 20px;"></i>
+                    Reset
+                </button>
+
+
+        </div>
+
+    </form>
+
+</div>

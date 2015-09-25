@@ -216,7 +216,8 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     ));
 
     app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-        failureRedirect: '/login'
+        failureRedirect: '/login',
+        failureFlash: true
     }),function(req,res){
         if(req.session.nextPage == 'success'){
             var Data = req.session.postData;
@@ -285,7 +286,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
             "facebookConected": false,
             "googleConnected": false,
             "avatar":avatar,
-            "timestamp":new Date().getTime()
+            "timestamp": Math.floor(Date.now() / 1000)
         };
 
 
@@ -293,6 +294,8 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
           //res.json(doc);
             id = doc._id;
         });
+
+        req.session.lastPage = 'signup';
 
         if(req.session.nextPage == 'success'){
 
@@ -315,6 +318,19 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     app.get('/logout', function(req, res) {
         req.logout();;
         res.redirect('/');
+    });
+
+
+
+    app.get('/t',function(req,res){
+
+        if(req.session.lastPage == 'signup'){
+            req.session.lastPage = null;
+            res.send('y');
+        }
+        else{
+            res.send('n');
+        }
     });
 
 

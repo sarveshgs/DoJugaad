@@ -3,7 +3,7 @@
  *
  */
 
-var app = angular.module('myApp',['lumx','duScroll']) .value('duScrollDuration', 2000)
+var app = angular.module('myApp',['oitozero.ngSweetAlert','duScroll']) .value('duScrollDuration', 2000)
     .value('duScrollOffset', 30);
 
 /**
@@ -146,6 +146,11 @@ app.controller('hiwController', function ($scope) {
     $scope.cur3="def";
     $scope.cur4="def";
 
+     $scope.tog = false;
+    $scope.tog2 = true;
+    $scope.tog3 = true;
+    $scope.tog4 = true;
+
     $scope.tog1 = function () {
         $scope.class1 = "active";
         $scope.class2 = "disabled";
@@ -220,8 +225,18 @@ app.controller('hwaController', function ($scope) {
 /**
  * Login Page Controller
  */
-app.controller('loginController', function ($scope) {
+app.controller('loginController', function ($scope,$http,SweetAlert) {
     //$scope.title="How We Are";
+
+    setTimeout(function() {
+        $http.get('/t').success(function (response) {
+            //console.log(response);
+            if(response == 'y'){
+                SweetAlert.swal({   title: "Successfully Registered",   text: "Login to continue",  type: "success" });
+            }
+        });
+    }, 1500);
+
 
 });
 
@@ -237,11 +252,12 @@ app.controller('signController', function ($scope,$http,$window) {
     $scope.create = function() {
 
         var Data = {
-            'email': $scope.sign.email,
-            'password': $scope.sign.password,
-            'name': $scope.sign.name,
-            'gender': $scope.sign.gender
+            'email': $scope.sc.email,
+            'password': $scope.sc.password,
+            'name': $scope.sc.name,
+            'gender': $scope.sc.gender
         };
+
 
         $http({
             method: 'POST',
@@ -287,17 +303,13 @@ app.controller('iController', function ($scope,$http,$rootScope,$window,LxDialog
         problem:""
     }
     $scope.opt = ["Technology","Science","Daily Life","General","Other"];
-    $scope.cvar = true;
+
     console.log($rootScope.isConnected);
 
     var validate = function(){
         if($scope.idea.title!=null && $scope.idea.description!=null && $scope.idea.category!=null){
             valid = true;
         }
-    };
-
-    var showAlert = function(dialogId) {
-        LxDialogService.open(dialogId);
     };
 
    $scope.create = function(){
@@ -321,7 +333,17 @@ app.controller('iController', function ($scope,$http,$rootScope,$window,LxDialog
        if(!$rootScope.isConnected){
            $http.post('/temp',Data).success(function(response){
                console.log(response);
-               showAlert('test');
+               SweetAlert.swal({
+                       title: "Info",
+                       text: "We appreciate and value your post, but it will be more useful if we identify you.",
+                       confirmButtonColor: "#DD6B55",confirmButtonText: "Login",
+                       closeOnConfirm: true
+                   },
+                   function(isConfirm){
+                       $window.location.href = '/login';
+                       $window.location.href;
+
+                   });
            }) ;
        }else{
            Data.postUserId = $rootScope.pid;
@@ -353,7 +375,7 @@ app.controller('iController', function ($scope,$http,$rootScope,$window,LxDialog
 /**
  * Submit Jugaad Controller
  */
-app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialogService) {
+app.controller('jController', function ($scope,$http,$rootScope,$window,SweetAlert) {
     var valid = false;
     var defaultForm = {
         title:"",
@@ -362,18 +384,7 @@ app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialog
         authname:""
     }
     $scope.opt = ["Technology","Science","Daily Life","General","Other"];
-    $scope.myvar = true;
-    $scope.cvar = true;
-    $scope.tog = function(){
-        $scope.myvar = !$scope.myvar;
-    }
 
-
-    $scope.ch = function(){
-        if($scope.jugaad.category == "Other"){
-            $scope.cvar = false;
-        }
-    }
 
     console.log($rootScope.isConnected);
 
@@ -384,11 +395,6 @@ app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialog
     };
 
 
-
-
-    var showAlert = function(dialogId) {
-        LxDialogService.open(dialogId);
-    };
 
     $scope.create = function(){
         var author,postUserId,image,media,Data = null;
@@ -404,14 +410,26 @@ app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialog
             'media':media
         };
 
+
         //console.log(Data);
         validate();
 
         if(valid){
-        if(!$rootScope.isConnected){
+
+            if(!$rootScope.isConnected){
             $http.post('/temp',Data).success(function(response){
                 console.log(response);
-                showAlert('test');
+                SweetAlert.swal({
+                        title: "Info",
+                        text: "We appreciate and value your post, but it will be more useful if we identify you.",
+                        confirmButtonColor: "#DD6B55",confirmButtonText: "Login",
+                        closeOnConfirm: true
+                    },
+                    function(isConfirm){
+                        $window.location.href = '/login';
+                        $window.location.href;
+
+                    });
             });
         }else{
             Data.postUserId = $rootScope.pid;
@@ -430,12 +448,11 @@ app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialog
 
         }
 
-    }
+    };
 
     $scope.clear = function(){
         $scope.jugaad = defaultForm;
-        $scope.myvar = !$scope.myvar;
-    }
+    };
 
 });
 
@@ -445,7 +462,7 @@ app.controller('jController', function ($scope,$http,$rootScope,$window,LxDialog
 /**
  * Submit Product Controller
  */
-app.controller('pController', function ($scope,$http,$rootScope,$window,LxDialogService) {
+app.controller('pController', function ($scope,$http,$rootScope,$window) {
     var valid = false;
     var defaultForm = {
         name:"",
@@ -454,12 +471,9 @@ app.controller('pController', function ($scope,$http,$rootScope,$window,LxDialog
         problem:""
     }
     $scope.opt = ["Technology","Science","Daily Life","General","Other"];
-    $scope.cvar = true;
+
     console.log($rootScope.isConnected);
 
-    var showAlert = function(dialogId) {
-        LxDialogService.open(dialogId);
-    };
 
 
 
@@ -495,7 +509,17 @@ app.controller('pController', function ($scope,$http,$rootScope,$window,LxDialog
 
             $http.post('/temp',Data).success(function(response){
                 console.log(response);
-                showAlert('test');
+                SweetAlert.swal({
+                        title: "Info",
+                        text: "We appreciate and value your post, but it will be more useful if we identify you.",
+                        confirmButtonColor: "#DD6B55",confirmButtonText: "Login",
+                        closeOnConfirm: true
+                    },
+                    function(isConfirm){
+                        $window.location.href = '/login';
+                        $window.location.href;
+
+                    });
             }) ;
         }else{
             Data.postUserId = $rootScope.pid;
@@ -520,4 +544,23 @@ app.controller('pController', function ($scope,$http,$rootScope,$window,LxDialog
         $scope.product = defaultForm;
     }
 
+});
+
+
+app.controller('hController', function($scope,$http){
+
+   $scope.links = [
+        {
+            "text": "About",
+            "link": "/about"
+        },
+        {
+            "text": "How It Works",
+            "link": "/hiw"
+        },
+        {
+            "text": "FAQ",
+            "link": "/faq"
+        }
+    ];
 });

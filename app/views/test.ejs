@@ -1,39 +1,89 @@
-<html lang="en" ng-app="app">
+<!doctype html>
+<html ng-app="app">
 <head>
-
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="dist/lumx.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/mystyle.css" rel="stylesheet"/>
+    <link href="css/app.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/header.css"/>
-    <title>DoJugaad | About</title>
+    <link href="bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/sweet-alert.css" type="text/css" />
+    <!--link href="//cdn.muicss.com/mui-0.1.23/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.1.23/js/mui.min.js"></script-->
+    <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/mui.min.js"></script>
+
 
 </head>
 
-<body ng-controller="common" ng-cloak class="holder">
+<body class="holder">
 
-<% include header %>
-<div ng-include="'about_content.htm'"></div>
+<div id="content-wrapper">
+<div id="appbar-placeholder" class="mui-appbar-height"></div>
+
+    <div class="mui-container-fluid" ng-controller="mainController">
+    <!--div class="mui-container" data-mui-fluid="true" ng-controller="mainController"-->
+
+    <div class="mui-row">
+
+        <div class="mui-col-md-4 mui-hidden-xs mui-hidden-sm"></div>
+
+        <div class="mui-col-md-4">
+            <div class="space-top"></div>
+            <!--div class="mui-card"-->
+              <div ng-include="'login_form.htm'"></div>
+         <!--/div-->
+        </div>
+
+        <div class="mui-col-md-4 mui-hidden-xs mui-hidden-sm"></div>
+
+    </div>
+
+</div>
+
+</div>
+<!--script>
+
+    window.addEventListener('load', function() {
+        loadjs("//cdn.muicss.com/mui-0.1.23/js/mui.min.js", "mui");
+        loadjs("/static/cache/vendor/jquery-2.1.4/jquery.min-f9c7afd0.js", "jquery");
+        loadjs("/static/cache/script.min-1071c6aa.js");
+    });
+
+</script-->
+<!--footer id="footer">
+
+    <div class="mui-container-fluid">
+        <nav class="mui-row" role="navigation">
+            <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                <ul class="mui-list-inline mui-text-body2 mui-text-white">
+                    <li><a href="/support">Support</a></li>
+                    <li><a href="/feedback?next=https%3A%2F%2Fwww.muicss.com%2Fdocs%2Fv1%2Fcss-js%2Fpanels">Feedback</a></li>
+                    <li><a href="/newsletter">Newsletter</a></li>
+                    <li><a href="https://twitter.com/mui_css">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/muicss">Facebook</a></li>
+                    <li><a href="https://github.com/muicss/mui">Github</a></li>
+                </ul>
+                <div class="mui-text-caption mui-text-white">&copy; 2015<a href="/"> DoJugaad.</a></div>
+            </div>
+        </nav>
+    </div>
 
 
-
-
+</footer-->
 
 <script src="js/jquery.min.js"></script>
+<script src="js/mui.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
-<script src="dist/lumx.min.js"></script>
-<script src="dist/velocity/velocity.min.js"></script>
-<script src="dist/moment/moment.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="js/angular-scroll.min.js"></script>
+<script src="js/sweet-alert.min.js"></script>
+<script src="js/SweetAlert.js"></script>
 <script src="js/test.js"></script>
-<script src="js/pace.min.js"></script>
 
 </body>
 </html>

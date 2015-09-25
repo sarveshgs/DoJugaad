@@ -1,39 +1,50 @@
-    <form name="product" ng-controller="pController" ng-submit="$event.preventDefault()">
+<div class="card-inner">
+    <form ng-controller="pController">
 
-
-        <lx-text-field label="Product name">
-            <input type="text" ng-model="product.name">
-        </lx-text-field>
-
-        <lx-text-field label="Describe your idea">
-            <textarea ng-model="idea.description" rows="5"></textarea>
-        </lx-text-field>
-
-        <lx-text-field label="Problem solved by the product ">
-            <input type="text" ng-model="product.problem">
-        </lx-text-field>
-
-        <div flex-container="row" flex-gutter="24">
-            <div flex-item>
-                <lx-select ng-model="product.category" placeholder="Suitable category" choices="opt" floating-label>
-                    <lx-select-selected>
-                        {{ $selected }}
-                    </lx-select-selected>
-
-                    <lx-select-choices>
-                        {{ $choice }}
-                    </lx-select-choices>
-                </lx-select>
-            </div>
-            <div flex-item>
-                <lx-text-field label="Specify" ng-hide="cvar">
-                    <input type="text" ng-model="product.specify" >
-                </lx-text-field>
-            </div>
+        <div class="mui-form-group">
+            <input type="text" class="mui-form-control form-fonts" ng-model="product.title" required>
+            <label class="mui-form-floating-label form-fonts">Title your product</label>
         </div>
 
-        <div layout-container="row" style="margin-top: 10px;">
-            <button class="btn btn--m btn--raised bgc-indigo-500 tc-white-1" lx-ripple="indigo-400" ng-click="create()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-send"></i>Submit</button>
-            <button class="btn btn--m btn--orange btn--raised" lx-ripple ng-click="clear()"><i style="margin-top: 3px; margin-left: -5px;" class="icon icon--s icon--white icon--flat mdi mdi-refresh"></i>Reset</button>
+
+        <div class="mui-form-group">
+            <textarea class="mui-form-control form-fonts" ng-model="product.description" required></textarea>
+            <label class="mui-form-floating-label form-fonts">Describe your product</label>
         </div>
-</form>
+
+        <div class="mui-select form-fonts">
+            <select ng-model="product.category">
+                <option value="" disabled selected>Specify the related field</option>
+                <option>Technology</option>
+                <option>Science</option>
+                <option>Daily Life</option>
+                <option>General</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="mui-form-group">
+            <input type="text" class="mui-form-control form-fonts" ng-model="product.problem" required>
+            <label class="mui-form-floating-label form-fonts">Problem solved by product</label>
+        </div>
+
+        <div class="mui-form-group">
+            <input type="text" class="mui-form-control form-fonts" ng-model="product.price" style="width: 50%;">
+            <label class="mui-form-floating-label form-fonts">Expected price for your product</label>
+        </div>
+
+        <div class="mui-row">
+            <button class="mui-btn abtn" data-mui-style="raised" style="background: #303F9F;color: #ffffff;" ng-click="create()">
+                <i class="mdi mdi-send" style="font-size: 20px;"></i>
+                Submit
+            </button>
+            <button class="mui-btn abtn" data-mui-style="raised" style="background: #FFC107;color: #ffffff;" ng-click="clear()">
+                <i class="mdi mdi-refresh" style="color: #ffffff;font-size: 20px;"></i>
+                Reset
+            </button>
+
+        </div>
+
+    </form>
+
+</div>

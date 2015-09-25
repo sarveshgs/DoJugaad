@@ -1,21 +1,15 @@
-html{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
 
-
-a{
+html,body{
     font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none;
 }
+
 /*
 ** Main Container
 */
 .holder{
-    background: #eeeeee url('../img/tile2.png') no-repeat;
+    background-color:#eeeeee;
+    background-image: url('../img/tile.png');
+    background-repeat: no-repeat;
 }
 
 /*
@@ -23,7 +17,7 @@ a{
 */
 .card_holder{
     background: #FFFFFF;
-
+    border-radius: 3px;
 }
 
 /*
@@ -38,15 +32,8 @@ a{
 
 .qa{
     color: #607D8B;
-    font-family: 'Dosis', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.q{
-    font-family: 'Dosis', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+    margin-right: 5px;
+    font-size: 20px;
 }
 
 .an{
@@ -57,13 +44,12 @@ a{
 }
 
 
-
-.myBtn{
-    font-family: 'Dosis', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
+/*
+** Header css
+*/
+.sh{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.14),0 8px 10px 1px rgba(0,0,0,.098),0 3px 14px 2px rgba(0,0,0,.084);
 }
-
 
 /*
 ** Breadcrumb css
@@ -87,7 +73,7 @@ a{
 
 .breadcrumb .home{
     color: #CFD8DC;
-    line-height: 52px;
+    line-height: 48px;
 }
 
 .breadcrumb .home:hover{
@@ -96,16 +82,12 @@ a{
 
 .breadcrumb .ar{
     color: #ffffff;
-    line-height: 56px;
+    line-height: 48px;
 }
 
 .breadcrumb .title {
-    font-family: 'Dosis', sans-serif;
     font-size: 34px;
     color: #ffffff;
-    text-align: justify;
-
-
 }
 
 
@@ -142,7 +124,6 @@ a{
     font-size: 30px;
     font-weight: 300;
     color: #999;
-    font-family: 'Dosis', sans-serif;
 }
 .pace {
     -webkit-pointer-events: none;
@@ -160,7 +141,7 @@ a{
     display: none;
 }
 .pace .pace-progress {
-    background: #303F9F;
+    background: #96cb4b;
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -186,10 +167,7 @@ a{
 }
 .footer-bottom p {
     margin: 0;
-   text-align: center;
-   font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
+
 }
 .footer {
     color: #aaa;
@@ -204,9 +182,8 @@ a{
     color: #dddddd;
 }
 .footer h4 {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 20px;
-    font-family: 'Dosis', sans-serif;
     border-bottom: 1px solid #aaaaaa;
     padding-bottom: 5px;
     width: 80%;
@@ -219,12 +196,6 @@ a{
     box-shadow: none;
 }
 
-.tb{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: justify;
-}
 
 /*
  * ===================================
@@ -272,232 +243,14 @@ a{
     z-index: 1;
 }*/
 
-
-/*Slider css*/
-#slide h1,p,a{
-    font-family: 'Dosis', sans-serif;
-    text-align: justify;
-
-}
-
-
-
 .hiwtitle{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 32px;
     color:#FFFFFF;
-    text-align: justify;
 }
  
 .hiwcontent{
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 19px;
     color:#FFFFFF;
-    text-align: justify;
-}
-
-
-.about-bg{
-    background:
-    linear-gradient(
-            rgba(0, 0, 255, 0.2),
-            rgba(0, 0, 0, 0.35)
-    ),
-        /* bottom, image */
-    url('../img/abb.png');
-   ;
-}
-
-
-.big-title{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    text-align: justify;
-}
-
-
-.text-grey{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: match-parent;
-    text-align: justify;
-}
-
-.text-about{
-    font-family: 'Dosis', sans-serif;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: justify;
-}
-
-.form_title h2{
-   font-family: 'Dosis', sans-serif;
-   margin-left: 15px;
-    color: #727272;
-    text-align: justify;
-}
-
-.form_fonts{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 600;
-    text-align: justify;
-}
-
-
-.active{
-    display: block;
-}
-
-.disabled{
-    display: none;
-}
-
-
-.tab_head{
-
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    cursor: hand;
-    text-align: justify;
-}
-
-.tab_head img{
-    cursor: hand;
-}
-
-.tab_title{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 600;
-    cursor: hand;
-    text-align: justify;
-    font-size: 18px;
-}
-
-
-.current {
-    color:#303F9F;
-    border-bottom: 3px solid #FF5252;
-    font-weight: bold;
-    text-align: justify;
-}
-
-.description{
-    font-family: 'Dosis', sans-serif;
-    color: #212121;
-    font-size: 18px;
-    margin-top: -5px;
-    text-align: justify;
-}
-
-.hiw-title{
-    font-family: 'Dosis', sans-serif;
-    color:#303F9F;
-    font-weight: bold;
-    font-size: 22px;
-    text-align: justify;
-
-}
-
-
-
-.cur{
-    background: #F5F5F5;
-    color: #212121;
-    font-weight: bold;
-    text-align: justify;
-}
-
-.def{
-
-    background: #ffffff;
-}
-
-.sticker{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 8px;
-    padding-bottom: 0;
-    color:#fefefe;
-    background:#eb2641;
-    font-weight: 500;
-    font-size: 18px;
-    -moz-border-top-right-radius: 5px;
-    -webkit-border-top-right-radius: 10px;
-    border-top-right-radius: 10px; /* future proofing */
-    line-height: 15px;
-    z-index: 2;
-}
-
-
-
-@media screen and (max-width: 630px) {
-
-    .center{
-
-    }
-.left,.right{
-    display: none;
-}
-    .tab_nav,.pic{
-        display: none;
-    }
-    .space_inner{
-        height: 100px;
-    }
-
-    .main_content{
-      margin: 10px;
-    }
-    .bottom_card{
-        margin-top: -20px;
-    }
-    .bb{
-        float: left;
-    }
-    .sm,.k{
-        background: #F5F5F5;
-    }
-
-    .small_nav{
-        margin-top: -25px;
-    }
-    .divider{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 631px) {
-    .bb{
-        float: right;
-        margin-right: 30%;
-    }
-    .space_inner{
-        height: 100px;
-    }
-    .bottom-space{
-        height: 24px;
-    }
-
-    .main_content{
-        margin-bottom: 10px;
-    }
-    .small_nav{
-        display: none;
-    }
-}
-
-.fs-subhead{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.fs-headline{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
 }

@@ -1,207 +1,354 @@
-<div flex-container="column" ng-cloak>
+<div ng-controller="hiwController">
+<div ng-include="'breadcrumb.htm'"></div>
+<div class="mui-panel pa" >
+    <div class="mui-container" data-mui-fluid="true">
 
-    <div flex-container="row" class="space_inner"></div>
+        <!-- Top Navigation Panel -->
+        <div class="mui-row mui-hidden-xs mui-hidden-sm">
+            <div class="mui-col-md-1 mui-col-lg-1" ></div>
 
-    <div flex-container="row" flex-gutter="24">
+            <div class="mui-col-md-8 mui-col-lg-8"   style="margin-top:-15px;">
+                <table width="100%" style=" border-bottom: 1px solid #e1e1e1;">
+                    <tr>
+                        <td ng-class="status1">
+                         <a href="" ng-click="tog1()" class="tab_head">
+                         <p class="mui-text-center">
+                             <img src="images/icons/ic_help_48.svg" style="margin-top: 10px;"/>
+                         </p>
+                          <p class="mui-text-center">I need a Jugaad</p>
+                         </a>
+                        </td>
 
-        <!-- Left Margin -->
-        <div flex-item="1" class="left"></div>
+                        <td ng-class="status2">
+                            <a href="" ng-click="tog2()" class="tab_head">
+                            <p class="mui-text-center">
+                                <img src="images/icons/ic_palette_48.svg" style="margin-top: 10px;"/>
+                            </p>
+                            <p class="mui-text-center">I have an idea</p>
+                            </a>
+                        </td>
+                        <td ng-class="status3">
+                            <a href="" ng-click="tog3()" class="tab_head">
+                            <p class="mui-text-center">
+                                <img src="images/icons/ic_local_48.svg" style="margin-top: 10px;"/>
+                            </p>
+                            <p class="mui-text-center">I have a product</p>
+                            </a>
+                        </td>
+                        <td ng-class="status4">
+                            <a href="" ng-click="tog4()" class="tab_head">
+                            <p class="mui-text-center">
+                                <img src="images/icons/ic_build_48.svg" style="margin-top: 10px;"/>
+                            </p>
+                            <p class="mui-text-center">I have a skill</p>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-        <!-- Main Content -->
-        <div flex-item="10" class="main_content" id="main_content">
-
-            <!-- Breadcrumb -->
-            <div ng-include="'breadcrumb.htm'" class="bread"></div>
-            <!-- End of Breadcrumb -->
-
-            <!-- Top Banner -->
-            <div flex-container="column" class="card k">
+        </div>
 
 
+        <!-- Content 1 -->
+        <div ng-class="class1" class="mui-hidden-xs mui-hidden-sm">
+        <div class="mui-row">
+            <div class="mui-clearfix" style="margin-bottom: 10px;"></div>
+           <div class="mui-col-md-3 mui-col-lg-3 mui-hidden-sm mui-hidden-xs">
+              <p class="mui-text-center">
+                  <img src="img/doubt.png">
+              </p>
+           </div>
 
-                    <div class="tab_nav" flex-container="row">
+            <div class="mui-col-md-8 mui-col-lg-8 mui-col-xs-12 mui-col-sm-12">
 
-                        <div flex-item="2" ><div>&nbsp;</div></div>
-
-                        <div flex-item="2" >
-                           <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog1()" class="tab_head" ng-class="status1">
-                            <img src="images/icons/ic_help_48.svg" style="cursor: hand;"/>
-                            <div class="tab_title">I need Jugaad</div>
-                           </div>
-                        </div>
-
-                        <div flex-item="2" >
-                            <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog2()" class="tab_head" ng-class="status2">
-                            <img src="images/icons/ic_palette_48.svg" style="cursor: hand;"/>
-                            <div class="tab_title">I have an Idea</div>
+                <table class="mui-table mr">
+                    <tr><td><h3 class="hiw-title">Ask us</h3></td></tr>
+                    <tr><td>
+                        <div class="mui-container">
+                            <div class="mui-row">
+                               <div class="mui-col-md-7 mui-col-xs-12 mui-col-sm-12">
+                                   <p class=" description mui-text-justify">
+                                       Mr.Sharma is a senior professor at an engineering college.
+                                       Being in the profession for years, he is very much aware of the amount of time that goes waste
+                                       because of tedious attendance taking procedure. Mr. Sharma always wished if he
+                                       could somehow automate this. So,he posted his problem at DoJugaad. The team at
+                                       DoJugaad analyzed his problem and developed a biometric sensor based portable
+                                       device that could be easily rotated in the class. This device could be easily
+                                       connected to any computer to generate excel sheet of the attendance. This sheet
+                                       would get periodically updated to the college server. This simple yet smart
+                                       device has helped not just Mr. Sharma but the entire college to take quick and
+                                       automatic attendance.
+                                   </p>
+                               </div>
                             </div>
                         </div>
-                        <div flex-item="2" >
-                            <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog3()" class="tab_head" ng-class="status3">
-                            <img src="images/icons/ic_local_48.svg" style="cursor: hand;"/>
-                            <div class="tab_title">I have a product</div>
+
+                    </td></tr>
+                    <tr>
+                        <td>
+                        <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="primary" onclick="document.location.href='jugaad';">Submit Problem</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+        </div>
+
+        <!-- Content 2 -->
+        <div ng-class="class2" class="mui-hidden-xs mui-hidden-sm">
+            <div class="mui-row">
+                <div class="mui-clearfix" style="margin-bottom: 10px;"></div>
+                <div class="mui-col-md-3 mui-col-lg-3 mui-hidden-sm mui-hidden-xs">
+                    <p class="mui-text-center">
+                        <img src="img/idea.png">
+                    </p>
+                </div>
+
+                <div class="mui-col-md-8 mui-col-lg-8 mui-col-xs-12 mui-col-sm-12">
+
+                    <table class="mui-table mr">
+                        <tr><td><h3 class="hiw-title">Share</h3></td></tr>
+                        <tr><td>
+                            <div class="mui-container">
+                                <div class="mui-row">
+                                    <div class="mui-col-md-7 mui-col-xs-12 mui-col-sm-12">
+                                        <p class="description mui-text-justify">Young and energetic Akshat is quite observant. Watching around, he often
+                                            ends up thinking about some simple yet creative ideas that might help the surrounding to be
+                                            a better place. However, Akshat faced a serious issue, he felt short of resources and
+                                            expertise to mould his idea into a working model. So, Akshat shared his idea with our team.
+                                            Our team of talented engineers and experts discussed and helped to improvise his idea.
+                                            We presented the idea to our partners.They valued the idea and decided to make it real!
+                                            The world was introduced to a brilliant invention all thanks to Akshat's role in idea
+                                            contribution.
+                                            While Akshat enjoyed his part of share, the world enjoyed his idea as a real time product.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div flex-item="2" >
-                            <div flex-container="column" flex-align="space-between center" class="p+" lx-ripple="white" ng-click="tog4()" class="tab_head" ng-class="status4">
-                               <img src="images/icons/ic_build_48.svg" style="cursor: hand;"/>
-                               <div class="tab_title">I have a skill</div>
-                            </div>
-                        </div>
-                        <div flex-item="2" ><div>&nbsp;</div></div>
-                    </div>
 
-                    <div flex-container="row" class="divider divider--dark"></div>
+                        </td></tr>
+                        <tr>
+                            <td>
+                                <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="primary" onclick="document.location.href='idea';">Submit Idea</button>
+                            </td>
+                        </tr>
+                    </table>
 
-
-                    <div flex-container="column" class="small_nav">
-                        <ul class="list mt++">
-                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur1" ng-click="tog1()">
-                                <div class="list-row__primary" style="cursor: hand">
-                                    <img src="images/icons/ic_help.svg">
-                                </div>
-
-                                <div class="list-row__content">
-                                    <span class="tab_title">I need Jugaad</span>
-                                </div>
-                            </li>
-
-                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur2" ng-click="tog2()">
-                                <div class="list-row__primary" style="cursor: hand">
-                                    <img src="images/icons/ic_palette.svg">
-                                </div>
-
-                                <div class="list-row__content">
-                                    <span class="tab_title">I have an idea</span>
-                                </div>
-                            </li>
-
-                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur3" ng-click="tog3()">
-                                <div class="list-row__primary" style="cursor: hand">
-                                    <img src="images/icons/ic_local.svg">
-                                </div>
-
-                                <div class="list-row__content">
-                                    <span class="tab_title">I have a product</span>
-                                </div>
-                            </li>
-
-                            <li class="list-row list-row--has-separator" lx-ripple="white" ng-class="cur4" ng-click="tog4()">
-                                <div class="list-row__primary" style="cursor: hand">
-                                    <img src="images/icons/ic_build.svg">
-                                </div>
-
-                                <div class="list-row__content">
-                                    <span class="tab_title">I have a skill</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
-
-                <div  ng-class="class1">
-                    <div flex-container="row" class="mt++ sm">
-                        <div flex-item="3" class="pic">
-                            <img src="img/doubt.png" class="center">
-                        </div>
-                        <div flex-item="9" class="p+">
-                            <h3 class="hiw-title">Ask us</h3>
-                            <br/>
-                            <p class="description">Mr. Sharma is a senior professor at an engineering college. Being in the
-                                profession for years, he is very much aware of the amount of time that goes waste
-                                because of tedious attendance taking procedure. Mr. Sharma always wished if he
-                                could somehow automate this. So,he posted his problem at DoJugaad. The team at
-                                DoJugaad analyzed his problem and developed a biometric sensor based portable
-                                device that could be easily rotated in the class. This device could be easily
-                                connected to any computer to generate excel sheet of the attendance. This sheet
-                                would get periodically updated to the college server. This simple yet smart
-                                device has helped not just Mr. Sharma but the entire college to take quick and
-                                automatic attendance.</p>
-
-                            <button class="btn btn--l btn--blue btn--raised" lx-ripple onclick="document.location.href='jugaad';">Submit Problem</button>
-                        </div>
-
-                    </div>
-                    </div>
-
-                <div  ng-class="class2">
-                <div flex-container="row" class="mt++ sm">
-                    <div flex-item="4" class="pic">
-                        <img src="img/idea.png" class="center">
-                    </div>
-                    <div flex-item="8" class="p+">
-                        <h3 class="hiw-title">Share</h3>
-                        <br/>
-                        <p class="description">Young and energetic Akshat is quite observant. Watching around, he often
-                            ends up thinking about some simple yet creative ideas that might help the surrounding to be
-                            a better place. However, Akshat faced a serious issue, he felt short of resources and
-                            expertise to mould his idea into a working model. So, Akshat shared his idea with our team.
-                            Our team of talented engineers and experts discussed and helped to improvise his idea.
-                            We presented the idea to our partners.They valued the idea and decided to make it real!
-                            The world was introduced to a brilliant invention all thanks to Akshat's role in idea
-                            contribution.
-                            While Akshat enjoyed his part of share, the world enjoyed his idea as a real time product.
-                        </p>
-                        <br/>
-                        <button class="btn btn--l btn--blue btn--raised" lx-ripple onclick="document.location.href='idea';">Submit Idea</button>
-                    </div>
-                </div>
-                </div>
-
-                <div  ng-class="class3">
-                <div flex-container="row" class="mt++ sm">
-                    <div flex-item="5" class="pic">
-                        <img src="img/sell.png" class="center">
-                    </div>
-                    <div flex-item="7" class="p+">
-                        <h3 class="hiw-title">Sell</h3>
-                        <br/>
-                        <p class="description">Raju and his team are always fascinated in building real life model
-                            projects. During college days, they would earn money by developing academic projects for
-                            other colleagues. However, they wanted to invest their talent into market(or however now
-                            they wanted to try their luck in real market). They were ready with many sample products
-                            and all they needed was a platform to meet interested investors. Raju and his team approached
-                            DoJugaad. We carefully analyzed their products and extended them a chance to interact with
-                            our interested investors/sellors/buyers. DoJugaad thus helped Raju and his team to turn their
-                            talent into a full time profession.</p>
-                        <br/>
-                        <button class="btn btn--l btn--blue btn--raised" lx-ripple onclick="document.location.href='product';">Submit Product</button>
-                    </div>
-                </div>
-                </div>
-
-                <div  ng-class="class4">
-                <div flex-container="row" class="mt++ sm">
-                    <div flex-item="4" class="pic">
-                        <img src="img/skill_girl1.png" class="center">
-                    </div>
-                    <div flex-item="8" class="p+">
-                        <h3 class="hiw-title">Contribute</h3>
-                        <br/>
-                        <p class="description">Miss Shruti is an established product design engineer. She is a
-                            hardworking and workoholic person. one day while browsing DoJugaad, Shruti came across an
-                            interesting idea description. She knew that this idea perfectly aligned with her expertise
-                            in product design. Shruti submitted her product design model. It was reviewed and accepted
-                            by the team experts.Shruti's design helped DoJugaad to release a well designed product into
-                            market. Shruti not only became a product share partner but also recieved a new platform to
-                            practise her interest.</p>
-                        <br/>
-                        <button class="btn btn--l btn--white btn--raised" lx-ripple>Coming soon</button>
-                    </div>
-                </div>
                 </div>
 
             </div>
-            <!-- End of Top Banner -->
+        </div>
 
-        </div> <!-- End of Main Content -->
+        <!-- Content 3 -->
+        <div ng-class="class3" class="mui-hidden-xs mui-hidden-sm">
+            <div class="mui-row">
+                <div class="mui-clearfix" style="margin-bottom: 10px;"></div>
+                <div class="mui-col-md-3 mui-col-lg-3 mui-hidden-sm mui-hidden-xs">
+                    <p class="mui-text-center">
+                        <img src="img/sell.png">
+                    </p>
+                </div>
 
-        <!-- Right Margin -->
-        <div flex-item="1" class="right"></div>
+                <div class="mui-col-md-8 mui-col-lg-8 mui-col-xs-12 mui-col-sm-12">
+
+                    <table class="mui-table mr">
+                        <tr><td><h3 class="hiw-title">Sell</h3></td></tr>
+                        <tr><td>
+                            <div class="mui-container">
+                                <div class="mui-row">
+                                    <div class="mui-col-md-7 mui-col-xs-12 mui-col-sm-12">
+                                        <p class="description mui-text-justify">Raju and his team are always fascinated in building real life model
+                                            projects. During college days, they would earn money by developing academic projects for
+                                            other colleagues. However, they wanted to invest their talent into market(or however now
+                                            they wanted to try their luck in real market). They were ready with many sample products
+                                            and all they needed was a platform to meet interested investors. Raju and his team approached
+                                            DoJugaad. We carefully analyzed their products and extended them a chance to interact with
+                                            our interested investors/sellors/buyers. DoJugaad thus helped Raju and his team to turn their
+                                            talent into a full time profession.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td></tr>
+                        <tr>
+                            <td>
+                                <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="primary" onclick="document.location.href='product';">Submit Product</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Content 4 -->
+        <div ng-class="class4" class="mui-hidden-xs mui-hidden-sm">
+            <div class="mui-row">
+                <div class="mui-clearfix" style="margin-bottom: 10px;"></div>
+                <div class="mui-col-md-3 mui-col-lg-3 mui-hidden-sm mui-hidden-xs">
+                    <p class="mui-text-center">
+                        <img src="img/skill_girl1.png">
+                    </p>
+                </div>
+
+                <div class="mui-col-md-8 mui-col-lg-8 mui-col-xs-12 mui-col-sm-12">
+
+                    <table class="mui-table mr">
+                        <tr><td><h3 class="hiw-title">Contribute</h3></td></tr>
+                        <tr><td>
+                            <div class="mui-container">
+                                <div class="mui-row">
+                                    <div class="mui-col-md-7 mui-col-xs-12 mui-col-sm-12">
+                                        <p class="description mui-text-justify">Miss Shruti is an established product design engineer. She is a
+                                            hardworking and workoholic person. one day while browsing DoJugaad, Shruti came across an
+                                            interesting idea description. She knew that this idea perfectly aligned with her expertise
+                                            in product design. Shruti submitted her product design model. It was reviewed and accepted
+                                            by the team experts.Shruti's design helped DoJugaad to release a well designed product into
+                                            market. Shruti not only became a product share partner but also recieved a new platform to
+                                            practise her interest.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td></tr>
+                        <tr>
+                            <td>
+                                <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="default" onclick="">Coming soon</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="mui-row mui-hidden-md mui-hidden-lg">
+            <div class="mui-panel">
+                <span class="mui-pull-left description" style="font-weight: 600;" ng-click="tog = !tog">
+                    <img src="images/icons/ic_help.svg"/>
+                    I need a Jugaad
+                </span>
+                <a href="" style="cursor: hand" class="mui-pull-right" ng-click="tog = !tog">
+                    <i ng-class="{'mdi mdi-chevron-up':!tog,'mdi mdi-chevron-down':tog}"></i>
+                </a>
+                <br/>
+
+                <div ng-class="{'disabled':tog}">
+                    <div class="mui-divider" style="margin-top: 5px; margin-bottom: 5px;"></div>
+                    <h4 class="hiw-title">Ask us</h4>
+                    <p class="description mui-text-justify">
+                        Mr.Sharma is a senior professor at an engineering college.
+                        Being in the profession for years, he is very much aware of the amount of time that goes waste
+                        because of tedious attendance taking procedure. Mr. Sharma always wished if he
+                        could somehow automate this. So,he posted his problem at DoJugaad. The team at
+                        DoJugaad analyzed his problem and developed a biometric sensor based portable
+                        device that could be easily rotated in the class. This device could be easily
+                        connected to any computer to generate excel sheet of the attendance. This sheet
+                        would get periodically updated to the college server. This simple yet smart
+                        device has helped not just Mr. Sharma but the entire college to take quick and
+                        automatic attendance.
+                    </p>
+                    <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="primary" onclick="document.location.href='jugaad';">Submit Problem</button>
+                </div>
+            </div>
+
+            <div class="mui-panel" style="margin-top: -15px;">
+                <span class="mui-pull-left description" style="font-weight: 600;" ng-click="tog2 = !tog2">
+                    <img src="images/icons/ic_palette.svg"/>
+                    I have an idea
+                </span>
+                <a href="" style="cursor: hand" class="mui-pull-right" ng-click="tog2 = !tog2">
+                    <i ng-class="{'mdi mdi-chevron-up':!tog2,'mdi mdi-chevron-down':tog2}"></i>
+                </a>
+                <br/>
+
+                <div ng-class="{'disabled':tog2}">
+                    <div class="mui-divider" style="margin-top: 5px; margin-bottom: 5px;"></div>
+                    <h4 class="hiw-title">Share</h4>
+                    <p class="description mui-text-justify">
+                        Young and energetic Akshat is quite observant. Watching around, he often
+                        ends up thinking about some simple yet creative ideas that might help the surrounding to be
+                        a better place. However, Akshat faced a serious issue, he felt short of resources and
+                        expertise to mould his idea into a working model. So, Akshat shared his idea with our team.
+                        Our team of talented engineers and experts discussed and helped to improvise his idea.
+                        We presented the idea to our partners.They valued the idea and decided to make it real!
+                        The world was introduced to a brilliant invention all thanks to Akshat's role in idea
+                        contribution.
+                        While Akshat enjoyed his part of share, the world enjoyed his idea as a real time product.
+                    </p>
+                    <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="primary" onclick="document.location.href='idea';">Submit Idea</button>
+                </div>
+            </div>
+
+            <div class="mui-panel" style="margin-top: -15px;">
+                <span class="mui-pull-left description" style="font-weight: 600;" ng-click="tog3 = !tog3">
+                    <img src="images/icons/ic_local.svg"/>
+                    I have a product
+                </span>
+                <a href="" style="cursor: hand" class="mui-pull-right" ng-click="tog3 = !tog3">
+                    <i ng-class="{'mdi mdi-chevron-up':!tog3,'mdi mdi-chevron-down':tog3}"></i>
+                </a>
+                <br/>
+
+                <div ng-class="{'disabled':tog3}">
+                    <div class="mui-divider" style="margin-top: 5px; margin-bottom: 5px;"></div>
+                    <h4 class="hiw-title">Sell</h4>
+                    <p class="description mui-text-justify">
+                        Raju and his team are always fascinated in building real life model
+                        projects. During college days, they would earn money by developing academic projects for
+                        other colleagues. However, they wanted to invest their talent into market(or however now
+                        they wanted to try their luck in real market). They were ready with many sample products
+                        and all they needed was a platform to meet interested investors. Raju and his team approached
+                        DoJugaad. We carefully analyzed their products and extended them a chance to interact with
+                        our interested investors/sellors/buyers. DoJugaad thus helped Raju and his team to turn their
+                        talent into a full time profession.
+                    </p>
+                    <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="primary" onclick="document.location.href='product';">Submit Product</button>
+                </div>
+            </div>
+
+
+            <div class="mui-panel" style="margin-top: -15px;">
+                <span class="mui-pull-left description" style="font-weight: 600;" ng-click="tog4 = !tog4">
+                    <img src="images/icons/ic_build.svg"/>
+                    I have a skill
+                </span>
+                <a href="" style="cursor: hand" class="mui-pull-right" ng-click="tog4 = !tog4">
+                    <i ng-class="{'mdi mdi-chevron-up':!tog4,'mdi mdi-chevron-down':tog4}"></i>
+                </a>
+                <br/>
+
+                <div ng-class="{'disabled':tog4}">
+                    <div class="mui-divider" style="margin-top: 5px; margin-bottom: 5px;"></div>
+                    <h4 class="hiw-title">Contribute</h4>
+                    <p class="description mui-text-justify">
+                        Miss Shruti is an established product design engineer. She is a
+                        hardworking and workoholic person. one day while browsing DoJugaad, Shruti came across an
+                        interesting idea description. She knew that this idea perfectly aligned with her expertise
+                        in product design. Shruti submitted her product design model. It was reviewed and accepted
+                        by the team experts.Shruti's design helped DoJugaad to release a well designed product into
+                        market. Shruti not only became a product share partner but also recieved a new platform to
+                        practise her interest.
+                    </p>
+                    <button class="mui-btn sbtn" data-mui-style="raised" data-mui-color="default" onclick="">Coming soon</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
     </div>
-
 </div>
+</div>
+
 
 
 

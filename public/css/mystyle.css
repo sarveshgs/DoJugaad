@@ -4,7 +4,6 @@ html{
     overflow-x: hidden;
 }
 
-
 a{
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
@@ -428,9 +427,9 @@ a{
     font-size: 18px;
     -moz-border-top-right-radius: 5px;
     -webkit-border-top-right-radius: 10px;
-    border-top-right-radius: 10px; /* future proofing */
+    border-top-right-radius: 10px;
     line-height: 15px;
-    z-index: 2;
+    z-index: 1000;
 }
 
 

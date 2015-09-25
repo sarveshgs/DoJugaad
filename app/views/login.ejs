@@ -1,50 +1,66 @@
+<!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="dist/lumx.css"/>
-    <!--link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'-->
-    <meta name="viewport" content="initial-scale=1" />
-    <link rel="stylesheet" href="css/header.css"/>
-    <link rel="stylesheet" href="css/mystyle.css">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+    <script>
+        document.write('<link href="css/animate.min.css" rel="stylesheet">');
+       // document.write('');
+       // document.write('');
+        document.write('<link href="css/mui.min.css" rel="stylesheet" type="text/css" />');
+        document.write('<link rel="stylesheet" href="css/sweet-alert.css" type="text/css" />');
+        document.write('<link href="bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet"/>');
+        document.write('<link href="css/app.min.css" rel="stylesheet"/>');
+    </script>
     <title>DoJugaad | Login</title>
 
 </head>
 
-<body ng-controller="common" ng-cloak class="holder">
+<body class="holder">
+
 <% include preloader %>
 
-<div flex-container="column" ng-cloak >
+<!-- Main Container-->
+<div id="content-wrapper">
+    <div id="appbar-placeholder" class="mui-appbar-height"></div>
 
-    <div flex-container="row" class="space_inner"></div>
+    <div class="mui-container-fluid" ng-controller="loginController">
 
-    <div class="tc-black-1" flex-container="row" flex-gutter="24" style="margin-top: 50px;">
-        <div flex-item="4"><div></div></div>
-        <div flex-item="4">
-        <div ng-include="'login_form.htm'"></div>
+        <div class="mui-row">
+            <!-- Left Margin -->
+            <div class="mui-col-md-4 mui-hidden-xs mui-hidden-sm"></div>
+            <!-- End of Left Margin -->
+
+            <!-- Center Content -->
+            <div class="mui-col-md-4">
+                <div class="space-top"></div>
+
+                <div ng-include="'login_form.htm'"></div>
+
+            </div>
+            <!-- End of Center Content-->
+
+            <!-- Right Margin -->
+            <div class="mui-col-md-4 mui-hidden-xs mui-hidden-sm"></div>
+            <!-- End of Right Margin -->
         </div>
-        <div flex-item="4"><div></div></div>
+
     </div>
 
 </div>
 
-
-
-
-
 <script src="js/jquery.min.js"></script>
+<script src="js/mui.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
-<script src="dist/lumx.min.js"></script>
-<script src="dist/velocity/velocity.min.js"></script>
-<script src="dist/moment/moment.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="js/angular-scroll.min.js"></script>
-
+<script src="js/sweet-alert.min.js"></script>
+<script src="js/SweetAlert.js"></script>
 <script src="js/application.js"></script>
 <script src="js/pace.min.js"></script>
 
