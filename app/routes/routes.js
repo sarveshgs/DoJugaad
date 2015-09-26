@@ -21,22 +21,12 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
         });
     });
 
-    //==================================================================================================================
-    // ==========================================   2. Submit Page    ====================================================
-    //==================================================================================================================
-     app.get('/submit', function(req, res) {
-        res.render('submit.ejs', {
-            data : req.user, // get the user out of session and pass to template
-            title: 'Submit'
-        });
-    });
-
-
 
     //==================================================================================================================
     // ==========================================   3. Jugaad Page    ==================================================
     //==================================================================================================================
     app.get('/jugaad', function(req, res) {
+        req.session.link = 'jugaad';
         res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
             head : 'Ask Jugaad',
@@ -49,6 +39,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     // ==========================================   4. Idea Page    ==================================================
     //==================================================================================================================
     app.get('/idea', function(req, res) {
+        req.session.link = 'idea';
         res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
             head : 'Submit Idea',
@@ -61,6 +52,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     // ==========================================   5. Product Page    ==================================================
     //==================================================================================================================
     app.get('/product', function(req, res) {
+        req.session.link = 'product';
         res.render('base.ejs', {
             data : req.user, // get the user out of session and pass to template
             head : 'Submit Product',
@@ -98,6 +90,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     // ==========================================   9. About Page    ====================================================
     //==================================================================================================================
     app.get('/about', function(req, res) {
+        req.session.link = 'about';
         res.render('about.ejs', {
             data : req.user, // get the user out of session and pass to template
         });
@@ -108,6 +101,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     // ==========================================   10. FAQ Page    ====================================================
     //==================================================================================================================
     app.get('/faq', function(req, res) {
+        req.session.link = 'faq';
         res.render('faq.ejs', {
             data : req.user, // get the user out of session and pass to template
         });
@@ -117,6 +111,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     // =====================================   11. How It Works Page    ================================================
     //==================================================================================================================
     app.get('/hiw', function(req, res) {
+        req.session.link = 'hiw';
         res.render('hiw.ejs', {
             data : req.user, // get the user out of session and pass to template
         });
@@ -136,6 +131,7 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     // =====================================   13. Who we are Page    ================================================
     //==================================================================================================================
     app.get('/hwa', function(req, res) {
+        req.session.link = 'hwa';
         res.render('team.ejs', {
             data : req.user, // get the user out of session and pass to template
         });
@@ -417,13 +413,14 @@ module.exports = function(app, passport,db,mongojs,nodemailer) {
     //==================================================================================================================
     app.get('/data', function(req, res){
       var msg=null;
+      var link = req.session.link;
         if(req.session.posted){
             msg = 'posted';
         }
          if(req.session.postData){
              console.log(req.session.postData);
          }
-        res.json({'data':req.user,'message':msg});
+        res.json({'data':req.user,'message':msg,'link':link});
     });
 
 

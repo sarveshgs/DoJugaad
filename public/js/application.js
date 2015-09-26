@@ -38,6 +38,7 @@ app.controller('common',function($scope,$http,$document,$rootScope) {
     $rootScope.isConnected = false;
     $rootScope.pid = null;
 
+    $scope.path = '/';
 
 
         // Scroll to Top Function
@@ -51,6 +52,7 @@ app.controller('common',function($scope,$http,$document,$rootScope) {
     // Function to check if User is Logged In
     var check =function() {
         $http.get('/data').success(function (response) {
+            $scope.path = response.link;
             if(response.data){
                 // If connected through Facebook
                 if (response.data.facebookConected == true) {

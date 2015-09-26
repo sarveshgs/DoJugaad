@@ -9,12 +9,13 @@
 
                 <td class="mui-text-right">
                     <div id="appbar-nav-links" class="mui-hidden-xs">
+                        <a href="/">Home</a>
                         <a href="about">About</a>
                         <a href="hiw">How It Works</a>
                         <a href="faq">FAQ</a>
                         <% if(data) {%>
-                        <img src="images/avatars/male/m1.png"class="avatar"/>
-                        <a><% data.name%></a>
+                        <img ng-src="{{ avatar }}"  class="avatar"/>
+                        <span><%=data.name%></span>
                         <button onclick="document.location.href='logout';" style="margin-top: -5px;" class="mui-btn abtn" data-mui-color="default" ><i class="mdi mdi-logout"></i>Logout</button>
                         <%} else {%>
                         <button onclick="document.location.href='login';" style="margin-top: -5px;" class="mui-btn abtn" data-mui-color="danger"><i class="mdi mdi-login"></i>Login</button>
@@ -23,12 +24,13 @@
                     <div class="mui-dropdown mui-hidden-lg mui-hidden-md">
                         <a id="appbar-more-vert" data-mui-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                         <ul class="mui-dropdown-menu mui-dropdown-menu-right">
+                            <li><a class="ah" href="/">sHome</a></li>
                             <li><a class="ah" href="about">About</a></li>
                             <li><a class="ah" href="hiw">How It Works</a></li>
                             <li><a class="ah" href="faq">FAQ</a></li>
                             <li><div class="mui-divider"></div></li>
                             <% if ( data ) { %>
-                            <li><a class="ah"><i class="mdi mdi-account"></i><% data.name%></a></li>
+                            <li><a class="ah"><i class="mdi mdi-account"></i><%=data.name%></a></li>
                             <li><a class="ah" href="logout"><i class="mdi mdi-logout"></i>Logout</a></li>
                             <% } else {%>
                             <li><a class="ah" href="login"><i class="mdi mdi-login"></i>Login</a></li>

@@ -814,6 +814,13 @@ ul.primary span {
     position: absolute;
     top: 50%;
 }
+
+@media (max-width: 768px) {
+    .v-center{
+        margin-left: -10px;
+    }
+}
+
 .v-center {
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
