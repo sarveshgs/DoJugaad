@@ -15,7 +15,7 @@
                         <a href="faq">FAQ</a>
                         <% if(data) {%>
                         <img ng-src="{{ avatar }}"  class="avatar"/>
-                        <span><%=data.name%></span>
+                        <a><%=data.name%></a>
                         <button onclick="document.location.href='logout';" style="margin-top: -5px;" class="mui-btn abtn" data-mui-color="default" ><i class="mdi mdi-logout"></i>Logout</button>
                         <%} else {%>
                         <button onclick="document.location.href='login';" style="margin-top: -5px;" class="mui-btn abtn" data-mui-color="danger"><i class="mdi mdi-login"></i>Login</button>
@@ -24,7 +24,7 @@
                     <div class="mui-dropdown mui-hidden-lg mui-hidden-md">
                         <a id="appbar-more-vert" data-mui-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                         <ul class="mui-dropdown-menu mui-dropdown-menu-right">
-                            <li><a class="ah" href="/">sHome</a></li>
+                            <li><a class="ah" href="/">Home</a></li>
                             <li><a class="ah" href="about">About</a></li>
                             <li><a class="ah" href="hiw">How It Works</a></li>
                             <li><a class="ah" href="faq">FAQ</a></li>
